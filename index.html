@@ -3,138 +3,198 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#ffffff">
 <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Appart Bois">
-<title>Appart côté Bois — Recherche de location</title>
+<title>Appart côté Bois</title>
 <link rel="icon" href="assets/icon.svg">
 <link rel="apple-touch-icon" href="assets/icon-180.png">
 <link rel="manifest" href="manifest.json">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <style>
-:root{--bg:#f6f7f5;--card:#fff;--ink:#17201d;--mut:#66726d;--line:#e3e7e4;--acc:#0f766e;--acc2:#115e59;--new:#16a34a;--recent:#2563eb;--old:#ea580c;--stale:#9ca3af;--warn:#b45309;--r:14px}
+:root{
+  --bg:#f4f5f3;--card:#fff;--ink:#16201c;--mut:#6b7671;--line:#e4e7e5;
+  --acc:#0f766e;--acc-soft:#e6f3f1;
+  --c-new:#16a34a;--c-recent:#2563eb;--c-old:#ea580c;--c-stale:#9aa3a0;
+  --warn:#b45309;--warn-soft:#fff3e2;
+  --hdr:56px;--seg:48px;--safe-t:env(safe-area-inset-top);--safe-b:env(safe-area-inset-bottom)
+}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.4 -apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;touch-action:manipulation;overscroll-behavior-y:contain;overflow-x:hidden}
-button,select,input,textarea{font:inherit;touch-action:manipulation}
-header{position:sticky;top:0;z-index:1000;background:rgba(246,247,245,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:calc(env(safe-area-inset-top) + 8px) 14px 8px}
-.top{display:flex;align-items:center;gap:10px}
-.top img{width:34px;height:34px;border-radius:9px}
-.top h1{font-size:17px;margin:0;line-height:1.1}
-.top small{color:var(--mut);font-size:12px}
-.top .sp{flex:1}
-.ib{border:1px solid var(--line);background:#fff;border-radius:10px;height:36px;min-width:36px;padding:0 10px;cursor:pointer}
-.filters{display:flex;gap:6px;overflow-x:auto;padding:8px 0 2px;scrollbar-width:none}
-.filters::-webkit-scrollbar{display:none}
-.chip{flex:none;border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 11px;font-size:13px;cursor:pointer;white-space:nowrap;color:var(--ink)}
-.chip.on{background:var(--acc);border-color:var(--acc);color:#fff}
-.chip select{border:0;background:transparent;color:inherit;font-size:13px;padding:0;appearance:none;-webkit-appearance:none;cursor:pointer}
-main{display:grid;grid-template-columns:1fr;gap:0}
-#map{height:46vh;min-height:280px;width:100%;border-bottom:1px solid var(--line)}
-#list{padding:10px 12px 90px;display:block;max-width:100%}
-#list>*{margin-bottom:12px}
-@media(min-width:960px){main{grid-template-columns:minmax(420px,520px) 1fr;height:calc(100vh - 96px)}#list{overflow:auto;order:1;padding-bottom:30px}#map{order:2;height:100%;border:0;border-left:1px solid var(--line)}}
-.summary{font-size:13px;color:var(--mut);padding:2px 2px 0}
-.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:grid;grid-template-columns:118px 1fr;scroll-margin-top:110px;transition:box-shadow .2s}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font:15px/1.4 -apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;touch-action:manipulation;overscroll-behavior-y:contain;overflow-x:hidden}
+button,select,input,textarea{font:inherit;color:inherit;touch-action:manipulation}
+button{cursor:pointer}
+a{color:inherit}
+
+/* ---------- En-tête ---------- */
+header{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid var(--line);padding-top:var(--safe-t)}
+.bar{height:var(--hdr);display:flex;align-items:center;gap:10px;padding:0 14px}
+.bar img{width:32px;height:32px;border-radius:8px;flex:none}
+.ttl{flex:1;min-width:0}
+.ttl b{display:block;font-size:16px;line-height:1.15}
+.ttl small{display:block;color:var(--mut);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hbtn{flex:none;height:36px;border:1px solid var(--line);background:#fff;border-radius:10px;padding:0 12px;display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:500}
+.hbtn.icon{width:36px;padding:0;justify-content:center}
+.badge[hidden]{display:none}
+.badge{background:var(--acc);color:#fff;border-radius:999px;font-size:11px;font-weight:700;min-width:18px;height:18px;padding:0 5px;display:inline-grid;place-items:center}
+
+/* Onglets mobile */
+.seg{display:flex;gap:4px;padding:0 14px 10px}
+.seg button{flex:1;height:34px;border:0;border-radius:9px;background:#eef1ef;font-weight:600;font-size:14px;color:var(--mut)}
+.seg button.on{background:var(--ink);color:#fff}
+
+/* ---------- Zones ---------- */
+#mapWrap{position:relative;height:calc(100dvh - var(--hdr) - var(--seg) - var(--safe-t))}
+#map{position:absolute;inset:0}
+#listWrap{padding:12px 12px calc(24px + var(--safe-b))}
+body[data-tab="list"] #mapWrap{display:none}
+body[data-tab="map"] #listWrap{display:none}
+@media(min-width:960px){
+  .seg{display:none}
+  main{display:grid;grid-template-columns:480px 1fr;height:calc(100dvh - var(--hdr) - var(--safe-t))}
+  body[data-tab] #mapWrap,body[data-tab] #listWrap{display:block}
+  #listWrap{overflow:auto;height:100%;border-right:1px solid var(--line)}
+  #mapWrap{height:100%;order:2}
+}
+.sum{font-size:13px;color:var(--mut);margin:0 2px 10px}
+.sum b{color:var(--c-new)}
+
+/* ---------- Fiches ---------- */
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden;scroll-margin:120px;transition:box-shadow .2s}
 .card.hl{box-shadow:0 0 0 3px var(--acc)}
-.card.dim{opacity:.5}
-.ph{position:relative;background:#e9edeb center/cover no-repeat;min-height:130px;cursor:pointer}
-.ph .age{position:absolute;left:6px;top:6px;color:#fff;font-size:11px;font-weight:700;padding:2px 7px;border-radius:999px}
-.bd{padding:10px 11px;min-width:0}
-.pr{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
-.pr b{font-size:19px}
-.pr span{color:var(--mut);font-size:12px}
-.meta{font-size:13px;margin-top:2px}
-.loc{font-size:13px;color:var(--mut);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.date{font-size:12.5px;margin-top:3px}
-.tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
-.tag{font-size:11px;border-radius:6px;padding:2px 6px;background:#eef2f0;color:#334155}
-.tag.w{background:#fff4e5;color:var(--warn)}
-.tag.g{background:#e8f7ee;color:#15803d}
-.tag.b{background:#e8f0fe;color:#1d4ed8}
-.acts{grid-column:1/-1;display:flex;gap:6px;padding:0 10px 10px;flex-wrap:wrap}
-.btn{border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 10px;font-size:13px;cursor:pointer;text-decoration:none;color:var(--ink);display:inline-flex;align-items:center;gap:5px}
-.btn.p{background:var(--acc);border-color:var(--acc);color:#fff;font-weight:600;flex:1;justify-content:center;min-width:170px}
-.btn.p.done{background:#e8f7ee;border-color:#bfe5cc;color:#15803d}
-.btn.ic{padding:8px 10px}
-.btn.on{background:#fff7d6;border-color:#f3d36b}
-.lbl{white-space:nowrap;font-size:11px;font-weight:700;color:#fff;padding:3px 7px;border-radius:999px;box-shadow:0 1px 4px rgba(0,0,0,.35);border:1.5px solid #fff;transform:translate(-50%,-50%);display:inline-block;cursor:pointer}
-.lbl.fav{outline:2px solid #facc15}
+.top{display:grid;grid-template-columns:108px 1fr;gap:12px;padding:12px 12px 10px}
+.ph{width:108px;height:108px;border-radius:10px;background:#e8ecea center/cover no-repeat;display:block}
+.info{min-width:0;display:grid;gap:2px;align-content:start}
+.l1{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+.l1 b{font-size:18px;white-space:nowrap}
+.l1 span{font-size:12px;color:var(--mut);white-space:nowrap}
+.l2{font-size:14px}
+.l3{font-size:13px;color:var(--mut);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.l4{font-size:13px;display:flex;align-items:center;gap:6px;margin-top:2px}
+.dot{width:8px;height:8px;border-radius:50%;flex:none}
+.tags{display:flex;flex-wrap:wrap;gap:4px;padding:0 12px 10px}
+.tag{font-size:11.5px;line-height:1;border-radius:6px;padding:5px 7px;background:#eff2f0;color:#3c4743}
+.tag.w{background:var(--warn-soft);color:var(--warn)}
+.tag.g{background:#e7f6ec;color:#15803d}
+.tag.b{background:#e8effd;color:#1d4ed8}
+.acts{display:flex;gap:8px;padding:10px 12px 12px;border-top:1px solid var(--line)}
+.btn{height:40px;border:1px solid var(--line);background:#fff;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;gap:6px;font-size:14px;text-decoration:none;flex:none}
+.btn.sq{width:40px;padding:0;font-size:16px}
+.btn.main{flex:1;min-width:0;padding:0 12px;background:var(--acc);border-color:var(--acc);color:#fff;font-weight:600}
+.btn.main span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.btn.main.done{background:var(--acc-soft);border-color:var(--acc-soft);color:var(--acc)}
+.btn.on{background:#fff7d6;border-color:#f0d26a}
+.empty{padding:40px 16px;text-align:center;color:var(--mut)}
+
+/* ---------- Carte ---------- */
 .leaflet-div-icon{background:none;border:0}
-.leaflet-popup-content{margin:10px 12px;font-size:13px}
-.empty{padding:30px 10px;text-align:center;color:var(--mut)}
-.legend{background:#fff;padding:6px 8px;border-radius:10px;font-size:11px;box-shadow:0 1px 4px rgba(0,0,0,.2);line-height:1.6}
-.legend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:4px;vertical-align:middle}
-dialog{border:0;border-radius:18px;padding:0;width:min(560px,94vw);max-height:90vh}
-dialog::backdrop{background:rgba(0,0,0,.4)}
-.dlg{padding:16px;display:grid;gap:10px}
-.dlg h2{margin:0;font-size:18px}
-.dlg label{font-size:12px;color:var(--mut);display:grid;gap:3px}
-.dlg input,.dlg textarea,.dlg select{border:1px solid var(--line);border-radius:10px;padding:9px 10px;font-size:16px;width:100%}
-.dlg textarea{min-height:190px;font-size:14px}
-.row{display:flex;gap:8px}
-.row>*{flex:1}
-.hint{font-size:12px;color:var(--mut)}
-#toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom));transform:translate(-50%,120px);background:#17201d;color:#fff;padding:11px 16px;border-radius:12px;font-size:14px;z-index:3000;transition:transform .3s;max-width:92vw;text-align:center}
+.pin{position:relative;width:0;height:0}
+.pin i{position:absolute;left:-7px;top:-7px;width:14px;height:14px;border-radius:50%;background:var(--c);border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4)}
+.pin.fav i{border-color:#facc15;width:16px;height:16px;left:-8px;top:-8px}
+.pin span{position:absolute;left:0;bottom:10px;transform:translateX(-50%);white-space:nowrap;font-size:11.5px;font-weight:700;color:#fff;background:var(--c);padding:3px 7px;border-radius:7px;box-shadow:0 1px 3px rgba(0,0,0,.3)}
+.pin.nolab span{display:none}
+.pin.sel i{width:20px;height:20px;left:-10px;top:-10px;border-width:3px}
+.legend{background:#fff;border-radius:10px;padding:6px 9px;font-size:11.5px;line-height:1.7;box-shadow:0 1px 4px rgba(0,0,0,.18)}
+.legend i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px}
+.leaflet-control-attribution{font-size:9px}
+#peek{position:absolute;left:10px;right:10px;bottom:calc(10px + var(--safe-b));z-index:900;background:#fff;border-radius:14px;box-shadow:0 6px 24px rgba(0,0,0,.22);display:none;max-width:460px;margin:0 auto}
+#peek.show{display:block}
+#peek .top{grid-template-columns:84px 1fr;padding:10px 10px 8px}
+#peek .ph{width:84px;height:84px}
+#peek .acts{padding:8px 10px 10px}
+#peek .x{position:absolute;right:6px;top:6px;width:28px;height:28px;border:0;border-radius:50%;background:#f1f3f2;font-size:14px;z-index:2}
+#peek .l1{padding-right:30px}
+
+/* ---------- Panneaux ---------- */
+dialog{border:0;padding:0;width:min(520px,100vw);max-height:92dvh;border-radius:18px;background:#fff}
+dialog::backdrop{background:rgba(0,0,0,.35)}
+@media(max-width:600px){dialog{margin:auto 0 0;width:100vw;max-width:100vw;border-radius:18px 18px 0 0}}
+.sh{display:flex;align-items:center;justify-content:space-between;padding:14px 16px 6px}
+.sh h2{margin:0;font-size:18px}
+.sh button{width:32px;height:32px;border:0;border-radius:50%;background:#f1f3f2}
+.sb{padding:6px 16px 8px;display:grid;gap:16px;overflow:auto;max-height:calc(92dvh - 130px)}
+.fld>label,.fld>.lb{display:block;font-size:12px;font-weight:600;color:var(--mut);text-transform:uppercase;letter-spacing:.03em;margin-bottom:6px}
+.opts{display:flex;flex-wrap:wrap;gap:6px}
+.opt{height:36px;padding:0 13px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:14px}
+.opt.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.sel,.inp,textarea{width:100%;height:42px;border:1px solid var(--line);border-radius:10px;padding:0 12px;font-size:16px;background:#fff}
+textarea{height:200px;padding:10px 12px;font-size:14px;line-height:1.45}
+.sw{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:6px 0;font-size:15px}
+.sw small{display:block;color:var(--mut);font-size:12px}
+.sw input{appearance:none;-webkit-appearance:none;width:46px;height:28px;border-radius:999px;background:#d9dedb;position:relative;flex:none;transition:background .2s;margin:0}
+.sw input::after{content:"";position:absolute;left:3px;top:3px;width:22px;height:22px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.3);transition:left .2s}
+.sw input:checked{background:var(--acc)}
+.sw input:checked::after{left:21px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sf{display:flex;gap:10px;padding:10px 16px calc(14px + var(--safe-b));border-top:1px solid var(--line)}
+.sf .btn{flex:1}
+.hint{font-size:12.5px;color:var(--mut);margin:0}
+
+#toast{position:fixed;left:50%;bottom:calc(20px + var(--safe-b));transform:translate(-50%,140px);background:var(--ink);color:#fff;padding:11px 16px;border-radius:12px;font-size:14px;z-index:3000;transition:transform .3s;width:max-content;max-width:90vw;text-align:center}
 #toast.show{transform:translate(-50%,0)}
-#ptr{position:fixed;top:0;left:50%;transform:translate(-50%,-60px);z-index:2500;background:#fff;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.2);width:40px;height:40px;display:grid;place-items:center;font-size:20px;transition:transform .15s}
-#ptr.spin{animation:sp 0.8s linear infinite}
+#ptr{position:fixed;top:calc(var(--safe-t) + 4px);left:50%;transform:translate(-50%,-70px);z-index:2500;background:#fff;border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,.2);width:38px;height:38px;display:grid;place-items:center;font-size:18px}
+#ptr.spin{animation:sp .8s linear infinite}
 @keyframes sp{to{rotate:360deg}}
 </style>
 </head>
-<body>
+<body data-tab="map">
 <div id="ptr">↻</div>
 <header>
-  <div class="top">
+  <div class="bar">
     <img src="assets/icon.svg" alt="">
-    <div><h1>Appart côté Bois</h1><small id="upd">Chargement…</small></div>
-    <div class="sp"></div>
-    <button class="ib" id="who" title="Qui envoie les messages ?">👤</button>
-    <button class="ib" id="cfg" title="Mon profil et mon message">⚙️</button>
+    <div class="ttl"><b>Appart côté Bois</b><small id="sub">Chargement…</small></div>
+    <button class="hbtn" id="bFilters">Filtres <span class="badge" id="fCount" hidden></span></button>
+    <button class="hbtn icon" id="bCfg" aria-label="Mon profil">👤</button>
   </div>
-  <div class="filters" id="filters">
-    <label class="chip on">≤ <select id="fBudget"></select> €</label>
-    <label class="chip on"><select id="fRooms"><option value="3">3 pièces et +</option><option value="4">4 pièces et +</option><option value="5">5 pièces et +</option></select></label>
-    <label class="chip on"><select id="fSurf"><option value="55">≥ 55 m²</option><option value="60">≥ 60 m²</option><option value="65">≥ 65 m²</option><option value="70">≥ 70 m²</option><option value="80">≥ 80 m²</option></select></label>
-    <button class="chip on" id="fSector" title="12e côté bois, Saint-Mandé, Vincennes côté château, Charenton">🌳 Secteur cible</button>
-    <button class="chip" data-zip="75012">Paris 12e</button>
-    <button class="chip" data-zip="94160">Saint-Mandé</button>
-    <button class="chip" data-zip="94300">Vincennes</button>
-    <button class="chip" data-zip="94220">Charenton</button>
-    <button class="chip" id="fNew">🆕 &lt; 7 jours</button>
-    <button class="chip" id="fFav">⭐ Favoris</button>
-    <button class="chip" id="fHidden">Masquées</button>
-    <label class="chip">Tri <select id="fSort"><option value="date">plus récentes</option><option value="price">prix ↑</option><option value="m2">€/m² ↑</option><option value="surface">surface ↓</option></select></label>
-  </div>
+  <nav class="seg">
+    <button data-tab="map" class="on">🗺️ Carte</button>
+    <button data-tab="list">☰ Liste <span id="tabCount"></span></button>
+  </nav>
 </header>
+
 <main>
-  <div id="map"></div>
-  <section id="list"></section>
+  <section id="listWrap"><div class="sum" id="sum"></div><div id="list"></div></section>
+  <section id="mapWrap"><div id="map"></div><div id="peek"></div></section>
 </main>
 
-<dialog id="dlg">
-  <form method="dialog" class="dlg" id="cfgForm">
-    <h2>✉️ Mon message de candidature</h2>
-    <div class="hint">Enregistré uniquement sur cet appareil (rien n'est publié). Chacun a son profil : Thomas et Marie.</div>
-    <label>Profil
-      <select id="pSel"><option value="thomas">Thomas</option><option value="marie">Marie</option></select>
-    </label>
-    <div class="row">
-      <label>Nom affiché<input id="pName"></label>
-      <label>Téléphone<input id="pPhone" inputmode="tel" placeholder="06…"></label>
+<!-- Filtres -->
+<dialog id="dF">
+  <div class="sh"><h2>Filtres</h2><button data-close aria-label="Fermer">✕</button></div>
+  <div class="sb">
+    <div class="fld"><div class="lb">Loyer max (charges comprises)</div><select class="sel" id="fBudget"></select></div>
+    <div class="fld"><div class="lb">Pièces</div><div class="opts" id="fRooms"></div></div>
+    <div class="fld"><div class="lb">Surface minimum</div><div class="opts" id="fSurf"></div></div>
+    <div class="fld"><div class="lb">Communes</div><div class="opts" id="fZip"></div></div>
+    <div class="fld">
+      <div class="sw"><div>Secteur cible<small>12e côté bois · Vincennes côté château</small></div><input type="checkbox" id="fSector"></div>
+      <div class="sw"><div>Publiées depuis moins de 7 jours</div><input type="checkbox" id="fNew"></div>
+      <div class="sw"><div>Favoris uniquement</div><input type="checkbox" id="fFav"></div>
+      <div class="sw"><div>Afficher les annonces masquées</div><input type="checkbox" id="fHidden"></div>
     </div>
-    <label>Statut professionnel<input id="pStatus"></label>
-    <label>Situation / garanties<input id="pSituation"></label>
-    <div class="row">
-      <label>E-mail<input id="pEmail" inputmode="email"></label>
-      <label>Lien DossierFacile (optionnel)<input id="pDossier" placeholder="https://locataire.dossierfacile.logement.gouv.fr/…"></label>
+    <div class="fld"><div class="lb">Trier par</div><div class="opts" id="fSort"></div></div>
+  </div>
+  <div class="sf"><button class="btn" id="fReset">Réinitialiser</button><button class="btn main" data-close id="fGo">Voir les annonces</button></div>
+</dialog>
+
+<!-- Profil -->
+<dialog id="dP">
+  <form method="dialog" id="pForm">
+    <div class="sh"><h2>Mon message de candidature</h2><button type="button" data-close aria-label="Fermer">✕</button></div>
+    <div class="sb">
+      <p class="hint">Enregistré uniquement sur ce téléphone, jamais publié.</p>
+      <div class="fld"><div class="lb">Les messages partent au nom de</div><div class="opts" id="pWho"></div></div>
+      <div class="two">
+        <div class="fld"><label for="pName">Nom</label><input class="inp" id="pName"></div>
+        <div class="fld"><label for="pPhone">Téléphone</label><input class="inp" id="pPhone" inputmode="tel" placeholder="06 …"></div>
+      </div>
+      <div class="fld"><label for="pStatus">Statut professionnel</label><input class="inp" id="pStatus"></div>
+      <div class="fld"><label for="pSituation">Situation et garanties</label><input class="inp" id="pSituation"></div>
+      <div class="fld"><label for="pEmail">E-mail</label><input class="inp" id="pEmail" inputmode="email"></div>
+      <div class="fld"><label for="pDossier">Lien DossierFacile (facultatif)</label><input class="inp" id="pDossier" placeholder="https://…"></div>
+      <div class="fld"><label for="pMsg">Message</label><textarea id="pMsg"></textarea>
+        <p class="hint">Remplis automatiquement : {prix} {pieces} {surface} {ville} {quartier} {source} {nom} {statut} {situation} {telephone} {email} {dossier}</p></div>
     </div>
-    <label>Message (variables : {prix} {pieces} {surface} {ville} {quartier} {source} {nom} {statut} {situation} {telephone} {email} {dossier})
-      <textarea id="pMsg"></textarea>
-    </label>
-    <div class="row">
-      <button class="btn" value="cancel" type="button" id="pReset">Message par défaut</button>
-      <button class="btn p" value="ok" id="pSave">Enregistrer</button>
-    </div>
+    <div class="sf"><button type="button" class="btn" id="pReset">Message par défaut</button><button class="btn main" id="pSave">Enregistrer</button></div>
   </form>
 </dialog>
 <div id="toast"></div>
@@ -146,19 +206,20 @@ const $ = s => document.querySelector(s);
 const LS = k => JSON.parse(localStorage.getItem('appart_' + k) || 'null');
 const SS = (k, v) => localStorage.setItem('appart_' + k, JSON.stringify(v));
 const DAY = 864e5;
+const DEF = { budget: 2600, rooms: 3, surf: 60, sector: true, zips: [], onlyNew: false, onlyFav: false, showHidden: false, sort: 'date' };
 let DATA = window.APPART_DATA || { listings: [] };
-let state = Object.assign({ budget: 2600, rooms: 3, surf: 60, sector: true, zips: [], onlyNew: false, onlyFav: false, showHidden: false, sort: 'date' }, LS('filters') || {});
+let state = Object.assign({}, DEF, LS('filters') || {});
 let favs = new Set(LS('favs') || []), hidden = new Set(LS('hidden') || []), contacted = LS('contacted') || {};
-let seenBefore = LS('seen') || null;
+const seenBefore = LS('seen');
 
-/* ---------------- Profils & message ---------------- */
+/* ---------- Profils ---------- */
 const DEFAULT_MSG = `Bonjour,
 
 Je suis très intéressé(e) par votre appartement de {pieces} pièces ({surface} m², {prix} € CC) à {ville}{quartier}, vu sur {source}.
 
 {nom}, {statut}. {situation}
 
-Dossier complet disponible immédiatement{dossier}. Nous sommes disponibles rapidement pour une visite, y compris en soirée.
+Dossier complet disponible immédiatement{dossier}. Nous pouvons visiter rapidement, y compris en soirée.
 
 Bien cordialement,
 {nom}
@@ -170,210 +231,237 @@ const DEFAULT_PROFILES = {
 let profiles = Object.assign({}, DEFAULT_PROFILES, LS('profiles') || {});
 let who = LS('who') || 'thomas';
 const P = () => profiles[who];
-function renderWho() { $('#who').textContent = who === 'marie' ? '👩 Marie' : '👨 Thomas'; }
 
 function fillMsg(it) {
   const p = P();
-  return p.msg
-    .replaceAll('{prix}', fmt(it.price)).replaceAll('{pieces}', it.rooms ?? '?').replaceAll('{surface}', it.surface ? Math.round(it.surface) : '?')
-    .replaceAll('{ville}', it.city || '').replaceAll('{quartier}', it.district ? ` (${it.district})` : '')
-    .replaceAll('{source}', it.source.split(' ')[0]).replaceAll('{nom}', p.name).replaceAll('{statut}', p.status)
-    .replaceAll('{situation}', p.situation).replaceAll('{telephone}', p.phone || '').replaceAll('{email}', p.email || '')
-    .replaceAll('{dossier}', p.dossier ? ` (DossierFacile : ${p.dossier})` : '')
-    .replace(/[ \t]+\n/g, '\n').trim();
+  const r = { prix: fmt(it.price), pieces: it.rooms ?? '?', surface: it.surface ? Math.round(it.surface) : '?', ville: it.city || '', quartier: it.district ? ` (${it.district})` : '', source: it.source.split(' ')[0], nom: p.name, statut: p.status, situation: p.situation, telephone: p.phone || '', email: p.email || '', dossier: p.dossier ? ` (DossierFacile : ${p.dossier})` : '' };
+  return p.msg.replace(/\{(\w+)\}/g, (m, k) => k in r ? r[k] : m).replace(/[ \t]+\n/g, '\n').trim();
 }
 const isMobile = n => /^0[67]\d{8}$/.test(n || '');
 const isIOS = /iP(hone|ad|od)/.test(navigator.userAgent);
 
 async function apply(id) {
-  const it = DATA.listings.find(x => x.id === id); if (!it) return;
-  if (!P().phone) { toast('Ajoute d’abord ton téléphone dans ⚙️'); openCfg(); return; }
+  const it = byId(id); if (!it) return;
+  if (!P().phone) { toast('Ajoute d’abord ton téléphone (bouton 👤)'); openProfile(); return; }
   const msg = fillMsg(it);
   contacted[id] = { at: Date.now(), by: who }; SS('contacted', contacted); render();
   if (isMobile(it.phone)) {
     location.href = `sms:${it.phone}${isIOS ? '&' : '?'}body=${encodeURIComponent(msg)}`;
-    toast('📱 SMS prêt : il ne reste qu’à appuyer sur Envoyer');
-    return;
+    toast('SMS prêt : appuie sur Envoyer'); return;
   }
   try { await navigator.clipboard.writeText(msg); } catch (e) {}
   window.open(it.url, '_blank', 'noopener');
-  toast('📋 Message copié : colle-le dans le formulaire de contact de l’annonce');
+  toast('Message copié : colle-le dans le formulaire de l’annonce');
 }
 
-/* ---------------- Utilitaires ---------------- */
+/* ---------- Utilitaires ---------- */
+const byId = id => DATA.listings.find(x => x.id === id);
 const fmt = n => n == null ? '?' : Math.round(n).toLocaleString('fr-FR');
 const pubDate = it => new Date(it.published || it.firstSeen);
 const ageDays = it => Math.max(0, Math.floor((Date.now() - pubDate(it)) / DAY));
-const ageColor = d => d <= 2 ? 'var(--new)' : d <= 14 ? 'var(--recent)' : d <= 60 ? 'var(--old)' : 'var(--stale)';
+const ageColor = d => d <= 2 ? 'var(--c-new)' : d <= 14 ? 'var(--c-recent)' : d <= 60 ? 'var(--c-old)' : 'var(--c-stale)';
 const dShort = d => d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short' }).replace('.', '');
-const dLong = d => d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: d.getFullYear() !== new Date().getFullYear() ? 'numeric' : undefined });
-const ago = d => d === 0 ? 'aujourd’hui' : d === 1 ? 'hier' : d < 31 ? `il y a ${d} j` : d < 365 ? `il y a ${Math.round(d / 30)} mois` : `il y a ${(d / 365).toFixed(1).replace('.', ',')} an(s)`;
-const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-let tt; function toast(t) { const e = $('#toast'); e.textContent = t; e.classList.add('show'); clearTimeout(tt); tt = setTimeout(() => e.classList.remove('show'), 3200); }
+const ago = d => d === 0 ? 'aujourd’hui' : d === 1 ? 'hier' : d < 31 ? `il y a ${d} j` : d < 365 ? `il y a ${Math.round(d / 30)} mois` : `il y a ${Math.round(d / 365)} an${d >= 730 ? 's' : ''}`;
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const num1 = n => String(Math.round(n * 10) / 10).replace('.', ',');
+let tt; function toast(t) { const e = $('#toast'); e.textContent = t; e.classList.add('show'); clearTimeout(tt); tt = setTimeout(() => e.classList.remove('show'), 3000); }
 
 function flags(it) {
-  const f = [], d = ageDays(it), m2 = it.pricePerM2;
-  const isNewForMe = seenBefore && new Date(it.firstSeen) > new Date(seenBefore);
-  if (isNewForMe) f.push(['g', '🆕 nouvelle depuis ta dernière visite']);
-  if (d > 60) f.push(['w', `⏳ en ligne depuis ${ago(d).replace('il y a ', '')} : demander si toujours dispo`]);
-  if (it.privateOwner) f.push(['b', '🏠 particulier, sans frais d’agence']);
-  if (it.priceDrop) f.push(['g', `↘ baisse de ${fmt(it.priceDrop)} €`]);
-  if (m2 && m2 < 22) f.push(['w', `⚠️ ${m2} €/m² : très bas, vérifier (arnaque ?)`]);
-  if (it.alsoOn?.some(a => a.source.startsWith('PAP')) && !it.privateOwner) f.push(['w', '⚠️ aussi publié « particulier » sur PAP']);
-  if (it.approxPosition) f.push(['', '📍 position approximative']);
-  if (it.inSector === false) f.push(['', 'hors secteur cible']);
-  if (it.exclusive) f.push(['', 'exclusivité agence']);
-  if (it.energy && 'FG'.includes(it.energy)) f.push(['w', `DPE ${it.energy} : passoire`]);
-  else if (it.energy) f.push(['', `DPE ${it.energy}`]);
-  if (it.furnished) f.push(['', 'meublé']);
-  return f;
+  const f = [], d = ageDays(it);
+  if (seenBefore && new Date(it.firstSeen) > new Date(seenBefore)) f.push(['g', 'Nouvelle']);
+  if (it.privateOwner) f.push(['b', 'Particulier · sans frais']);
+  if (it.priceDrop) f.push(['g', `Baisse de ${fmt(it.priceDrop)} €`]);
+  if (d > 60) f.push(['w', 'En ligne depuis longtemps']);
+  if (it.pricePerM2 && it.pricePerM2 < 22) f.push(['w', 'Prix très bas : prudence']);
+  if (it.alsoOn?.some(a => a.source.startsWith('PAP')) && !it.privateOwner) f.push(['w', 'Aussi « particulier » sur PAP']);
+  if (it.energy && 'FG'.includes(it.energy)) f.push(['w', `DPE ${it.energy}`]);
+  if (it.furnished) f.push(['', 'Meublé']);
+  if (it.inSector === false) f.push(['', 'Hors secteur']);
+  return f.slice(0, 3);
 }
 
-/* ---------------- Filtres ---------------- */
+/* ---------- Filtres ---------- */
 function filtered() {
-  let l = DATA.listings.filter(it =>
+  const l = DATA.listings.filter(it =>
     (!it.price || it.price <= state.budget) && (!it.rooms || it.rooms >= state.rooms) && (!it.surface || it.surface >= state.surf) &&
     (!state.sector || it.inSector !== false) && (!state.zips.length || state.zips.includes(it.zip)) &&
     (!state.onlyNew || ageDays(it) <= 7) && (!state.onlyFav || favs.has(it.id)) &&
-    (state.showHidden ? hidden.has(it.id) : !hidden.has(it.id)));
+    (state.showHidden || !hidden.has(it.id)));
   const s = { date: (a, b) => pubDate(b) - pubDate(a), price: (a, b) => a.price - b.price, m2: (a, b) => (a.pricePerM2 || 99) - (b.pricePerM2 || 99), surface: (a, b) => b.surface - a.surface }[state.sort];
   return l.sort(s);
 }
-function initFilters() {
-  const b = $('#fBudget');
-  for (let v = 1600; v <= 3200; v += 100) b.add(new Option(fmt(v), v));
-  b.value = state.budget; $('#fRooms').value = state.rooms; $('#fSurf').value = state.surf; $('#fSort').value = state.sort;
-  b.onchange = e => upd('budget', +e.target.value); $('#fRooms').onchange = e => upd('rooms', +e.target.value);
-  $('#fSurf').onchange = e => upd('surf', +e.target.value); $('#fSort').onchange = e => upd('sort', e.target.value);
-  $('#fSector').onclick = () => upd('sector', !state.sector); $('#fNew').onclick = () => upd('onlyNew', !state.onlyNew);
-  $('#fFav').onclick = () => upd('onlyFav', !state.onlyFav); $('#fHidden').onclick = () => upd('showHidden', !state.showHidden);
-  document.querySelectorAll('[data-zip]').forEach(c => c.onclick = () => {
-    const z = c.dataset.zip; state.zips = state.zips.includes(z) ? state.zips.filter(x => x !== z) : [...state.zips, z]; upd();
-  });
+function opts(el, items, isOn, onPick) {
+  el.innerHTML = items.map(([v, t]) => `<button type="button" class="opt${isOn(v) ? ' on' : ''}" data-v="${v}">${t}</button>`).join('');
+  el.onclick = e => { const b = e.target.closest('.opt'); if (b) { onPick(b.dataset.v); } };
 }
-function upd(k, v) { if (k) state[k] = v; SS('filters', state); render(); }
-function syncChips() {
-  $('#fSector').classList.toggle('on', state.sector); $('#fNew').classList.toggle('on', state.onlyNew);
-  $('#fFav').classList.toggle('on', state.onlyFav); $('#fHidden').classList.toggle('on', state.showHidden);
-  document.querySelectorAll('[data-zip]').forEach(c => c.classList.toggle('on', state.zips.includes(c.dataset.zip)));
+function buildFilters() {
+  const b = $('#fBudget'); b.innerHTML = '';
+  for (let v = 1600; v <= 3200; v += 100) b.add(new Option(`${fmt(v)} €`, v));
+  b.value = state.budget; b.onchange = () => set('budget', +b.value);
+  opts($('#fRooms'), [[3, '3 et +'], [4, '4 et +'], [5, '5 et +']], v => +v === state.rooms, v => set('rooms', +v));
+  opts($('#fSurf'), [[55, '55 m²'], [60, '60 m²'], [65, '65 m²'], [70, '70 m²'], [80, '80 m²']], v => +v === state.surf, v => set('surf', +v));
+  opts($('#fZip'), [['', 'Toutes'], ['75012', 'Paris 12e'], ['94160', 'Saint-Mandé'], ['94300', 'Vincennes'], ['94220', 'Charenton']],
+    v => v ? state.zips.includes(v) : !state.zips.length,
+    v => set('zips', !v ? [] : state.zips.includes(v) ? state.zips.filter(x => x !== v) : [...state.zips, v]));
+  opts($('#fSort'), [['date', 'Plus récentes'], ['price', 'Prix'], ['m2', '€/m²'], ['surface', 'Surface']], v => v === state.sort, v => set('sort', v));
+  [['fSector', 'sector'], ['fNew', 'onlyNew'], ['fFav', 'onlyFav'], ['fHidden', 'showHidden']].forEach(([id, k]) => { const c = $('#' + id); c.checked = state[k]; c.onchange = () => set(k, c.checked); });
 }
+function set(k, v) { state[k] = v; SS('filters', state); buildFilters(); render(); }
+function activeFilters() {
+  let n = 0;
+  if (state.budget !== DEF.budget) n++; if (state.rooms !== DEF.rooms) n++; if (state.surf !== DEF.surf) n++;
+  if (state.zips.length) n++; if (state.onlyNew) n++; if (state.onlyFav) n++; if (!state.sector) n++; if (state.showHidden) n++;
+  return n;
+}
+$('#fReset').onclick = () => { state = Object.assign({}, DEF); SS('filters', state); buildFilters(); render(); };
 
-/* ---------------- Carte ---------------- */
-const map = L.map('map', { zoomControl: false, tap: true }).setView([48.838, 2.418], 14);
-L.control.zoom({ position: 'bottomright' }).addTo(map);
+/* ---------- Carte ---------- */
+const map = L.map('map', { zoomControl: false }).setView([48.838, 2.418], 14);
+L.control.zoom({ position: 'topright' }).addTo(map);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '© OpenStreetMap' }).addTo(map);
-const layer = L.layerGroup().addTo(map);
-const legend = L.control({ position: 'topright' });
-legend.onAdd = () => { const d = L.DomUtil.create('div', 'legend'); d.innerHTML = '<i style="background:var(--new)"></i>≤ 2 j<br><i style="background:var(--recent)"></i>≤ 14 j<br><i style="background:var(--old)"></i>≤ 2 mois<br><i style="background:var(--stale)"></i>plus vieux'; return d; };
+const legend = L.control({ position: 'topleft' });
+legend.onAdd = () => { const d = L.DomUtil.create('div', 'legend'); d.innerHTML = '<i style="background:var(--c-new)"></i>2 derniers jours<br><i style="background:var(--c-recent)"></i>moins de 2 semaines<br><i style="background:var(--c-old)"></i>moins de 2 mois<br><i style="background:var(--c-stale)"></i>plus ancien'; return d; };
 legend.addTo(map);
-L.circleMarker([48.8428, 2.4358], { radius: 5, color: '#7c3aed', fillOpacity: .9 }).bindTooltip('Château de Vincennes').addTo(map);
-let fitted = false;
+const layer = L.layerGroup().addTo(map);
+let markers = [], fitted = false, selId = null;
 
 function drawMap(list) {
-  layer.clearLayers();
-  const pts = [];
-  list.forEach(it => {
+  layer.clearLayers(); markers = [];
+  list.forEach((it, i) => {
     if (it.lat == null) return;
     const d = ageDays(it);
-    const html = `<span class="lbl${favs.has(it.id) ? ' fav' : ''}" style="background:${ageColor(d)}">${dShort(pubDate(it))} · ${fmt(it.price)} €</span>`;
-    const m = L.marker([it.lat, it.lng], { icon: L.divIcon({ html, className: '', iconSize: null }), riseOnHover: true, zIndexOffset: -d });
-    m.bindPopup(`<b>${fmt(it.price)} €</b> · ${it.rooms} p · ${Math.round(it.surface)} m²<br>${esc(it.city)}${it.district ? ' · ' + esc(it.district) : ''}<br>Publiée le ${dLong(pubDate(it))} (${ago(d)})<br><a href="#" onclick="focusCard('${it.id}');return false">Voir la fiche ↓</a>`);
-    m.on('click', () => focusCard(it.id, false));
-    m.addTo(layer); pts.push([it.lat, it.lng]);
+    const icon = L.divIcon({ className: '', iconSize: [0, 0], html: `<div class="pin${favs.has(it.id) ? ' fav' : ''}${it.id === selId ? ' sel' : ''}" style="--c:${ageColor(d)}"><i></i><span>${dShort(pubDate(it))} · ${fmt(it.price)} €</span></div>` });
+    const m = L.marker([it.lat, it.lng], { icon, zIndexOffset: 1000 - Math.min(d, 999) });
+    m.on('click', () => showPeek(it.id));
+    m.addTo(layer); markers.push({ m, it, prio: (favs.has(it.id) ? 1e6 : 0) - d });
   });
-  if (!fitted && pts.length) { map.fitBounds(pts, { padding: [30, 30], maxZoom: 15 }); fitted = true; }
+  if (!fitted && markers.length && $('#map').offsetHeight) { map.fitBounds(markers.map(x => x.m.getLatLng()), { padding: [40, 40], maxZoom: 15 }); fitted = true; }
+  declutter();
 }
-function focusCard(id, pan = true) {
-  const c = document.getElementById('c-' + id); if (!c) return;
-  c.scrollIntoView({ behavior: 'smooth', block: 'center' }); c.classList.add('hl'); setTimeout(() => c.classList.remove('hl'), 1800);
-  const it = DATA.listings.find(x => x.id === id);
-  if (pan && it?.lat) map.setView([it.lat, it.lng], 16);
+// Masque les étiquettes qui se chevauchent : priorité aux favoris puis aux plus récentes.
+function declutter() {
+  const placed = [];
+  [...markers].sort((a, b) => b.prio - a.prio).forEach(({ m }) => {
+    const el = m.getElement()?.querySelector('.pin'); if (!el) return;
+    el.classList.remove('nolab');
+    const r = el.querySelector('span').getBoundingClientRect();
+    const box = { l: r.left - 3, r: r.right + 3, t: r.top - 3, b: r.bottom + 3 };
+    if (placed.some(p => !(box.r < p.l || box.l > p.r || box.b < p.t || box.t > p.b))) el.classList.add('nolab');
+    else placed.push(box);
+  });
 }
-window.focusCard = focusCard;
+map.on('zoomend moveend', declutter);
+map.on('click', () => hidePeek());
 
-/* ---------------- Liste ---------------- */
-function card(it) {
-  const d = ageDays(it), pd = pubDate(it), c = contacted[it.id];
-  const call = it.phone ? `<a class="btn ic" href="tel:${it.phone}" title="Appeler">📞</a>` : '';
-  const others = (it.alsoOn || []).map(a => `<a class="btn ic" href="${a.url}" target="_blank" rel="noopener">${esc(a.source.split(' ')[0])}</a>`).join('');
-  const sendLabel = c ? `✓ Contacté ${dShort(new Date(c.at))}${c.by === 'marie' ? ' (Marie)' : c.by === 'thomas' ? ' (Thomas)' : ''} · renvoyer` : (isMobile(it.phone) ? '✉️ Candidater par SMS' : '✉️ Candidater (copier + ouvrir)');
-  return `<article class="card${hidden.has(it.id) && !state.showHidden ? ' dim' : ''}" id="c-${it.id}">
-    <div class="ph" style="background-image:url('${esc(it.photo || '')}')" onclick="window.open('${it.url}','_blank','noopener')"><span class="age" style="background:${ageColor(d)}">${ago(d)}</span></div>
-    <div class="bd">
-      <div class="pr"><b>${fmt(it.price)} €</b><span>${it.chargesIncluded ? 'CC' : ''}${it.pricePerM2 ? ' · ' + String(it.pricePerM2).replace('.', ',') + ' €/m²' : ''}</span></div>
-      <div class="meta">${it.rooms ?? '?'} pièces${it.bedrooms ? ` · ${it.bedrooms} ch.` : ''} · ${it.surface ? String(Math.round(it.surface * 10) / 10).replace('.', ',') : '?'} m²${it.floor ? ' · ét. ' + esc(String(it.floor).replace('Étage ', '')) : ''}</div>
-      <div class="loc" onclick="focusCard('${it.id}')">📍 ${esc(it.city)}${it.district ? ' · ' + esc(it.district) : ''}</div>
-      <div class="date">🗓️ Publiée le <b>${dLong(pd)}</b> <span style="color:var(--mut)">(${ago(d)})</span></div>
-      <div class="loc">${esc(it.source)}${it.agency && !it.privateOwner ? ' · ' + esc(it.agency) : ''}</div>
-      <div class="tags">${flags(it).map(([c, t]) => `<span class="tag ${c}">${esc(t)}</span>`).join('')}</div>
-    </div>
-    <div class="acts">
-      <button class="btn p${c ? ' done' : ''}" onclick="apply('${it.id}')">${sendLabel}</button>
-      ${call}
-      <a class="btn ic" href="${it.url}" target="_blank" rel="noopener" title="Voir l’annonce">↗</a>${others}
-      <button class="btn ic${favs.has(it.id) ? ' on' : ''}" onclick="toggle(favs,'favs','${it.id}')" title="Favori">⭐</button>
-      <button class="btn ic" onclick="toggle(hidden,'hidden','${it.id}')" title="${hidden.has(it.id) ? 'Réafficher' : 'Masquer'}">${hidden.has(it.id) ? '↺' : '✕'}</button>
-    </div>
-  </article>`;
+function showPeek(id) {
+  const it = byId(id); if (!it) return;
+  selId = id; drawMap(filtered());
+  const p = $('#peek');
+  p.innerHTML = `<button class="x" onclick="hidePeek()" aria-label="Fermer">✕</button>` + cardInner(it, true);
+  p.classList.add('show');
 }
-function toggle(set, key, id) { set.has(id) ? set.delete(id) : set.add(id); SS(key, [...set]); render(); }
-window.toggle = toggle; window.apply = apply;
+function hidePeek() { $('#peek').classList.remove('show'); if (selId) { selId = null; drawMap(filtered()); } }
+
+/* ---------- Fiches ---------- */
+function cardInner(it, compact) {
+  const d = ageDays(it), c = contacted[it.id];
+  const label = c ? `✓ Contacté le ${dShort(new Date(c.at))}` : isMobile(it.phone) ? '✉️ Candidater par SMS' : '✉️ Candidater';
+  const others = (it.alsoOn || []).map(a => a.source.split(' ')[0]).join(', ');
+  return `<div class="top">
+      <a class="ph" href="${esc(it.url)}" target="_blank" rel="noopener" style="background-image:url('${esc(it.photo || '')}')" aria-label="Voir les photos"></a>
+      <div class="info">
+        <div class="l1"><b>${fmt(it.price)} €</b><span>${it.pricePerM2 ? num1(it.pricePerM2) + ' €/m²' : ''}</span></div>
+        <div class="l2">${it.rooms ?? '?'} pièces · ${it.surface ? num1(it.surface) : '?'} m²${it.floor ? ' · ét. ' + esc(String(it.floor).replace('Étage ', '')) : ''}</div>
+        <div class="l3">${esc(it.city)}${it.district ? ' · ' + esc(it.district) : ''}</div>
+        <div class="l4"><span class="dot" style="background:${ageColor(d)}"></span>Publiée le ${dShort(pubDate(it))} · ${ago(d)}</div>
+        <div class="l3">${esc(it.privateOwner ? 'Particulier' : (it.agency || it.source.split(' ')[0]))}${others ? ' · aussi sur ' + esc(others) : ''}</div>
+      </div>
+    </div>
+    ${compact ? '' : (flags(it).length ? `<div class="tags">${flags(it).map(([k, t]) => `<span class="tag ${k}">${esc(t)}</span>`).join('')}</div>` : '')}
+    <div class="acts">
+      <button class="btn main${c ? ' done' : ''}" onclick="apply('${it.id}')"><span>${label}</span></button>
+      ${it.phone ? `<a class="btn sq" href="tel:${it.phone}" aria-label="Appeler">📞</a>` : ''}
+      <a class="btn sq" href="${esc(it.url)}" target="_blank" rel="noopener" aria-label="Voir l’annonce">↗</a>
+      <button class="btn sq${favs.has(it.id) ? ' on' : ''}" onclick="toggle(favs,'favs','${it.id}')" aria-label="Favori">${favs.has(it.id) ? '★' : '☆'}</button>
+      ${compact ? `<button class="btn sq" onclick="goList('${it.id}')" aria-label="Voir dans la liste">☰</button>`
+                : `<button class="btn sq" onclick="toggle(hidden,'hidden','${it.id}')" aria-label="${hidden.has(it.id) ? 'Réafficher' : 'Masquer'}">${hidden.has(it.id) ? '↺' : '✕'}</button>`}
+    </div>`;
+}
+function toggle(setObj, key, id) {
+  setObj.has(id) ? setObj.delete(id) : setObj.add(id); SS(key, [...setObj]);
+  if (key === 'hidden' && setObj.has(id)) toast('Annonce masquée (Filtres → Afficher les masquées)');
+  render(); if ($('#peek').classList.contains('show') && selId) showPeek(selId);
+}
+function goList(id) {
+  hidePeek(); setTab('list');
+  requestAnimationFrame(() => { const c = document.getElementById('c-' + id); if (c) { c.scrollIntoView({ behavior: 'smooth', block: 'center' }); c.classList.add('hl'); setTimeout(() => c.classList.remove('hl'), 1600); } });
+}
+Object.assign(window, { apply, toggle, goList, hidePeek });
 
 function render() {
-  syncChips(); renderWho();
   const l = filtered();
-  const newCount = seenBefore ? l.filter(it => new Date(it.firstSeen) > new Date(seenBefore)).length : 0;
-  $('#list').innerHTML = `<div class="summary">${l.length} annonce${l.length > 1 ? 's' : ''}${newCount ? ` · <b style="color:var(--new)">${newCount} nouvelle${newCount > 1 ? 's' : ''}</b>` : ''} · SeLoger/Logic-Immo, Bien'ici, PAP</div>` +
-    (l.map(card).join('') || '<div class="empty">Aucune annonce avec ces filtres.<br>Essaie d’augmenter le budget ou de désactiver « Secteur cible ».</div>');
+  const nNew = seenBefore ? l.filter(it => new Date(it.firstSeen) > new Date(seenBefore)).length : 0;
+  $('#sum').innerHTML = `${l.length} annonce${l.length > 1 ? 's' : ''}${nNew ? ` · <b>${nNew} nouvelle${nNew > 1 ? 's' : ''}</b>` : ''}`;
+  $('#list').innerHTML = l.map(it => `<article class="card" id="c-${it.id}">${cardInner(it, false)}</article>`).join('') ||
+    '<div class="empty">Aucune annonce avec ces filtres.<br>Ouvre « Filtres » pour élargir la recherche.</div>';
+  $('#tabCount').textContent = `(${l.length})`;
+  const n = activeFilters(); $('#fCount').hidden = !n; $('#fCount').textContent = n;
+  $('#fGo').textContent = `Voir ${l.length} annonce${l.length > 1 ? 's' : ''}`;
+  if (DATA.updated) { const u = new Date(DATA.updated); $('#sub').textContent = `${l.length} annonces · mis à jour ${dShort(u)} ${u.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })}`; }
   drawMap(l);
-  const u = new Date(DATA.updated);
-  $('#upd').textContent = DATA.updated ? `Mise à jour ${dShort(u)} à ${u.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })} · ${DATA.count} annonces` : '';
 }
 
-/* ---------------- Réglages ---------------- */
-function loadForm(k) {
-  const p = profiles[k]; $('#pSel').value = k;
+/* ---------- Onglets & panneaux ---------- */
+function setTab(t) {
+  document.body.dataset.tab = t; SS('tab', t);
+  document.querySelectorAll('.seg button').forEach(b => b.classList.toggle('on', b.dataset.tab === t));
+  if (t === 'map') setTimeout(() => { map.invalidateSize(); if (!fitted) drawMap(filtered()); declutter(); }, 30);
+}
+document.querySelectorAll('.seg button').forEach(b => b.onclick = () => setTab(b.dataset.tab));
+document.querySelectorAll('dialog').forEach(d => {
+  d.addEventListener('click', e => { if (e.target === d || e.target.closest('[data-close]')) d.close(); });
+});
+$('#bFilters').onclick = () => { buildFilters(); render(); $('#dF').showModal(); };
+
+function loadProfile(k) {
+  const p = profiles[k];
+  opts($('#pWho'), [['thomas', 'Thomas'], ['marie', 'Marie']], v => v === k, v => { saveForm(k); loadProfile(v); });
+  $('#pWho').dataset.k = k;
   $('#pName').value = p.name; $('#pPhone').value = p.phone; $('#pStatus').value = p.status; $('#pSituation').value = p.situation;
   $('#pEmail').value = p.email; $('#pDossier').value = p.dossier; $('#pMsg').value = p.msg;
 }
-function openCfg() { loadForm(who); $('#dlg').showModal(); }
-$('#cfg').onclick = openCfg;
-$('#pSel').onchange = e => loadForm(e.target.value);
-$('#pReset').onclick = () => { $('#pMsg').value = DEFAULT_MSG; };
-$('#cfgForm').onsubmit = () => {
-  const k = $('#pSel').value;
+function saveForm(k) {
   profiles[k] = { name: $('#pName').value.trim(), phone: $('#pPhone').value.replace(/\s/g, ''), status: $('#pStatus').value.trim(), situation: $('#pSituation').value.trim(), email: $('#pEmail').value.trim(), dossier: $('#pDossier').value.trim(), msg: $('#pMsg').value };
-  who = k; SS('who', who); SS('profiles', profiles); render(); toast('Profil enregistré ✓');
-};
-$('#who').onclick = () => { who = who === 'thomas' ? 'marie' : 'thomas'; SS('who', who); render(); toast(`Les messages partiront au nom de ${profiles[who].name}`); };
+  SS('profiles', profiles);
+}
+function openProfile() { loadProfile(who); $('#dP').showModal(); }
+$('#bCfg').onclick = openProfile;
+$('#pReset').onclick = () => { $('#pMsg').value = DEFAULT_MSG; };
+$('#pForm').onsubmit = () => { const k = $('#pWho').dataset.k; saveForm(k); who = k; SS('who', who); render(); toast(`Enregistré · messages au nom de ${profiles[who].name}`); };
 
-/* ---------------- Données & pull-to-refresh ---------------- */
+/* ---------- Données & tirer pour actualiser (liste) ---------- */
 async function refresh(manual) {
-  try {
-    const r = await fetch('data/listings.json?t=' + Date.now(), { cache: 'no-store' });
-    if (r.ok) DATA = await r.json();
-    if (manual) toast(`✓ ${DATA.count} annonces, mise à jour ${dShort(new Date(DATA.updated))}`);
-  } catch (e) { if (manual) toast('Hors-ligne : données locales affichées'); }
+  try { const r = await fetch('data/listings.json?t=' + Date.now(), { cache: 'no-store' }); if (r.ok) DATA = await r.json(); if (manual) toast('Annonces à jour'); }
+  catch (e) { if (manual) toast('Hors-ligne : dernières annonces connues'); }
   render();
 }
-let y0 = null, pulling = false;
-const ptr = $('#ptr');
-function start(y, target) { if (window.scrollY <= 0 && !target.closest('#map,dialog')) { y0 = y; pulling = true; } }
-function move(y) { if (!pulling || y0 == null) return; const d = Math.min(110, y - y0); if (d > 0) ptr.style.transform = `translate(-50%,${d - 50}px) rotate(${d * 3}deg)`; }
-async function end(y) {
-  if (!pulling) return; pulling = false; const d = y - y0; y0 = null;
-  if (d > 80) { navigator.vibrate?.(15); ptr.style.transform = 'translate(-50%,20px)'; ptr.classList.add('spin'); await refresh(true); ptr.classList.remove('spin'); }
-  ptr.style.transform = 'translate(-50%,-60px)';
+let y0 = null; const ptr = $('#ptr');
+const canPull = t => document.body.dataset.tab === 'list' || matchMedia('(min-width:960px)').matches ? !t.closest('#mapWrap,dialog') && window.scrollY <= 0 && ($('#listWrap').scrollTop || 0) <= 0 : false;
+function pStart(y, t) { y0 = canPull(t) ? y : null; }
+function pMove(y) { if (y0 == null) return; const d = Math.min(110, y - y0); if (d > 0) ptr.style.transform = `translate(-50%,${d - 50}px) rotate(${d * 3}deg)`; }
+async function pEnd(y) {
+  if (y0 == null) return; const d = y - y0; y0 = null;
+  if (d > 80) { navigator.vibrate?.(15); ptr.style.transform = 'translate(-50%,16px)'; ptr.classList.add('spin'); await refresh(true); ptr.classList.remove('spin'); }
+  ptr.style.transform = 'translate(-50%,-70px)';
 }
-addEventListener('touchstart', e => start(e.touches[0].clientY, e.target), { passive: true });
-addEventListener('touchmove', e => move(e.touches[0].clientY), { passive: true });
-addEventListener('touchend', e => end(e.changedTouches[0].clientY));
-addEventListener('mousedown', e => start(e.clientY, e.target));
-addEventListener('mousemove', e => e.buttons && move(e.clientY));
-addEventListener('mouseup', e => end(e.clientY));
+addEventListener('touchstart', e => pStart(e.touches[0].clientY, e.target), { passive: true });
+addEventListener('touchmove', e => pMove(e.touches[0].clientY), { passive: true });
+addEventListener('touchend', e => pEnd(e.changedTouches[0].clientY));
+addEventListener('mousedown', e => pStart(e.clientY, e.target));
+addEventListener('mousemove', e => e.buttons && pMove(e.clientY));
+addEventListener('mouseup', e => pEnd(e.clientY));
 
-initFilters(); render(); refresh(false);
-// mémorise la visite : les annonces apparues ensuite seront marquées « nouvelles »
+setTab(LS('tab') || 'map'); render(); refresh(false);
 addEventListener('pagehide', () => SS('seen', DATA.updated || new Date().toISOString()));
 setTimeout(() => SS('seen', DATA.updated), 60000);
 if ('serviceWorker' in navigator) navigator.serviceWorker.getRegistrations().then(rs => rs.forEach(r => r.unregister()));
