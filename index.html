@@ -21,7 +21,8 @@
   --hdr:56px;--seg:48px;--safe-t:env(safe-area-inset-top);--safe-b:env(safe-area-inset-bottom)
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font:15px/1.4 -apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;touch-action:manipulation;overscroll-behavior-y:contain;overflow-x:hidden}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font:15px/1.4 -apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;touch-action:manipulation;overflow-x:hidden}
+@media (hover:none) and (pointer:coarse){html,body{overscroll-behavior-y:contain}}
 button,select,input,textarea{font:inherit;color:inherit;touch-action:manipulation}
 button{cursor:pointer}
 a{color:inherit}
@@ -203,7 +204,7 @@ textarea{height:200px;padding:10px 12px;font-size:14px;line-height:1.45}
 <script src="data/embedded_data.js"></script>
 <script>
 /* Auto-mise à jour : si une version plus récente est publiée, on recharge sans cache. */
-const BUILD = '2026-11-15.3';
+const BUILD = '2026-11-15.4';
 (async () => {
   try {
     const t = await (await fetch('./index.html?check=' + Date.now(), { cache: 'no-store' })).text();
@@ -237,8 +238,8 @@ Bien cordialement,
 {nom}
 {telephone} {email}`;
 const DEFAULT_PROFILES = {
-  thomas: { name: 'Dr Thomas Lefèvre', status: 'médecin radiologue à l’Hôpital Cochin (AP-HP), poste stable', situation: 'En couple, un enfant, revenus stables et garanties solides.', phone: '', email: '', dossier: '', msg: DEFAULT_MSG },
-  marie: { name: 'Marie', status: 'médecin', situation: 'En couple avec un médecin radiologue de l’Hôpital Cochin (AP-HP), un enfant, revenus stables.', phone: '', email: '', dossier: '', msg: DEFAULT_MSG }
+  thomas: { name: 'Dr Thomas Lefevre', status: 'médecin radiologue, assistant spécialiste à l’Hôpital Cochin (AP-HP)', situation: 'Marié, un enfant ; mon épouse est chef de clinique en pédiatrie à l’Hôpital Armand-Trousseau (AP-HP).', phone: '', email: '', dossier: '', msg: DEFAULT_MSG },
+  marie: { name: 'Dr Marie Parizot', status: 'chef de clinique-assistante en pédiatrie à l’Hôpital Armand-Trousseau (AP-HP)', situation: 'Mariée, un enfant ; mon mari est médecin radiologue à l’Hôpital Cochin (AP-HP).', phone: '', email: '', dossier: '', msg: DEFAULT_MSG }
 };
 let profiles = Object.assign({}, DEFAULT_PROFILES, LS('profiles') || {});
 let who = LS('who') || 'thomas';
