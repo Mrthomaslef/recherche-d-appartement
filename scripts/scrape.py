@@ -356,6 +356,19 @@ def dedupe(items):
     return kept
 
 
+def relevant(i):
+    if i.get("zip") not in COMMUNES:
+        return False
+    if i.get("rooms") and i["rooms"] < MIN_ROOMS:
+        return False
+    if i.get("surface") and (i["surface"] < MIN_SURFACE or i["surface"] > 250):
+        return False
+    # colocations / chambres : loyer anormalement bas pour la surface
+    if i.get("price") and i.get("surface") and i["price"] / i["surface"] < 14:
+        return False
+    return True
+
+
 def main():
     DATA.mkdir(exist_ok=True)
     prev_list = json.loads(OUT_JSON.read_text())["listings"] if OUT_JSON.exists() else []
@@ -365,26 +378,25 @@ def main():
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
 
     items, errors = [], []
-    for name, fn in (("Logic-Immo", scrape_logicimmo), ("PAP", scrape_pap), ("Bien'ici", scrape_bienici)):
+    for name, prefix, fn in (("Logic-Immo", "li-", scrape_logicimmo), ("PAP", "pap-", scrape_pap),
+                             ("Bien'ici", "bi-", scrape_bienici)):
         try:
-            items += fn(prev)
+            got = fn(prev)
         except Exception as e:
             log(f"!! {name} : {e}")
+            got = []
+        before = [p for p in prev_list if p["id"].startswith(prefix)]
+        # Site bloqué (0 annonce, ou moins de la moitié d'avant) : on garde les annonces déjà connues.
+        if before and len(got) < len(before) / 2:
+            log(f"!! {name} : {len(got)} annonces contre {len(before)} avant, site probablement bloqué, anciennes conservées")
             errors.append(name)
+            ids = {g["id"] for g in got}
+            got += [p for p in before if p["id"] not in ids]
+        items += got
 
-    def relevant(i):
-        if i.get("zip") not in COMMUNES:
-            return False
-        if i.get("rooms") and i["rooms"] < MIN_ROOMS:
-            return False
-        if i.get("surface") and (i["surface"] < MIN_SURFACE or i["surface"] > 250):
-            return False
-        # colocations / chambres : loyer anormalement bas pour la surface
-        if i.get("price") and i.get("surface") and i["price"] / i["surface"] < 14:
-            return False
-        return True
-
-    items = [i for i in items if relevant(i)]
+    items = [dict(i) for i in items if relevant(i)]
+    for i in items:
+        i.pop("alsoOn", None)  # recalculé à chaque passage
     items = dedupe(items)
     for it in items:
         old = prev.get(it["id"])
@@ -396,13 +408,6 @@ def main():
         it["inSector"] = in_sector(it)
         it["pricePerM2"] = round(it["price"] / it["surface"], 1) if it.get("price") and it.get("surface") else None
         it.pop("altUrl", None) if it.get("url") else None
-
-    # Si une source a planté, on garde ses anciennes annonces plutôt que de les perdre.
-    if errors:
-        seen = {i["id"] for i in items}
-        for p in prev_list:
-            if p["id"] not in seen and any(p["source"].startswith(e.split("-")[0]) for e in errors):
-                items.append(p)
 
     items.sort(key=lambda i: i.get("published") or i["firstSeen"], reverse=True)
     payload = {"updated": now, "count": len(items), "criteria": {

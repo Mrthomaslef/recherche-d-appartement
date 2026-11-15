@@ -2,8 +2,9 @@ name: Scrape annonces (quotidien)
 
 on:
   schedule:
-    - cron: "0 5 * * *"    # 6h/7h Paris
-    - cron: "0 16 * * *"   # 17h/18h Paris
+    # Secours si le Mac est éteint (la collecte principale tourne sur le Mac à 7h30 et 19h).
+    # Depuis GitHub, PAP est bloqué : les anciennes annonces PAP sont conservées.
+    - cron: "0 11 * * *"
   workflow_dispatch:
 
 permissions:
