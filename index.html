@@ -30,7 +30,8 @@ header{position:sticky;top:0;z-index:1000;background:rgba(246,247,245,.92);backd
 .chip select{border:0;background:transparent;color:inherit;font-size:13px;padding:0;appearance:none;-webkit-appearance:none;cursor:pointer}
 main{display:grid;grid-template-columns:1fr;gap:0}
 #map{height:46vh;min-height:280px;width:100%;border-bottom:1px solid var(--line)}
-#list{padding:10px 12px 90px;display:grid;gap:12px;max-width:100%}
+#list{padding:10px 12px 90px;display:block;max-width:100%}
+#list>*{margin-bottom:12px}
 @media(min-width:960px){main{grid-template-columns:minmax(420px,520px) 1fr;height:calc(100vh - 96px)}#list{overflow:auto;order:1;padding-bottom:30px}#map{order:2;height:100%;border:0;border-left:1px solid var(--line)}}
 .summary{font-size:13px;color:var(--mut);padding:2px 2px 0}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:grid;grid-template-columns:118px 1fr;scroll-margin-top:110px;transition:box-shadow .2s}
@@ -260,7 +261,7 @@ function syncChips() {
 /* ---------------- Carte ---------------- */
 const map = L.map('map', { zoomControl: false, tap: true }).setView([48.838, 2.418], 14);
 L.control.zoom({ position: 'bottomright' }).addTo(map);
-L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', { maxZoom: 19, attribution: '© OpenStreetMap © CARTO' }).addTo(map);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '© OpenStreetMap' }).addTo(map);
 const layer = L.layerGroup().addTo(map);
 const legend = L.control({ position: 'topright' });
 legend.onAdd = () => { const d = L.DomUtil.create('div', 'legend'); d.innerHTML = '<i style="background:var(--new)"></i>≤ 2 j<br><i style="background:var(--recent)"></i>≤ 14 j<br><i style="background:var(--old)"></i>≤ 2 mois<br><i style="background:var(--stale)"></i>plus vieux'; return d; };
