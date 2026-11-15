@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f766e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Appart Bois">
+<title>Appart côté Bois — Recherche de location</title>
+<link rel="icon" href="assets/icon.svg">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+:root{--bg:#f6f7f5;--card:#fff;--ink:#17201d;--mut:#66726d;--line:#e3e7e4;--acc:#0f766e;--acc2:#115e59;--new:#16a34a;--recent:#2563eb;--old:#ea580c;--stale:#9ca3af;--warn:#b45309;--r:14px}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.4 -apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;touch-action:manipulation;overscroll-behavior-y:contain;overflow-x:hidden}
+button,select,input,textarea{font:inherit;touch-action:manipulation}
+header{position:sticky;top:0;z-index:1000;background:rgba(246,247,245,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:calc(env(safe-area-inset-top) + 8px) 14px 8px}
+.top{display:flex;align-items:center;gap:10px}
+.top img{width:34px;height:34px;border-radius:9px}
+.top h1{font-size:17px;margin:0;line-height:1.1}
+.top small{color:var(--mut);font-size:12px}
+.top .sp{flex:1}
+.ib{border:1px solid var(--line);background:#fff;border-radius:10px;height:36px;min-width:36px;padding:0 10px;cursor:pointer}
+.filters{display:flex;gap:6px;overflow-x:auto;padding:8px 0 2px;scrollbar-width:none}
+.filters::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 11px;font-size:13px;cursor:pointer;white-space:nowrap;color:var(--ink)}
+.chip.on{background:var(--acc);border-color:var(--acc);color:#fff}
+.chip select{border:0;background:transparent;color:inherit;font-size:13px;padding:0;appearance:none;-webkit-appearance:none;cursor:pointer}
+main{display:grid;grid-template-columns:1fr;gap:0}
+#map{height:46vh;min-height:280px;width:100%;border-bottom:1px solid var(--line)}
+#list{padding:10px 12px 90px;display:grid;gap:12px;max-width:100%}
+@media(min-width:960px){main{grid-template-columns:minmax(420px,520px) 1fr;height:calc(100vh - 96px)}#list{overflow:auto;order:1;padding-bottom:30px}#map{order:2;height:100%;border:0;border-left:1px solid var(--line)}}
+.summary{font-size:13px;color:var(--mut);padding:2px 2px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:grid;grid-template-columns:118px 1fr;scroll-margin-top:110px;transition:box-shadow .2s}
+.card.hl{box-shadow:0 0 0 3px var(--acc)}
+.card.dim{opacity:.5}
+.ph{position:relative;background:#e9edeb center/cover no-repeat;min-height:130px;cursor:pointer}
+.ph .age{position:absolute;left:6px;top:6px;color:#fff;font-size:11px;font-weight:700;padding:2px 7px;border-radius:999px}
+.bd{padding:10px 11px;min-width:0}
+.pr{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+.pr b{font-size:19px}
+.pr span{color:var(--mut);font-size:12px}
+.meta{font-size:13px;margin-top:2px}
+.loc{font-size:13px;color:var(--mut);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.date{font-size:12.5px;margin-top:3px}
+.tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+.tag{font-size:11px;border-radius:6px;padding:2px 6px;background:#eef2f0;color:#334155}
+.tag.w{background:#fff4e5;color:var(--warn)}
+.tag.g{background:#e8f7ee;color:#15803d}
+.tag.b{background:#e8f0fe;color:#1d4ed8}
+.acts{grid-column:1/-1;display:flex;gap:6px;padding:0 10px 10px;flex-wrap:wrap}
+.btn{border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 10px;font-size:13px;cursor:pointer;text-decoration:none;color:var(--ink);display:inline-flex;align-items:center;gap:5px}
+.btn.p{background:var(--acc);border-color:var(--acc);color:#fff;font-weight:600;flex:1;justify-content:center;min-width:170px}
+.btn.p.done{background:#e8f7ee;border-color:#bfe5cc;color:#15803d}
+.btn.ic{padding:8px 10px}
+.btn.on{background:#fff7d6;border-color:#f3d36b}
+.lbl{white-space:nowrap;font-size:11px;font-weight:700;color:#fff;padding:3px 7px;border-radius:999px;box-shadow:0 1px 4px rgba(0,0,0,.35);border:1.5px solid #fff;transform:translate(-50%,-50%);display:inline-block;cursor:pointer}
+.lbl.fav{outline:2px solid #facc15}
+.leaflet-div-icon{background:none;border:0}
+.leaflet-popup-content{margin:10px 12px;font-size:13px}
+.empty{padding:30px 10px;text-align:center;color:var(--mut)}
+.legend{background:#fff;padding:6px 8px;border-radius:10px;font-size:11px;box-shadow:0 1px 4px rgba(0,0,0,.2);line-height:1.6}
+.legend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:4px;vertical-align:middle}
+dialog{border:0;border-radius:18px;padding:0;width:min(560px,94vw);max-height:90vh}
+dialog::backdrop{background:rgba(0,0,0,.4)}
+.dlg{padding:16px;display:grid;gap:10px}
+.dlg h2{margin:0;font-size:18px}
+.dlg label{font-size:12px;color:var(--mut);display:grid;gap:3px}
+.dlg input,.dlg textarea,.dlg select{border:1px solid var(--line);border-radius:10px;padding:9px 10px;font-size:16px;width:100%}
+.dlg textarea{min-height:190px;font-size:14px}
+.row{display:flex;gap:8px}
+.row>*{flex:1}
+.hint{font-size:12px;color:var(--mut)}
+#toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom));transform:translate(-50%,120px);background:#17201d;color:#fff;padding:11px 16px;border-radius:12px;font-size:14px;z-index:3000;transition:transform .3s;max-width:92vw;text-align:center}
+#toast.show{transform:translate(-50%,0)}
+#ptr{position:fixed;top:0;left:50%;transform:translate(-50%,-60px);z-index:2500;background:#fff;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.2);width:40px;height:40px;display:grid;place-items:center;font-size:20px;transition:transform .15s}
+#ptr.spin{animation:sp 0.8s linear infinite}
+@keyframes sp{to{rotate:360deg}}
+</style>
+</head>
+<body>
+<div id="ptr">↻</div>
+<header>
+  <div class="top">
+    <img src="assets/icon.svg" alt="">
+    <div><h1>Appart côté Bois</h1><small id="upd">Chargement…</small></div>
+    <div class="sp"></div>
+    <button class="ib" id="who" title="Qui envoie les messages ?">👤</button>
+    <button class="ib" id="cfg" title="Mon profil et mon message">⚙️</button>
+  </div>
+  <div class="filters" id="filters">
+    <label class="chip on">≤ <select id="fBudget"></select> €</label>
+    <label class="chip on"><select id="fRooms"><option value="3">3 pièces et +</option><option value="4">4 pièces et +</option><option value="5">5 pièces et +</option></select></label>
+    <label class="chip on"><select id="fSurf"><option value="55">≥ 55 m²</option><option value="60">≥ 60 m²</option><option value="65">≥ 65 m²</option><option value="70">≥ 70 m²</option><option value="80">≥ 80 m²</option></select></label>
+    <button class="chip on" id="fSector" title="12e côté bois, Saint-Mandé, Vincennes côté château, Charenton">🌳 Secteur cible</button>
+    <button class="chip" data-zip="75012">Paris 12e</button>
+    <button class="chip" data-zip="94160">Saint-Mandé</button>
+    <button class="chip" data-zip="94300">Vincennes</button>
+    <button class="chip" data-zip="94220">Charenton</button>
+    <button class="chip" id="fNew">🆕 &lt; 7 jours</button>
+    <button class="chip" id="fFav">⭐ Favoris</button>
+    <button class="chip" id="fHidden">Masquées</button>
+    <label class="chip">Tri <select id="fSort"><option value="date">plus récentes</option><option value="price">prix ↑</option><option value="m2">€/m² ↑</option><option value="surface">surface ↓</option></select></label>
+  </div>
+</header>
+<main>
+  <div id="map"></div>
+  <section id="list"></section>
+</main>
+
+<dialog id="dlg">
+  <form method="dialog" class="dlg" id="cfgForm">
+    <h2>✉️ Mon message de candidature</h2>
+    <div class="hint">Enregistré uniquement sur cet appareil (rien n'est publié). Chacun a son profil : Thomas et Marie.</div>
+    <label>Profil
+      <select id="pSel"><option value="thomas">Thomas</option><option value="marie">Marie</option></select>
+    </label>
+    <div class="row">
+      <label>Nom affiché<input id="pName"></label>
+      <label>Téléphone<input id="pPhone" inputmode="tel" placeholder="06…"></label>
+    </div>
+    <label>Statut professionnel<input id="pStatus"></label>
+    <label>Situation / garanties<input id="pSituation"></label>
+    <div class="row">
+      <label>E-mail<input id="pEmail" inputmode="email"></label>
+      <label>Lien DossierFacile (optionnel)<input id="pDossier" placeholder="https://locataire.dossierfacile.logement.gouv.fr/…"></label>
+    </div>
+    <label>Message (variables : {prix} {pieces} {surface} {ville} {quartier} {source} {nom} {statut} {situation} {telephone} {email} {dossier})
+      <textarea id="pMsg"></textarea>
+    </label>
+    <div class="row">
+      <button class="btn" value="cancel" type="button" id="pReset">Message par défaut</button>
+      <button class="btn p" value="ok" id="pSave">Enregistrer</button>
+    </div>
+  </form>
+</dialog>
+<div id="toast"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="data/embedded_data.js"></script>
+<script>
+const $ = s => document.querySelector(s);
+const LS = k => JSON.parse(localStorage.getItem('appart_' + k) || 'null');
+const SS = (k, v) => localStorage.setItem('appart_' + k, JSON.stringify(v));
+const DAY = 864e5;
+let DATA = window.APPART_DATA || { listings: [] };
+let state = Object.assign({ budget: 2600, rooms: 3, surf: 60, sector: true, zips: [], onlyNew: false, onlyFav: false, showHidden: false, sort: 'date' }, LS('filters') || {});
+let favs = new Set(LS('favs') || []), hidden = new Set(LS('hidden') || []), contacted = LS('contacted') || {};
+let seenBefore = LS('seen') || null;
+
+/* ---------------- Profils & message ---------------- */
+const DEFAULT_MSG = `Bonjour,
+
+Je suis très intéressé(e) par votre appartement de {pieces} pièces ({surface} m², {prix} € CC) à {ville}{quartier}, vu sur {source}.
+
+{nom}, {statut}. {situation}
+
+Dossier complet disponible immédiatement{dossier}. Nous sommes disponibles rapidement pour une visite, y compris en soirée.
+
+Bien cordialement,
+{nom}
+{telephone} {email}`;
+const DEFAULT_PROFILES = {
+  thomas: { name: 'Dr Thomas Lefèvre', status: 'médecin radiologue à l’Hôpital Cochin (AP-HP), poste stable', situation: 'En couple, un enfant, revenus stables et garanties solides.', phone: '', email: '', dossier: '', msg: DEFAULT_MSG },
+  marie: { name: 'Marie', status: 'médecin', situation: 'En couple avec un médecin radiologue de l’Hôpital Cochin (AP-HP), un enfant, revenus stables.', phone: '', email: '', dossier: '', msg: DEFAULT_MSG }
+};
+let profiles = Object.assign({}, DEFAULT_PROFILES, LS('profiles') || {});
+let who = LS('who') || 'thomas';
+const P = () => profiles[who];
+function renderWho() { $('#who').textContent = who === 'marie' ? '👩 Marie' : '👨 Thomas'; }
+
+function fillMsg(it) {
+  const p = P();
+  return p.msg
+    .replaceAll('{prix}', fmt(it.price)).replaceAll('{pieces}', it.rooms ?? '?').replaceAll('{surface}', it.surface ? Math.round(it.surface) : '?')
+    .replaceAll('{ville}', it.city || '').replaceAll('{quartier}', it.district ? ` (${it.district})` : '')
+    .replaceAll('{source}', it.source.split(' ')[0]).replaceAll('{nom}', p.name).replaceAll('{statut}', p.status)
+    .replaceAll('{situation}', p.situation).replaceAll('{telephone}', p.phone || '').replaceAll('{email}', p.email || '')
+    .replaceAll('{dossier}', p.dossier ? ` (DossierFacile : ${p.dossier})` : '')
+    .replace(/[ \t]+\n/g, '\n').trim();
+}
+const isMobile = n => /^0[67]\d{8}$/.test(n || '');
+const isIOS = /iP(hone|ad|od)/.test(navigator.userAgent);
+
+async function apply(id) {
+  const it = DATA.listings.find(x => x.id === id); if (!it) return;
+  if (!P().phone) { toast('Ajoute d’abord ton téléphone dans ⚙️'); openCfg(); return; }
+  const msg = fillMsg(it);
+  contacted[id] = { at: Date.now(), by: who }; SS('contacted', contacted); render();
+  if (isMobile(it.phone)) {
+    location.href = `sms:${it.phone}${isIOS ? '&' : '?'}body=${encodeURIComponent(msg)}`;
+    toast('📱 SMS prêt : il ne reste qu’à appuyer sur Envoyer');
+    return;
+  }
+  try { await navigator.clipboard.writeText(msg); } catch (e) {}
+  window.open(it.url, '_blank', 'noopener');
+  toast('📋 Message copié : colle-le dans le formulaire de contact de l’annonce');
+}
+
+/* ---------------- Utilitaires ---------------- */
+const fmt = n => n == null ? '?' : Math.round(n).toLocaleString('fr-FR');
+const pubDate = it => new Date(it.published || it.firstSeen);
+const ageDays = it => Math.max(0, Math.floor((Date.now() - pubDate(it)) / DAY));
+const ageColor = d => d <= 2 ? 'var(--new)' : d <= 14 ? 'var(--recent)' : d <= 60 ? 'var(--old)' : 'var(--stale)';
+const dShort = d => d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short' }).replace('.', '');
+const dLong = d => d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: d.getFullYear() !== new Date().getFullYear() ? 'numeric' : undefined });
+const ago = d => d === 0 ? 'aujourd’hui' : d === 1 ? 'hier' : d < 31 ? `il y a ${d} j` : d < 365 ? `il y a ${Math.round(d / 30)} mois` : `il y a ${(d / 365).toFixed(1).replace('.', ',')} an(s)`;
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+let tt; function toast(t) { const e = $('#toast'); e.textContent = t; e.classList.add('show'); clearTimeout(tt); tt = setTimeout(() => e.classList.remove('show'), 3200); }
+
+function flags(it) {
+  const f = [], d = ageDays(it), m2 = it.pricePerM2;
+  const isNewForMe = seenBefore && new Date(it.firstSeen) > new Date(seenBefore);
+  if (isNewForMe) f.push(['g', '🆕 nouvelle depuis ta dernière visite']);
+  if (d > 60) f.push(['w', `⏳ en ligne depuis ${ago(d).replace('il y a ', '')} : demander si toujours dispo`]);
+  if (it.privateOwner) f.push(['b', '🏠 particulier, sans frais d’agence']);
+  if (it.priceDrop) f.push(['g', `↘ baisse de ${fmt(it.priceDrop)} €`]);
+  if (m2 && m2 < 22) f.push(['w', `⚠️ ${m2} €/m² : très bas, vérifier (arnaque ?)`]);
+  if (it.alsoOn?.some(a => a.source.startsWith('PAP')) && !it.privateOwner) f.push(['w', '⚠️ aussi publié « particulier » sur PAP']);
+  if (it.approxPosition) f.push(['', '📍 position approximative']);
+  if (it.inSector === false) f.push(['', 'hors secteur cible']);
+  if (it.exclusive) f.push(['', 'exclusivité agence']);
+  if (it.energy && 'FG'.includes(it.energy)) f.push(['w', `DPE ${it.energy} : passoire`]);
+  else if (it.energy) f.push(['', `DPE ${it.energy}`]);
+  if (it.furnished) f.push(['', 'meublé']);
+  return f;
+}
+
+/* ---------------- Filtres ---------------- */
+function filtered() {
+  let l = DATA.listings.filter(it =>
+    (!it.price || it.price <= state.budget) && (!it.rooms || it.rooms >= state.rooms) && (!it.surface || it.surface >= state.surf) &&
+    (!state.sector || it.inSector !== false) && (!state.zips.length || state.zips.includes(it.zip)) &&
+    (!state.onlyNew || ageDays(it) <= 7) && (!state.onlyFav || favs.has(it.id)) &&
+    (state.showHidden ? hidden.has(it.id) : !hidden.has(it.id)));
+  const s = { date: (a, b) => pubDate(b) - pubDate(a), price: (a, b) => a.price - b.price, m2: (a, b) => (a.pricePerM2 || 99) - (b.pricePerM2 || 99), surface: (a, b) => b.surface - a.surface }[state.sort];
+  return l.sort(s);
+}
+function initFilters() {
+  const b = $('#fBudget');
+  for (let v = 1600; v <= 3200; v += 100) b.add(new Option(fmt(v), v));
+  b.value = state.budget; $('#fRooms').value = state.rooms; $('#fSurf').value = state.surf; $('#fSort').value = state.sort;
+  b.onchange = e => upd('budget', +e.target.value); $('#fRooms').onchange = e => upd('rooms', +e.target.value);
+  $('#fSurf').onchange = e => upd('surf', +e.target.value); $('#fSort').onchange = e => upd('sort', e.target.value);
+  $('#fSector').onclick = () => upd('sector', !state.sector); $('#fNew').onclick = () => upd('onlyNew', !state.onlyNew);
+  $('#fFav').onclick = () => upd('onlyFav', !state.onlyFav); $('#fHidden').onclick = () => upd('showHidden', !state.showHidden);
+  document.querySelectorAll('[data-zip]').forEach(c => c.onclick = () => {
+    const z = c.dataset.zip; state.zips = state.zips.includes(z) ? state.zips.filter(x => x !== z) : [...state.zips, z]; upd();
+  });
+}
+function upd(k, v) { if (k) state[k] = v; SS('filters', state); render(); }
+function syncChips() {
+  $('#fSector').classList.toggle('on', state.sector); $('#fNew').classList.toggle('on', state.onlyNew);
+  $('#fFav').classList.toggle('on', state.onlyFav); $('#fHidden').classList.toggle('on', state.showHidden);
+  document.querySelectorAll('[data-zip]').forEach(c => c.classList.toggle('on', state.zips.includes(c.dataset.zip)));
+}
+
+/* ---------------- Carte ---------------- */
+const map = L.map('map', { zoomControl: false, tap: true }).setView([48.838, 2.418], 14);
+L.control.zoom({ position: 'bottomright' }).addTo(map);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', { maxZoom: 19, attribution: '© OpenStreetMap © CARTO' }).addTo(map);
+const layer = L.layerGroup().addTo(map);
+const legend = L.control({ position: 'topright' });
+legend.onAdd = () => { const d = L.DomUtil.create('div', 'legend'); d.innerHTML = '<i style="background:var(--new)"></i>≤ 2 j<br><i style="background:var(--recent)"></i>≤ 14 j<br><i style="background:var(--old)"></i>≤ 2 mois<br><i style="background:var(--stale)"></i>plus vieux'; return d; };
+legend.addTo(map);
+L.circleMarker([48.8428, 2.4358], { radius: 5, color: '#7c3aed', fillOpacity: .9 }).bindTooltip('Château de Vincennes').addTo(map);
+let fitted = false;
+
+function drawMap(list) {
+  layer.clearLayers();
+  const pts = [];
+  list.forEach(it => {
+    if (it.lat == null) return;
+    const d = ageDays(it);
+    const html = `<span class="lbl${favs.has(it.id) ? ' fav' : ''}" style="background:${ageColor(d)}">${dShort(pubDate(it))} · ${fmt(it.price)} €</span>`;
+    const m = L.marker([it.lat, it.lng], { icon: L.divIcon({ html, className: '', iconSize: null }), riseOnHover: true, zIndexOffset: -d });
+    m.bindPopup(`<b>${fmt(it.price)} €</b> · ${it.rooms} p · ${Math.round(it.surface)} m²<br>${esc(it.city)}${it.district ? ' · ' + esc(it.district) : ''}<br>Publiée le ${dLong(pubDate(it))} (${ago(d)})<br><a href="#" onclick="focusCard('${it.id}');return false">Voir la fiche ↓</a>`);
+    m.on('click', () => focusCard(it.id, false));
+    m.addTo(layer); pts.push([it.lat, it.lng]);
+  });
+  if (!fitted && pts.length) { map.fitBounds(pts, { padding: [30, 30], maxZoom: 15 }); fitted = true; }
+}
+function focusCard(id, pan = true) {
+  const c = document.getElementById('c-' + id); if (!c) return;
+  c.scrollIntoView({ behavior: 'smooth', block: 'center' }); c.classList.add('hl'); setTimeout(() => c.classList.remove('hl'), 1800);
+  const it = DATA.listings.find(x => x.id === id);
+  if (pan && it?.lat) map.setView([it.lat, it.lng], 16);
+}
+window.focusCard = focusCard;
+
+/* ---------------- Liste ---------------- */
+function card(it) {
+  const d = ageDays(it), pd = pubDate(it), c = contacted[it.id];
+  const call = it.phone ? `<a class="btn ic" href="tel:${it.phone}" title="Appeler">📞</a>` : '';
+  const others = (it.alsoOn || []).map(a => `<a class="btn ic" href="${a.url}" target="_blank" rel="noopener">${esc(a.source.split(' ')[0])}</a>`).join('');
+  const sendLabel = c ? `✓ Contacté ${dShort(new Date(c.at))}${c.by === 'marie' ? ' (Marie)' : c.by === 'thomas' ? ' (Thomas)' : ''} · renvoyer` : (isMobile(it.phone) ? '✉️ Candidater par SMS' : '✉️ Candidater (copier + ouvrir)');
+  return `<article class="card${hidden.has(it.id) && !state.showHidden ? ' dim' : ''}" id="c-${it.id}">
+    <div class="ph" style="background-image:url('${esc(it.photo || '')}')" onclick="window.open('${it.url}','_blank','noopener')"><span class="age" style="background:${ageColor(d)}">${ago(d)}</span></div>
+    <div class="bd">
+      <div class="pr"><b>${fmt(it.price)} €</b><span>${it.chargesIncluded ? 'CC' : ''}${it.pricePerM2 ? ' · ' + String(it.pricePerM2).replace('.', ',') + ' €/m²' : ''}</span></div>
+      <div class="meta">${it.rooms ?? '?'} pièces${it.bedrooms ? ` · ${it.bedrooms} ch.` : ''} · ${it.surface ? String(Math.round(it.surface * 10) / 10).replace('.', ',') : '?'} m²${it.floor ? ' · ét. ' + esc(String(it.floor).replace('Étage ', '')) : ''}</div>
+      <div class="loc" onclick="focusCard('${it.id}')">📍 ${esc(it.city)}${it.district ? ' · ' + esc(it.district) : ''}</div>
+      <div class="date">🗓️ Publiée le <b>${dLong(pd)}</b> <span style="color:var(--mut)">(${ago(d)})</span></div>
+      <div class="loc">${esc(it.source)}${it.agency && !it.privateOwner ? ' · ' + esc(it.agency) : ''}</div>
+      <div class="tags">${flags(it).map(([c, t]) => `<span class="tag ${c}">${esc(t)}</span>`).join('')}</div>
+    </div>
+    <div class="acts">
+      <button class="btn p${c ? ' done' : ''}" onclick="apply('${it.id}')">${sendLabel}</button>
+      ${call}
+      <a class="btn ic" href="${it.url}" target="_blank" rel="noopener" title="Voir l’annonce">↗</a>${others}
+      <button class="btn ic${favs.has(it.id) ? ' on' : ''}" onclick="toggle(favs,'favs','${it.id}')" title="Favori">⭐</button>
+      <button class="btn ic" onclick="toggle(hidden,'hidden','${it.id}')" title="${hidden.has(it.id) ? 'Réafficher' : 'Masquer'}">${hidden.has(it.id) ? '↺' : '✕'}</button>
+    </div>
+  </article>`;
+}
+function toggle(set, key, id) { set.has(id) ? set.delete(id) : set.add(id); SS(key, [...set]); render(); }
+window.toggle = toggle; window.apply = apply;
+
+function render() {
+  syncChips(); renderWho();
+  const l = filtered();
+  const newCount = seenBefore ? l.filter(it => new Date(it.firstSeen) > new Date(seenBefore)).length : 0;
+  $('#list').innerHTML = `<div class="summary">${l.length} annonce${l.length > 1 ? 's' : ''}${newCount ? ` · <b style="color:var(--new)">${newCount} nouvelle${newCount > 1 ? 's' : ''}</b>` : ''} · SeLoger/Logic-Immo, Bien'ici, PAP</div>` +
+    (l.map(card).join('') || '<div class="empty">Aucune annonce avec ces filtres.<br>Essaie d’augmenter le budget ou de désactiver « Secteur cible ».</div>');
+  drawMap(l);
+  const u = new Date(DATA.updated);
+  $('#upd').textContent = DATA.updated ? `Mise à jour ${dShort(u)} à ${u.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })} · ${DATA.count} annonces` : '';
+}
+
+/* ---------------- Réglages ---------------- */
+function loadForm(k) {
+  const p = profiles[k]; $('#pSel').value = k;
+  $('#pName').value = p.name; $('#pPhone').value = p.phone; $('#pStatus').value = p.status; $('#pSituation').value = p.situation;
+  $('#pEmail').value = p.email; $('#pDossier').value = p.dossier; $('#pMsg').value = p.msg;
+}
+function openCfg() { loadForm(who); $('#dlg').showModal(); }
+$('#cfg').onclick = openCfg;
+$('#pSel').onchange = e => loadForm(e.target.value);
+$('#pReset').onclick = () => { $('#pMsg').value = DEFAULT_MSG; };
+$('#cfgForm').onsubmit = () => {
+  const k = $('#pSel').value;
+  profiles[k] = { name: $('#pName').value.trim(), phone: $('#pPhone').value.replace(/\s/g, ''), status: $('#pStatus').value.trim(), situation: $('#pSituation').value.trim(), email: $('#pEmail').value.trim(), dossier: $('#pDossier').value.trim(), msg: $('#pMsg').value };
+  who = k; SS('who', who); SS('profiles', profiles); render(); toast('Profil enregistré ✓');
+};
+$('#who').onclick = () => { who = who === 'thomas' ? 'marie' : 'thomas'; SS('who', who); render(); toast(`Les messages partiront au nom de ${profiles[who].name}`); };
+
+/* ---------------- Données & pull-to-refresh ---------------- */
+async function refresh(manual) {
+  try {
+    const r = await fetch('data/listings.json?t=' + Date.now(), { cache: 'no-store' });
+    if (r.ok) DATA = await r.json();
+    if (manual) toast(`✓ ${DATA.count} annonces, mise à jour ${dShort(new Date(DATA.updated))}`);
+  } catch (e) { if (manual) toast('Hors-ligne : données locales affichées'); }
+  render();
+}
+let y0 = null, pulling = false;
+const ptr = $('#ptr');
+function start(y, target) { if (window.scrollY <= 0 && !target.closest('#map,dialog')) { y0 = y; pulling = true; } }
+function move(y) { if (!pulling || y0 == null) return; const d = Math.min(110, y - y0); if (d > 0) ptr.style.transform = `translate(-50%,${d - 50}px) rotate(${d * 3}deg)`; }
+async function end(y) {
+  if (!pulling) return; pulling = false; const d = y - y0; y0 = null;
+  if (d > 80) { navigator.vibrate?.(15); ptr.style.transform = 'translate(-50%,20px)'; ptr.classList.add('spin'); await refresh(true); ptr.classList.remove('spin'); }
+  ptr.style.transform = 'translate(-50%,-60px)';
+}
+addEventListener('touchstart', e => start(e.touches[0].clientY, e.target), { passive: true });
+addEventListener('touchmove', e => move(e.touches[0].clientY), { passive: true });
+addEventListener('touchend', e => end(e.changedTouches[0].clientY));
+addEventListener('mousedown', e => start(e.clientY, e.target));
+addEventListener('mousemove', e => e.buttons && move(e.clientY));
+addEventListener('mouseup', e => end(e.clientY));
+
+initFilters(); render(); refresh(false);
+// mémorise la visite : les annonces apparues ensuite seront marquées « nouvelles »
+addEventListener('pagehide', () => SS('seen', DATA.updated || new Date().toISOString()));
+setTimeout(() => SS('seen', DATA.updated), 60000);
+if ('serviceWorker' in navigator) navigator.serviceWorker.getRegistrations().then(rs => rs.forEach(r => r.unregister()));
+</script>
+</body>
+</html>
