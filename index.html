@@ -202,6 +202,18 @@ textarea{height:200px;padding:10px 12px;font-size:14px;line-height:1.45}
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="data/embedded_data.js"></script>
 <script>
+/* Auto-mise à jour : si une version plus récente est publiée, on recharge sans cache. */
+const BUILD = '2026-11-15.3';
+(async () => {
+  try {
+    const t = await (await fetch('./index.html?check=' + Date.now(), { cache: 'no-store' })).text();
+    const m = t.match(/const BUILD = '([^']+)'/);
+    if (m && m[1] !== BUILD && !sessionStorage.getItem('appart_reloaded_' + m[1])) {
+      sessionStorage.setItem('appart_reloaded_' + m[1], '1');
+      location.replace(location.pathname + '?v=' + encodeURIComponent(m[1]));
+    }
+  } catch (e) {}
+})();
 const $ = s => document.querySelector(s);
 const LS = k => JSON.parse(localStorage.getItem('appart_' + k) || 'null');
 const SS = (k, v) => localStorage.setItem('appart_' + k, JSON.stringify(v));
