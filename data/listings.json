@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-15T18:00:03+00:00",
- "count": 41,
+ "updated": "2026-11-16T06:30:03+00:00",
+ "count": 40,
  "criteria": {
   "minRooms": 3,
   "minSurface": 55,
@@ -231,7 +231,7 @@
     "https://cdnihddipa.cloudimg.io/a/a/8/8/aa88aaa7-66f4-4477-a498-4e2980fc62d3.jpg?ci_seal=52fbc3b723f10f514f485bdc1f6ad93840ae531f"
    ],
    "published": "2026-11-13T16:11:00Z",
-   "updated": "2026-11-15T02:15:11.366Z",
+   "updated": "2026-11-16T02:01:28.438Z",
    "agency": "SIA IMMOBILIER",
    "privateOwner": false,
    "exclusive": true,
@@ -275,7 +275,7 @@
     "https://cdnihddipa.cloudimg.io/e/e/4/d/ee4d0862-38cd-4f15-afdd-37aff5d75bfe.jpg?ci_seal=09136858fe1bcf296ff2dda467ccf8e16f3b55c5"
    ],
    "published": "2026-11-13T15:51:00Z",
-   "updated": "2026-11-15T01:51:17.19Z",
+   "updated": "2026-11-16T02:06:16.401Z",
    "agency": "2S IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
@@ -661,44 +661,6 @@
    "pricePerM2": 35.5
   },
   {
-   "id": "li-26U3WVS9A6Q5",
-   "source": "SeLoger / Logic-Immo",
-   "url": "https://www.seloger.com/annonce/location/ile-de-france/paris-75/paris-75000/26U3WVS9A6Q5",
-   "price": 2032,
-   "chargesIncluded": true,
-   "surface": 58,
-   "rooms": 3,
-   "bedrooms": 2,
-   "zip": "75012",
-   "city": "Paris 12ème arrondissement",
-   "district": null,
-   "floor": "4/6",
-   "energy": "E",
-   "title": "APPARTEMENT 3 pièces",
-   "description": "GARE DE LYON - REUILLY DIDEROT DISPONIBLE A PARTIR DU 27 NOVEMBRE : dossier complet par mail Situation centrale pour cet appartement meublé type 3Pièces de 58m² à deux pas du métro reuilly Diderot, situé au 4ème étage sur 6 avec ascenseur, au sein d'un bel immeuble ancien. Le bien est composé comme suit: une entrée, une cuisine ouverte sur le séjour traversant, 2 chambres avec placards, une salle de bains, un wc séparé. Pas de cave A visiter rapidement. Loyer Charges Comprises: 2032 euros",
-   "photo": "https://cdnihddipa.cloudimg.io/c/a/4/8/ca488582-233e-4e00-b374-25e9fff1638f.jpg?ci_seal=34e51218bab6854b82f604dd6551731beb53e5e8",
-   "photos": [
-    "https://cdnihddipa.cloudimg.io/c/a/4/8/ca488582-233e-4e00-b374-25e9fff1638f.jpg?ci_seal=34e51218bab6854b82f604dd6551731beb53e5e8",
-    "https://cdnihddipa.cloudimg.io/0/1/9/2/019238a6-23a5-46dc-bce7-38cd12b9af33.jpg?ci_seal=bc1e328f2720c168a16b7f68a708feeb985fa63b",
-    "https://cdnihddipa.cloudimg.io/9/b/f/9/9bf94219-2b66-48e4-98e9-77ef3113d88d.jpg?ci_seal=829e8ea272a08be6a0569fd2ab4124b559f6b198",
-    "https://cdnihddipa.cloudimg.io/5/0/0/9/5009b48d-f65b-47fc-bc23-3718b5baa884.jpg?ci_seal=ffffe73b177d658d4ef85e52c6d7369deb761e3d",
-    "https://cdnihddipa.cloudimg.io/9/d/b/e/9dbe9d34-66b6-4f3e-8806-f0b5dd300477.jpg?ci_seal=0b4010ad092793472147f6b8d55959f92ef52c95",
-    "https://cdnihddipa.cloudimg.io/d/7/7/c/d77ca3d0-430a-4d85-ae78-f33f56a6da55.jpg?ci_seal=e63d82a1020e0a7961fdf95472cc140802fc241d"
-   ],
-   "published": "2026-11-11T20:05:00Z",
-   "updated": "2026-11-13T11:11:10.645Z",
-   "agency": "MGH - FERDY",
-   "privateOwner": false,
-   "exclusive": false,
-   "lat": 48.8245,
-   "lng": 2.41787,
-   "phone": "0656745805",
-   "addressPublished": false,
-   "firstSeen": "2026-11-15T17:16:21+00:00",
-   "inSector": true,
-   "pricePerM2": 35.0
-  },
-  {
    "id": "li-26IQ7PZSYSC3",
    "source": "SeLoger / Logic-Immo",
    "url": "https://www.seloger.com/annonce/location/ile-de-france/paris-75/paris-75000/26IQ7PZSYSC3",
@@ -762,7 +724,7 @@
     "https://cdnihddipa.cloudimg.io/1/4/d/2/14d2f880-0302-4ec1-a930-b553fcbf5282.jpg?ci_seal=a93e5810540f382d6d8f6dc6c41c7b5520879ef4"
    ],
    "published": "2026-11-10T10:18:20.047Z",
-   "updated": "2026-11-15T02:51:28.58Z",
+   "updated": "2026-11-16T02:31:20.375Z",
    "agency": "DESRUE IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
@@ -1184,7 +1146,7 @@
     "https://cdnihddipa.cloudimg.io/c/5/9/9/c59902fe-2385-4edc-be1e-cd925ea8f915.jpg?ci_seal=b8e7ec4f4012e43c159535be3abaf1b1e3383d11"
    ],
    "published": "2026-10-22T10:51:00Z",
-   "updated": "2026-11-15T02:15:08.298Z",
+   "updated": "2026-11-16T01:56:16.564Z",
    "agency": "Arik Property",
    "privateOwner": false,
    "exclusive": false,
@@ -1304,7 +1266,7 @@
     "https://cdnihddipa.cloudimg.io/c/0/b/6/c0b64e83-e8c1-4036-abff-87f71749c7c0.jpg?ci_seal=db14f3bdcc3cece3b5b42d50dd8877137fbab17b"
    ],
    "published": "2026-09-25T09:54:00Z",
-   "updated": "2026-11-15T02:31:22.193Z",
+   "updated": "2026-11-16T02:16:21.655Z",
    "agency": "LYNX D'OR IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
