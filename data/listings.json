@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-16T18:00:02+00:00",
- "count": 42,
+ "updated": "2026-11-16T20:50:52+00:00",
+ "count": 43,
  "criteria": {
   "minRooms": 3,
   "minSurface": 55,
@@ -12,8 +12,54 @@
    "94220": "Charenton-le-Pont"
   }
  },
- "errors": [],
+ "errors": [
+  "PAP"
+ ],
  "listings": [
+  {
+   "id": "li-265ZWBBADV7E",
+   "source": "SeLoger / Logic-Immo",
+   "url": "https://www.seloger.com/annonce/location/ile-de-france/paris-75/paris-75000/265ZWBBADV7E",
+   "price": 1790.08,
+   "chargesIncluded": true,
+   "surface": 67,
+   "rooms": 3,
+   "bedrooms": 2,
+   "zip": "75012",
+   "city": "Paris 12ème arrondissement",
+   "district": "Bel-Air",
+   "floor": "étage",
+   "energy": "D",
+   "title": "Appartement T3",
+   "description": "SANS HONORAIRES. Résidence sécurisée et gardiennée, située à deux pas de la Porte de Vincennes et de la station de tramway T3a (Alexandra David-Néel), secteur du 12ème arrondissement de Paris. SANS HONORAIRES. Appartement Type 3 de 67m² situé au 5ème étage avec ascenseur comprenant : une entrée avec placard, un spacieux séjour lumineux, une cuisine séparée (non équipée), deux chambres, une salle de bain (baignoire) et WC séparé. Chauffage individuel électrique, ballon d'eau chaude, double vitra...",
+   "photo": "https://cdnihddipa.cloudimg.io/a/e/5/8/ae583dd4-e018-45b4-9789-5f3b792a70d6.jpg?ci_seal=0736ab649d2a643056f11a62285d9bcedd5e6e8c",
+   "photos": [
+    "https://cdnihddipa.cloudimg.io/a/e/5/8/ae583dd4-e018-45b4-9789-5f3b792a70d6.jpg?ci_seal=0736ab649d2a643056f11a62285d9bcedd5e6e8c",
+    "https://cdnihddipa.cloudimg.io/7/6/8/5/76852903-d474-4a8c-9284-45733a935b98.jpg?ci_seal=4a89d4f26c3397bc9001e88253e2b7c4ea0c729c",
+    "https://cdnihddipa.cloudimg.io/d/c/e/1/dce1363e-bfaf-47a0-8a43-e6c9279f00da.jpg?ci_seal=3a584301639f7ceb600cfd1216e58a4c48e4b5a4",
+    "https://cdnihddipa.cloudimg.io/4/4/d/9/44d9f13a-f2ed-434d-a1bc-878ae5db0caa.jpg?ci_seal=1a2434a57b1f9209a8c097fcca8d9b0c28503a1a",
+    "https://cdnihddipa.cloudimg.io/f/e/2/5/fe25fe91-8131-4de5-a085-2a45147a5b3c.jpg?ci_seal=ec56bac8a95ff1286c17e7071e7456f236b6cc22"
+   ],
+   "published": "2026-11-16T19:08:00Z",
+   "updated": "2026-11-16T19:11:07.485Z",
+   "agency": "CDC HABITAT",
+   "privateOwner": false,
+   "exclusive": false,
+   "lng": 2.409781055306528,
+   "lat": 48.84452324586,
+   "approxPosition": false,
+   "addressPublished": true,
+   "phone": "0972150964",
+   "alsoOn": [
+    {
+     "source": "Bien'ici",
+     "url": "https://www.bienici.com/annonce/mgc-ancien-SNI_0000_182729"
+    }
+   ],
+   "firstSeen": "2026-11-16T20:50:52+00:00",
+   "inSector": true,
+   "pricePerM2": 26.7
+  },
   {
    "id": "bi-gedeon-29341207",
    "source": "Bien'ici",
@@ -85,11 +131,10 @@
    "agency": "MORISS IMMOBILIER SAINT MANDE-VINCENNES-PARIS 12",
    "privateOwner": false,
    "exclusive": true,
-   "lng": 2.41147,
    "lat": 48.83393,
-   "approxPosition": true,
-   "addressPublished": false,
+   "lng": 2.41147,
    "phone": "0143659999",
+   "addressPublished": false,
    "firstSeen": "2026-11-16T18:00:02+00:00",
    "inSector": true,
    "pricePerM2": 29.2
@@ -124,11 +169,10 @@
    "agency": "BSI EST PARISIEN",
    "privateOwner": false,
    "exclusive": true,
-   "lng": 2.44476,
    "lat": 48.85176,
-   "approxPosition": true,
-   "addressPublished": false,
+   "lng": 2.44476,
    "phone": "0610756555",
+   "addressPublished": false,
    "firstSeen": "2026-11-16T18:00:02+00:00",
    "inSector": false,
    "pricePerM2": 28.4
@@ -163,11 +207,10 @@
    "agency": "LYNX D'OR IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
-   "lng": 2.41147,
    "lat": 48.83393,
-   "approxPosition": true,
-   "addressPublished": false,
+   "lng": 2.41147,
    "phone": "0765228095",
+   "addressPublished": false,
    "firstSeen": "2026-11-16T18:00:02+00:00",
    "inSector": true,
    "pricePerM2": 28.5
@@ -374,11 +417,11 @@
    "photos": [
     "https://cdnihddipa.cloudimg.io/f/a/9/c/fa9c418f-78ab-4a3a-b139-19f83f95a28d.jpg?ci_seal=b5ae0b3d86f770cf8c00aca428ad372794b63cfc",
     "https://cdnihddipa.cloudimg.io/7/6/e/5/76e5f9fa-7dd8-4abe-a76e-5ad1c764427d.jpg?ci_seal=501ed55d36a3df47f4ef81d1f56a4623441569d1",
-    "https://cdnihddipa.cloudimg.io/d/6/0/f/d60fe149-b044-4bd5-91f9-18b36e521fb8.png?ci_seal=74bc66353a0c38dd58236c53d8d5e10bbddd8e2b",
+    "https://cdnihddipa.cloudimg.io/b/a/c/0/bac0c20a-7d23-4f3f-851a-bb7b17f8407b.png?ci_seal=ce2602bc4a5f89eb870d19d77161f908761d6b7e",
     "https://cdnihddipa.cloudimg.io/5/2/f/c/52fc5217-5860-4f8a-ad46-675ed76035b0.jpg?ci_seal=a8be889689bf0271e6c58b172db889a5ee048ef8"
    ],
    "published": "2026-11-13T18:35:41.159Z",
-   "updated": "2026-11-16T11:21:09.646Z",
+   "updated": "2026-11-16T18:21:06.402Z",
    "agency": "DAUCHEZ",
    "privateOwner": false,
    "exclusive": true,
@@ -1272,12 +1315,6 @@
    "lng": 2.416020753270021,
    "phone": "0140052626",
    "addressPublished": true,
-   "alsoOn": [
-    {
-     "source": "PAP (particulier)",
-     "url": "https://www.pap.fr/annonces/appartement-saint-mande-94160-r465702781"
-    }
-   ],
    "firstSeen": "2026-11-15T17:16:21+00:00",
    "inSector": true,
    "pricePerM2": 30.0
