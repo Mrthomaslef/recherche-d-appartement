@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-16T20:50:52+00:00",
- "count": 43,
+ "updated": "2026-11-17T06:30:06+00:00",
+ "count": 41,
  "criteria": {
   "minRooms": 3,
   "minSurface": 55,
@@ -12,9 +12,7 @@
    "94220": "Charenton-le-Pont"
   }
  },
- "errors": [
-  "PAP"
- ],
+ "errors": [],
  "listings": [
   {
    "id": "li-265ZWBBADV7E",
@@ -45,11 +43,10 @@
    "agency": "CDC HABITAT",
    "privateOwner": false,
    "exclusive": false,
-   "lng": 2.409781055306528,
    "lat": 48.84452324586,
-   "approxPosition": false,
-   "addressPublished": true,
+   "lng": 2.409781055306528,
    "phone": "0972150964",
+   "addressPublished": true,
    "alsoOn": [
     {
      "source": "Bien'ici",
@@ -127,7 +124,7 @@
     "https://cdnihddipa.cloudimg.io/2/7/d/f/27df4235-c748-44cf-ba5f-7926a469af04.jpg?ci_seal=73b4fc7e55c52b24c869de1973fc170816a046c6"
    ],
    "published": "2026-11-16T13:24:00Z",
-   "updated": "2026-11-16T13:26:08.051Z",
+   "updated": "2026-11-17T02:46:30.561Z",
    "agency": "MORISS IMMOBILIER SAINT MANDE-VINCENNES-PARIS 12",
    "privateOwner": false,
    "exclusive": true,
@@ -165,7 +162,7 @@
     "https://cdnihddipa.cloudimg.io/a/c/6/a/ac6a895e-2eda-420e-9c9d-85691fb3a19a.jpg?ci_seal=b27ea791eabb7b51324e40c91a2fbb6743c02173"
    ],
    "published": "2026-11-16T08:55:00Z",
-   "updated": "2026-11-16T10:15:14.493Z",
+   "updated": "2026-11-17T02:46:29.632Z",
    "agency": "BSI EST PARISIEN",
    "privateOwner": false,
    "exclusive": true,
@@ -203,7 +200,7 @@
     "https://cdnihddipa.cloudimg.io/f/9/4/9/f9491c74-73b6-4245-8182-3918c410c4d0.jpg?ci_seal=94ef331ba8bc46ac03c4ab452058d1b645932174"
    ],
    "published": "2026-11-16T08:16:00Z",
-   "updated": "2026-11-16T17:36:11.493Z",
+   "updated": "2026-11-17T01:51:24.363Z",
    "agency": "LYNX D'OR IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
@@ -465,7 +462,7 @@
     "https://cdnihddipa.cloudimg.io/a/a/8/8/aa88aaa7-66f4-4477-a498-4e2980fc62d3.jpg?ci_seal=52fbc3b723f10f514f485bdc1f6ad93840ae531f"
    ],
    "published": "2026-11-13T16:11:00Z",
-   "updated": "2026-11-16T16:36:11.972Z",
+   "updated": "2026-11-17T02:06:15.535Z",
    "agency": "SIA IMMOBILIER",
    "privateOwner": false,
    "exclusive": true,
@@ -547,7 +544,7 @@
     "https://cdnihddipa.cloudimg.io/4/7/7/c/477c190e-c02c-464c-b9e7-e52fbbc8ba21.jpg?ci_seal=92a380a4807a9022104848761e64426815ca53b5"
    ],
    "published": "2026-11-13T11:37:00Z",
-   "updated": "2026-11-16T13:46:06.077Z",
+   "updated": "2026-11-17T01:56:14.765Z",
    "agency": "CABINET FABRE D EGLANTINE",
    "privateOwner": false,
    "exclusive": false,
@@ -662,7 +659,7 @@
     "https://cdnihddipa.cloudimg.io/4/9/2/1/49210990-7192-4a24-a184-d4f482fc7c83.jpg?ci_seal=2cdc2a5e731a1d62b627879ff9b07bcb84f19119"
    ],
    "published": "2026-11-12T10:11:00Z",
-   "updated": "2026-11-14T01:46:19.828Z",
+   "updated": "2026-11-17T02:06:15.862Z",
    "agency": "LYNX D'OR IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
@@ -706,82 +703,6 @@
    "firstSeen": "2026-11-15T17:24:14+00:00",
    "inSector": true,
    "pricePerM2": 34.6
-  },
-  {
-   "id": "li-26F6FCDY6PLW",
-   "source": "SeLoger / Logic-Immo",
-   "url": "https://www.seloger.com/annonce/location/ile-de-france/paris-75/paris-75000/26F6FCDY6PLW",
-   "price": 1560,
-   "chargesIncluded": true,
-   "surface": 59.2,
-   "rooms": 3,
-   "bedrooms": 2,
-   "zip": "75012",
-   "city": "Paris 12ème arrondissement",
-   "district": "Bel-Air",
-   "floor": "4/6",
-   "energy": "D",
-   "title": "F3 Non meublé",
-   "description": "Au 125 Bis Rue de Picpus au 4 étage sans asc un F3 non meublé comprenant entrée un living une cuisine aménagée une salle de douche wc deux chambres Au pied des commerces métro libre immédiatement Pour réserver un créneau de visite merci de vous rendre sur le site du cabinet Poillot section location (lien de réservation en rouge en haut de la page), ou ou via Jinka de cliquer sur contacter l'agence. Après avoir complété le formulaire vous recevrez un mail vous permettant de vous inscrire à la vi...",
-   "photo": "https://cdnihddipa.cloudimg.io/d/b/e/5/dbe560f6-6db4-49d5-abe7-ec22c6e3a3f9.jpg?ci_seal=f7732aaf293ff64a4324404d186238e71eff2656",
-   "photos": [
-    "https://cdnihddipa.cloudimg.io/d/b/e/5/dbe560f6-6db4-49d5-abe7-ec22c6e3a3f9.jpg?ci_seal=f7732aaf293ff64a4324404d186238e71eff2656",
-    "https://cdnihddipa.cloudimg.io/f/8/f/d/f8fde4b0-ecc0-4966-a1f0-f560f56472ba.jpg?ci_seal=0dbb51889ba27312e1200e110c8bfd5995d6fcfe",
-    "https://cdnihddipa.cloudimg.io/2/2/e/4/22e471d0-d9f4-4ba1-ba45-93bc57dee782.jpg?ci_seal=dd704bcb734e1005e30ec1972cfc4b9f30b5c19b",
-    "https://cdnihddipa.cloudimg.io/a/f/1/d/af1dad50-6236-4a0d-a17b-5092852a2c28.jpg?ci_seal=906c94e282db952fe722ac5904c64f4c503bcc7d",
-    "https://cdnihddipa.cloudimg.io/9/1/6/5/9165ca04-4784-4636-be2f-86f70eb77cf0.jpg?ci_seal=4637b6e0d8c9f594d67dee62da7c0978a1f0c7d6",
-    "https://cdnihddipa.cloudimg.io/2/2/4/5/2245b484-e851-4857-adf4-71bbc0a4732e.jpg?ci_seal=45c889b72c37f4b71297d37f5321df47dab065bd"
-   ],
-   "published": "2026-11-12T01:12:00Z",
-   "updated": "2026-11-12T01:31:15.428Z",
-   "agency": "CABINET POILLOT",
-   "privateOwner": false,
-   "exclusive": true,
-   "lat": 48.83802274054855,
-   "lng": 2.401842643140763,
-   "phone": null,
-   "addressPublished": true,
-   "firstSeen": "2026-11-15T17:16:21+00:00",
-   "inSector": true,
-   "pricePerM2": 26.4
-  },
-  {
-   "id": "li-26ID8ZXW3XCF",
-   "source": "SeLoger / Logic-Immo",
-   "url": "https://www.seloger.com/annonce/location/ile-de-france/paris-75/paris-75000/26ID8ZXW3XCF",
-   "price": 1645,
-   "chargesIncluded": true,
-   "surface": 59.71,
-   "rooms": 3,
-   "bedrooms": 2,
-   "zip": "94160",
-   "city": "Saint-Mandé",
-   "district": "Daumesnil",
-   "floor": "5/5",
-   "energy": "D",
-   "title": "F3 non meublé",
-   "description": "Au 14 Avenue Robert André Vivien au 5 étage et dernier étage sans asc un F3 non meublé comprenant entrée un living une cuisine aménagée une salle de douche wc deux chambres Au pied des commerces métro libre immédiatement Pour réserver un créneau de visite merci de vous rendre sur le site du cabinet Poillot section location (lien de réservation en rouge en haut de la page), ou ou via Jinka de cliquer sur contacter l'agence. Après avoir complété le formulaire vous recevrez un mail vous permettant...",
-   "photo": "https://cdnihddipa.cloudimg.io/c/d/7/1/cd7112c9-1b29-4e62-8fbd-d5a6fa6ba36f.jpg?ci_seal=4b5122b79f7cc5707bed21f9eeb1a483f82519fa",
-   "photos": [
-    "https://cdnihddipa.cloudimg.io/c/d/7/1/cd7112c9-1b29-4e62-8fbd-d5a6fa6ba36f.jpg?ci_seal=4b5122b79f7cc5707bed21f9eeb1a483f82519fa",
-    "https://cdnihddipa.cloudimg.io/d/b/5/8/db58b86e-fb5d-4aa3-aa5b-50b2674be674.jpg?ci_seal=0f92525ce947bf8966285e808b8ab7b15e84d5bf",
-    "https://cdnihddipa.cloudimg.io/7/e/c/b/7ecb6699-6491-409f-8f28-eaa9f301ef68.jpg?ci_seal=29f4ff46b7f9469f13b6e9e0bd76b45ef046ccf9",
-    "https://cdnihddipa.cloudimg.io/3/8/e/f/38ef416a-8ddc-422b-b2cd-a86070cb8067.jpg?ci_seal=9d8f974f1e5ad2ed99db6343a136e16b4a32468a",
-    "https://cdnihddipa.cloudimg.io/3/0/4/d/304d1adc-5d29-4d90-ac51-bb724a8102c5.jpg?ci_seal=4b2eb2d782767601e81b7a1cd3672295d5996cd1",
-    "https://cdnihddipa.cloudimg.io/4/7/d/d/47ddfce3-bec6-4954-849b-cfba9321bd86.jpg?ci_seal=a500903a49cb26d29b3f24045e4af261bb086b18"
-   ],
-   "published": "2026-11-12T01:12:00Z",
-   "updated": "2026-11-12T01:31:19.713Z",
-   "agency": "CABINET POILLOT",
-   "privateOwner": false,
-   "exclusive": true,
-   "lat": 48.83547197076327,
-   "lng": 2.41754699093774,
-   "phone": null,
-   "addressPublished": true,
-   "firstSeen": "2026-11-15T17:16:21+00:00",
-   "inSector": true,
-   "pricePerM2": 27.5
   },
   {
    "id": "li-265LDZTV5STL",
@@ -847,7 +768,7 @@
     "https://cdnihddipa.cloudimg.io/1/4/d/2/14d2f880-0302-4ec1-a930-b553fcbf5282.jpg?ci_seal=a93e5810540f382d6d8f6dc6c41c7b5520879ef4"
    ],
    "published": "2026-11-10T10:18:20.047Z",
-   "updated": "2026-11-16T02:31:20.375Z",
+   "updated": "2026-11-17T01:51:29.891Z",
    "agency": "DESRUE IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
@@ -1315,6 +1236,12 @@
    "lng": 2.416020753270021,
    "phone": "0140052626",
    "addressPublished": true,
+   "alsoOn": [
+    {
+     "source": "PAP (particulier)",
+     "url": "https://www.pap.fr/annonces/appartement-saint-mande-94160-r465702781"
+    }
+   ],
    "firstSeen": "2026-11-15T17:16:21+00:00",
    "inSector": true,
    "pricePerM2": 30.0
@@ -1383,7 +1310,7 @@
     "https://cdnihddipa.cloudimg.io/c/0/b/6/c0b64e83-e8c1-4036-abff-87f71749c7c0.jpg?ci_seal=db14f3bdcc3cece3b5b42d50dd8877137fbab17b"
    ],
    "published": "2026-09-25T09:54:00Z",
-   "updated": "2026-11-16T02:16:21.655Z",
+   "updated": "2026-11-17T02:36:10.935Z",
    "agency": "LYNX D'OR IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
