@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T18:00:06+00:00",
+ "updated": "2026-11-17T19:40:47+00:00",
  "count": 41,
  "criteria": {
   "minRooms": 3,
@@ -12,7 +12,9 @@
    "94220": "Charenton-le-Pont"
   }
  },
- "errors": [],
+ "errors": [
+  "PAP"
+ ],
  "listings": [
   {
    "id": "li-26Q9KZNQVUM9",
@@ -44,11 +46,10 @@
    "agency": "GDB ASTRUC IMMOBILIER",
    "privateOwner": false,
    "exclusive": true,
-   "lng": 2.431857153413764,
    "lat": 48.85001210147399,
-   "approxPosition": false,
-   "addressPublished": true,
+   "lng": 2.431857153413764,
    "phone": "0622895674",
+   "addressPublished": true,
    "firstSeen": "2026-11-17T18:00:06+00:00",
    "inSector": false,
    "pricePerM2": 30.8
@@ -453,11 +454,11 @@
    "photos": [
     "https://cdnihddipa.cloudimg.io/f/a/9/c/fa9c418f-78ab-4a3a-b139-19f83f95a28d.jpg?ci_seal=b5ae0b3d86f770cf8c00aca428ad372794b63cfc",
     "https://cdnihddipa.cloudimg.io/7/6/e/5/76e5f9fa-7dd8-4abe-a76e-5ad1c764427d.jpg?ci_seal=501ed55d36a3df47f4ef81d1f56a4623441569d1",
-    "https://cdnihddipa.cloudimg.io/b/c/9/d/bc9d725e-7142-4ee8-afc1-3d7d44d08077.png?ci_seal=042f9dc35b5c371eea986ccd9720b7391fda1754",
+    "https://cdnihddipa.cloudimg.io/0/7/8/2/0782bce9-5a85-4eca-9807-509c7dfc71e8.png?ci_seal=f47e172e3d6adb0ccff3d5172b614dcb66327e04",
     "https://cdnihddipa.cloudimg.io/5/2/f/c/52fc5217-5860-4f8a-ad46-675ed76035b0.jpg?ci_seal=a8be889689bf0271e6c58b172db889a5ee048ef8"
    ],
    "published": "2026-11-13T18:35:41.159Z",
-   "updated": "2026-11-17T11:21:08.703Z",
+   "updated": "2026-11-17T18:21:51.053Z",
    "agency": "DAUCHEZ",
    "privateOwner": false,
    "exclusive": true,
@@ -1275,12 +1276,6 @@
    "lng": 2.416020753270021,
    "phone": "0140052626",
    "addressPublished": true,
-   "alsoOn": [
-    {
-     "source": "PAP (particulier)",
-     "url": "https://www.pap.fr/annonces/appartement-saint-mande-94160-r465702781"
-    }
-   ],
    "firstSeen": "2026-11-15T17:16:21+00:00",
    "inSector": true,
    "pricePerM2": 30.0
