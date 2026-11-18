@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T18:00:02+00:00",
+ "updated": "2026-11-18T19:16:28+00:00",
  "count": 41,
  "criteria": {
   "minRooms": 3,
@@ -12,7 +12,9 @@
    "94220": "Charenton-le-Pont"
   }
  },
- "errors": [],
+ "errors": [
+  "PAP"
+ ],
  "listings": [
   {
    "id": "li-261G1MGIJMRZ",
@@ -40,15 +42,14 @@
     "https://cdnihddipa.cloudimg.io/2/a/8/2/2a829772-e7ae-44eb-a3e8-f56c25beea77.jpg?ci_seal=80660ef9e75835c0c89c9a364a91df99a00971f5"
    ],
    "published": "2026-11-18T13:22:00Z",
-   "updated": "2026-11-18T13:26:12.046Z",
+   "updated": "2026-11-18T18:46:13.926Z",
    "agency": "D&J PARIS IMMO",
    "privateOwner": false,
    "exclusive": false,
-   "lng": 2.375514818793788,
    "lat": 48.84640081549254,
-   "approxPosition": false,
-   "addressPublished": true,
+   "lng": 2.375514818793788,
    "phone": "0698377118",
+   "addressPublished": true,
    "firstSeen": "2026-11-18T18:00:02+00:00",
    "inSector": false,
    "pricePerM2": 34.2
@@ -83,11 +84,10 @@
    "agency": "SR IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
-   "lng": 2.4563,
    "lat": 48.84956,
-   "approxPosition": true,
-   "addressPublished": false,
+   "lng": 2.4563,
    "phone": "0143949696",
+   "addressPublished": false,
    "firstSeen": "2026-11-18T18:00:02+00:00",
    "inSector": false,
    "pricePerM2": 29.0
@@ -122,11 +122,10 @@
    "agency": "INSTANTiMMO - Jacky Merai",
    "privateOwner": false,
    "exclusive": true,
-   "lng": 2.41311,
    "lat": 48.82147,
-   "approxPosition": true,
-   "addressPublished": false,
+   "lng": 2.41311,
    "phone": "0603017403",
+   "addressPublished": false,
    "alsoOn": [
     {
      "source": "Bien'ici",
@@ -167,11 +166,10 @@
    "agency": "GARANCE IMMOBILIER - PARIS 12",
    "privateOwner": false,
    "exclusive": true,
-   "lng": 2.40068,
    "lat": 48.83921,
-   "approxPosition": true,
-   "addressPublished": false,
+   "lng": 2.40068,
    "phone": "0767822050",
+   "addressPublished": false,
    "firstSeen": "2026-11-18T18:00:02+00:00",
    "inSector": true,
    "pricePerM2": 29.4
@@ -427,11 +425,10 @@
    "agency": "GUY HOQUET DAUMESNIL",
    "privateOwner": false,
    "exclusive": false,
-   "lng": 2.41334,
    "lat": 48.82176,
-   "approxPosition": true,
-   "addressPublished": false,
+   "lng": 2.41334,
    "phone": "0178902020",
+   "addressPublished": false,
    "alsoOn": [
     {
      "source": "Bien'ici",
@@ -497,7 +494,7 @@
     "https://cdnihddipa.cloudimg.io/c/1/1/b/c11b30a4-cb93-40e3-b955-2e6072ce5347.png?ci_seal=5b9759bf71a22037534dfea89868d8c842e8ab7d",
     "https://cdnihddipa.cloudimg.io/5/2/f/c/52fc5217-5860-4f8a-ad46-675ed76035b0.jpg?ci_seal=a8be889689bf0271e6c58b172db889a5ee048ef8"
    ],
-   "published": "2026-11-13T18:35:41.159Z",
+   "published": "2026-11-13T19:03:00Z",
    "updated": "2026-11-18T11:26:10.945Z",
    "agency": "DAUCHEZ",
    "privateOwner": false,
@@ -506,12 +503,6 @@
    "lng": 2.38318,
    "phone": "0153985858",
    "addressPublished": false,
-   "alsoOn": [
-    {
-     "source": "Bien'ici",
-     "url": "https://www.bienici.com/annonce/dauchez-26000"
-    }
-   ],
    "firstSeen": "2026-11-15T17:16:21+00:00",
    "inSector": false,
    "pricePerM2": 30.6
@@ -535,14 +526,14 @@
    "photo": "https://cdnihddipa.cloudimg.io/4/a/8/d/4a8d45e6-ae70-43b2-874a-76eb9a86538c.jpg?ci_seal=50557c25eda9cc68733432f5ff856dffd4803da0",
    "photos": [
     "https://cdnihddipa.cloudimg.io/4/a/8/d/4a8d45e6-ae70-43b2-874a-76eb9a86538c.jpg?ci_seal=50557c25eda9cc68733432f5ff856dffd4803da0",
+    "https://cdnihddipa.cloudimg.io/d/6/e/1/d6e1dac4-96d3-4547-ba6e-1137744980a4.jpg?ci_seal=e94d6d7b02d48bf2eea89ca985549d1da0209e62",
     "https://cdnihddipa.cloudimg.io/7/8/2/6/7826b966-5ccc-4c8d-908d-c894d077a566.jpg?ci_seal=f0d7c84e7b9a04d6b96dbe171b45ab8983984c76",
     "https://cdnihddipa.cloudimg.io/7/c/c/a/7ccab38d-04c6-43b0-805e-a996386af6df.jpg?ci_seal=e9eddaad5e614717de4b7262592115a8fc96f5b2",
     "https://cdnihddipa.cloudimg.io/2/2/4/4/22440c33-01eb-465d-9625-b4e2266e5f2c.jpg?ci_seal=e3d49f5186823d5d617bb77a5b61d68511f34a0d",
-    "https://cdnihddipa.cloudimg.io/8/4/5/5/8455e362-63a7-4252-80bb-04c00414bdb4.jpg?ci_seal=a589b2620ce6fe1946cfb51112d1fc02a584d83d",
-    "https://cdnihddipa.cloudimg.io/a/a/8/8/aa88aaa7-66f4-4477-a498-4e2980fc62d3.jpg?ci_seal=52fbc3b723f10f514f485bdc1f6ad93840ae531f"
+    "https://cdnihddipa.cloudimg.io/8/4/5/5/8455e362-63a7-4252-80bb-04c00414bdb4.jpg?ci_seal=a589b2620ce6fe1946cfb51112d1fc02a584d83d"
    ],
    "published": "2026-11-13T16:11:00Z",
-   "updated": "2026-11-18T16:16:10.536Z",
+   "updated": "2026-11-18T18:16:15.205Z",
    "agency": "SIA IMMOBILIER",
    "privateOwner": false,
    "exclusive": true,
@@ -854,11 +845,10 @@
    "agency": "BEAUDOIN CONSEIL ET INVESTISSEMENT",
    "privateOwner": false,
    "exclusive": true,
-   "lng": 2.390805043244786,
    "lat": 48.84055800841467,
-   "approxPosition": false,
-   "addressPublished": true,
+   "lng": 2.390805043244786,
    "phone": null,
+   "addressPublished": true,
    "firstSeen": "2026-11-18T18:00:02+00:00",
    "inSector": false,
    "pricePerM2": 27.5
@@ -1242,12 +1232,6 @@
    "lng": 2.416020753270021,
    "phone": "0140052626",
    "addressPublished": true,
-   "alsoOn": [
-    {
-     "source": "PAP (particulier)",
-     "url": "https://www.pap.fr/annonces/appartement-saint-mande-94160-r465702781"
-    }
-   ],
    "firstSeen": "2026-11-15T17:16:21+00:00",
    "inSector": true,
    "pricePerM2": 30.0
