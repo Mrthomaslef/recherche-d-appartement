@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-17T19:40:47+00:00",
- "count": 41,
+ "updated": "2026-11-18T06:30:03+00:00",
+ "count": 40,
  "criteria": {
   "minRooms": 3,
   "minSurface": 55,
@@ -12,9 +12,7 @@
    "94220": "Charenton-le-Pont"
   }
  },
- "errors": [
-  "PAP"
- ],
+ "errors": [],
  "listings": [
   {
    "id": "li-26Q9KZNQVUM9",
@@ -240,7 +238,7 @@
     "https://cdnihddipa.cloudimg.io/f/9/4/9/f9491c74-73b6-4245-8182-3918c410c4d0.jpg?ci_seal=94ef331ba8bc46ac03c4ab452058d1b645932174"
    ],
    "published": "2026-11-16T08:16:00Z",
-   "updated": "2026-11-17T01:51:24.363Z",
+   "updated": "2026-11-18T02:31:20.804Z",
    "agency": "LYNX D'OR IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
@@ -391,50 +389,6 @@
    "pricePerM2": 33.8
   },
   {
-   "id": "li-2622KM1RL3ZZ",
-   "source": "SeLoger / Logic-Immo",
-   "url": "https://www.seloger.com/annonce/location/ile-de-france/paris-75/paris-75000/2622KM1RL3ZZ",
-   "price": 2590,
-   "chargesIncluded": true,
-   "surface": 76,
-   "rooms": 3,
-   "bedrooms": 2,
-   "zip": "75012",
-   "city": "Paris 12ème arrondissement",
-   "district": "Bel-Air",
-   "floor": "5/6",
-   "energy": "C",
-   "title": "Location Appartement 3 pièces",
-   "description": "iad France - Pauline Nouschi vous propose: Balcons – Lumineux – Traversant Dans le quartier Bel-Air Nord du 12ème arrondissement de Paris, à 15 minutes à pied du Bois de Vincennes, venez découvrir ce bel appartement situé dans une résidence de standing très bien entretenue et sécurisée avec gardien et vidéosurveillance. L'appartement est au 5ème étage avec ascenseur. L'entrée avec placard dessert un beau séjour de 23 m² environ donnant sur un balcon orienté Sud-Est. La cuisine séparée est aména...",
-   "photo": "https://cdnihddipa.cloudimg.io/4/a/0/3/4a031440-117a-4839-bafa-9f9ef6e81133.jpg?ci_seal=801e99016bbdc1bd3541eabe8786e63a6c804c70",
-   "photos": [
-    "https://cdnihddipa.cloudimg.io/4/a/0/3/4a031440-117a-4839-bafa-9f9ef6e81133.jpg?ci_seal=801e99016bbdc1bd3541eabe8786e63a6c804c70",
-    "https://cdnihddipa.cloudimg.io/c/5/4/6/c5466553-4e4c-4f99-a22d-039ce1339287.jpg?ci_seal=f71461892af8d377167e61f076a48d96efd2a531",
-    "https://cdnihddipa.cloudimg.io/c/f/9/8/cf98cdc4-7517-4a90-ae77-de54379daf35.jpg?ci_seal=34d3fa4db2e97575de5ffeaf638325969667775c",
-    "https://cdnihddipa.cloudimg.io/6/3/5/8/6358a936-39a5-4855-b396-7a2712159d4f.jpg?ci_seal=1f64f6328544eecfca6e49add2efe5e65a9ae3ec",
-    "https://cdnihddipa.cloudimg.io/8/7/8/d/878dd469-beee-44b1-92ee-0f9e78da8572.jpg?ci_seal=905cde4620dba78ca284f951415cf27123f1606a",
-    "https://cdnihddipa.cloudimg.io/b/7/f/f/b7ff8bdd-77d6-4fc6-ad65-a2a3d641d9fa.jpg?ci_seal=11cbefbe490568f7e7fb61f20242f8d00c3a7d47"
-   ],
-   "published": "2026-11-14T03:57:35.002Z",
-   "updated": "2026-11-16T11:36:13.583Z",
-   "agency": "IAD France  Pauline NOUSCHI",
-   "privateOwner": false,
-   "exclusive": false,
-   "lat": 48.84573811712093,
-   "lng": 2.407281043870822,
-   "phone": "0621697526",
-   "addressPublished": true,
-   "alsoOn": [
-    {
-     "source": "Bien'ici",
-     "url": "https://www.bienici.com/annonce/iad-france-2159689"
-    }
-   ],
-   "firstSeen": "2026-11-15T17:16:21+00:00",
-   "inSector": true,
-   "pricePerM2": 34.1
-  },
-  {
    "id": "li-26X8PAJ1DX1T",
    "source": "SeLoger / Logic-Immo",
    "url": "https://www.seloger.com/annonce/location/ile-de-france/paris-75/paris-75000/26X8PAJ1DX1T",
@@ -502,7 +456,7 @@
     "https://cdnihddipa.cloudimg.io/a/a/8/8/aa88aaa7-66f4-4477-a498-4e2980fc62d3.jpg?ci_seal=52fbc3b723f10f514f485bdc1f6ad93840ae531f"
    ],
    "published": "2026-11-13T16:11:00Z",
-   "updated": "2026-11-17T14:36:13.742Z",
+   "updated": "2026-11-18T02:46:35.912Z",
    "agency": "SIA IMMOBILIER",
    "privateOwner": false,
    "exclusive": true,
@@ -546,7 +500,7 @@
     "https://cdnihddipa.cloudimg.io/e/e/4/d/ee4d0862-38cd-4f15-afdd-37aff5d75bfe.jpg?ci_seal=09136858fe1bcf296ff2dda467ccf8e16f3b55c5"
    ],
    "published": "2026-11-13T15:51:00Z",
-   "updated": "2026-11-17T16:50:13.595Z",
+   "updated": "2026-11-18T01:51:16.315Z",
    "agency": "2S IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
@@ -699,7 +653,7 @@
     "https://cdnihddipa.cloudimg.io/4/9/2/1/49210990-7192-4a24-a184-d4f482fc7c83.jpg?ci_seal=2cdc2a5e731a1d62b627879ff9b07bcb84f19119"
    ],
    "published": "2026-11-12T10:11:00Z",
-   "updated": "2026-11-17T02:06:15.862Z",
+   "updated": "2026-11-18T01:51:15.712Z",
    "agency": "LYNX D'OR IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
@@ -808,7 +762,7 @@
     "https://cdnihddipa.cloudimg.io/1/4/d/2/14d2f880-0302-4ec1-a930-b553fcbf5282.jpg?ci_seal=a93e5810540f382d6d8f6dc6c41c7b5520879ef4"
    ],
    "published": "2026-11-10T10:18:20.047Z",
-   "updated": "2026-11-17T01:51:29.891Z",
+   "updated": "2026-11-18T02:31:21.179Z",
    "agency": "DESRUE IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
@@ -1091,44 +1045,6 @@
    "pricePerM2": 30.0
   },
   {
-   "id": "li-26BIEA22RR2L",
-   "source": "SeLoger / Logic-Immo",
-   "url": "https://www.seloger.com/annonce/location/ile-de-france/paris-75/paris-75000/26BIEA22RR2L",
-   "price": 1842,
-   "chargesIncluded": true,
-   "surface": 57.73,
-   "rooms": 3,
-   "bedrooms": 2,
-   "zip": "94160",
-   "city": "Saint-Mandé",
-   "district": "Saint Louis",
-   "floor": "étage",
-   "energy": "D",
-   "title": "Appartement",
-   "description": "Saint-Mandé - À deux pas du métro et du Bois de Vincennes - 3 pièces - 57,73 m² - Situé rue Fay, deux pas du métro Saint-Mandé (ligne 1) et de toutes les commodités, découvrez ce charmant 3 pièces de 57,73 m², situé au 1er étage avec ascenseur d'un bel immeuble ancien. Lumineux, cet appartement séduit par tout le charme de l'ancien avec son parquet, ses moulures et sa cheminée décorative. Il se compose d'un séjour agréable, d'une cuisine indépendante, de deux chambres, d'une salle d'eau ainsi q...",
-   "photo": "https://cdnihddipa.cloudimg.io/d/d/d/8/ddd8caaa-818b-4e41-8cf5-b6a57dd9aa3a.jpg?ci_seal=8e77c5eaf9b88bca1cb3cf5eaa3877909dcb9d8b",
-   "photos": [
-    "https://cdnihddipa.cloudimg.io/d/d/d/8/ddd8caaa-818b-4e41-8cf5-b6a57dd9aa3a.jpg?ci_seal=8e77c5eaf9b88bca1cb3cf5eaa3877909dcb9d8b",
-    "https://cdnihddipa.cloudimg.io/c/1/5/9/c159ee82-77bc-4c25-8b6c-fc179b90fbd5.jpg?ci_seal=2126b82bad794bcb27db973b389f5ca9654d3047",
-    "https://cdnihddipa.cloudimg.io/9/1/f/d/91fdec35-7e0f-411b-9638-e08374898078.jpg?ci_seal=4026f85dfc7deb5365cf948a2cfad3f098313a0d",
-    "https://cdnihddipa.cloudimg.io/c/a/6/8/ca6893a7-0d1c-41fd-9eb4-1c10f21df39d.jpg?ci_seal=dd7d8e311ef6bc17c3a1f47ac7629b4b527d4657",
-    "https://cdnihddipa.cloudimg.io/2/3/0/3/23032159-accd-4015-b43b-db340dcc11ca.jpg?ci_seal=b3b5e58a77ef82dc018c35b163bfff4ffae8fe51",
-    "https://cdnihddipa.cloudimg.io/e/a/8/c/ea8cd6ff-d7c5-44d9-b92c-0c681bb25c3b.jpg?ci_seal=4105a0437c52f087e32f670d72801f400b469645"
-   ],
-   "published": "2026-10-28T19:26:00Z",
-   "updated": "2026-11-10T16:16:10.159Z",
-   "agency": "Oralia Faÿ & Cie",
-   "privateOwner": false,
-   "exclusive": true,
-   "lat": 48.84923,
-   "lng": 2.41634,
-   "phone": "0780977439",
-   "addressPublished": false,
-   "firstSeen": "2026-11-15T17:16:21+00:00",
-   "inSector": true,
-   "pricePerM2": 31.9
-  },
-  {
    "id": "li-26NX9F1Z178P",
    "source": "SeLoger / Logic-Immo",
    "url": "https://www.seloger.com/annonce/location/ile-de-france/paris-75/paris-75000/26NX9F1Z178P",
@@ -1230,7 +1146,7 @@
     "https://cdnihddipa.cloudimg.io/c/5/9/9/c59902fe-2385-4edc-be1e-cd925ea8f915.jpg?ci_seal=b8e7ec4f4012e43c159535be3abaf1b1e3383d11"
    ],
    "published": "2026-10-22T10:51:00Z",
-   "updated": "2026-11-17T15:06:13.042Z",
+   "updated": "2026-11-18T02:46:43.044Z",
    "agency": "Arik Property",
    "privateOwner": false,
    "exclusive": false,
@@ -1276,6 +1192,12 @@
    "lng": 2.416020753270021,
    "phone": "0140052626",
    "addressPublished": true,
+   "alsoOn": [
+    {
+     "source": "PAP (particulier)",
+     "url": "https://www.pap.fr/annonces/appartement-saint-mande-94160-r465702781"
+    }
+   ],
    "firstSeen": "2026-11-15T17:16:21+00:00",
    "inSector": true,
    "pricePerM2": 30.0
@@ -1344,7 +1266,7 @@
     "https://cdnihddipa.cloudimg.io/c/0/b/6/c0b64e83-e8c1-4036-abff-87f71749c7c0.jpg?ci_seal=db14f3bdcc3cece3b5b42d50dd8877137fbab17b"
    ],
    "published": "2026-09-25T09:54:00Z",
-   "updated": "2026-11-17T02:36:10.935Z",
+   "updated": "2026-11-18T02:21:18.163Z",
    "agency": "LYNX D'OR IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
@@ -1416,17 +1338,17 @@
    "energy": "E",
    "title": "3 pièces",
    "description": "A 6 minutes à pied du métro Charenton-Ecoles ligne 8, SAINT MAURICE PLATEAU , à deux pas du bois de Vincennes et des commerces. Dans un immeuble des années 1900 de standing nous vous proposons cet appartement de 3 pièces entièrement meublé situé au rez de chaussée comprenant une entrée, un séjour, une salle à manger, 1 chambre, une cuisine indépendante aménagée et équipée, une salle de bains, WC indépendant. Disponible de suite Honoraires locataires : 1035.0 euros Dont : - Visite, constitution ...",
-   "photo": "https://cdnihddipa.cloudimg.io/5/9/f/4/59f41153-6011-4446-8121-b5ed0961d6f6.jpg?ci_seal=2ca7abcba4d39c0a45643846d87612f34ba0229a",
+   "photo": "https://cdnihddipa.cloudimg.io/9/f/5/0/9f50f75d-4f46-476d-b8ef-f492b1e46893.jpg?ci_seal=94a4ee256d2a2c168694814c23bea9126febeb37",
    "photos": [
+    "https://cdnihddipa.cloudimg.io/9/f/5/0/9f50f75d-4f46-476d-b8ef-f492b1e46893.jpg?ci_seal=94a4ee256d2a2c168694814c23bea9126febeb37",
     "https://cdnihddipa.cloudimg.io/5/9/f/4/59f41153-6011-4446-8121-b5ed0961d6f6.jpg?ci_seal=2ca7abcba4d39c0a45643846d87612f34ba0229a",
     "https://cdnihddipa.cloudimg.io/3/9/d/9/39d9f23e-baca-4bfc-9a4b-dbf93ba5e95c.jpg?ci_seal=ea5d7c4dffc453d3a8b05efac0d9f02ba53b6666",
-    "https://cdnihddipa.cloudimg.io/9/f/5/0/9f50f75d-4f46-476d-b8ef-f492b1e46893.jpg?ci_seal=94a4ee256d2a2c168694814c23bea9126febeb37",
     "https://cdnihddipa.cloudimg.io/8/6/e/0/86e07cf3-dd25-449a-aaa5-9a717662f8b1.jpg?ci_seal=168fddbe21731b70602c58f8a986715a9d7ae4d7",
     "https://cdnihddipa.cloudimg.io/b/a/4/d/ba4d3e11-cfdd-4e91-92b3-358bcf6f2d31.jpg?ci_seal=5aab36e8dd60d3b9918e0e62525998beb7968bda",
     "https://cdnihddipa.cloudimg.io/0/2/e/c/02ec00d3-f533-422d-b999-71aeb658fb82.jpg?ci_seal=d206feb60cbf997f7fbb6ca644814b43a175b852"
    ],
    "published": "2026-09-04T00:56:00Z",
-   "updated": "2026-11-01T02:21:18.816Z",
+   "updated": "2026-11-18T02:16:11.648Z",
    "agency": "CENTURY 21 LTC",
    "privateOwner": false,
    "exclusive": true,
@@ -1437,6 +1359,45 @@
    "firstSeen": "2026-11-15T17:16:21+00:00",
    "inSector": true,
    "pricePerM2": 27.5
+  },
+  {
+   "id": "li-26N9QBLGJ7W6",
+   "source": "SeLoger / Logic-Immo",
+   "url": "https://www.seloger.com/annonce/location/ile-de-france/paris-75/paris-75000/26N9QBLGJ7W6",
+   "price": 2500,
+   "chargesIncluded": true,
+   "surface": 62,
+   "rooms": 3,
+   "bedrooms": 2,
+   "zip": "75012",
+   "city": "Paris 12ème arrondissement",
+   "district": "Vallée de Fécamp",
+   "floor": "1/6",
+   "energy": null,
+   "title": "Appartement meublé 2 chambres - Paris 12 - 62m2",
+   "description": "Location meublée Paris Attitude (Référence 14107). Retrouvez la visite virtuelle de cet appartement meublé et envoyez votre demande de location uniquement via notre site Paris Attitude. Cet appartement meublé prêt à vivre peut être réservé pour une durée comprise entre 6 mois et un an. Cet appartement de 62 m² , 3 pièces, est situé avenue du General Michel Bizot dans le 12ème arrondissement , au 1er étage d'un immeuble du 19ème siècle et il peut accueillir 4 personnes. Cet appartement est équip...",
+   "photo": "https://cdnihddipa.cloudimg.io/3/2/7/a/327aea47-b9de-4f02-8b30-c18ba92c767d.jpg?ci_seal=11b5c564f27a3cd4da5f559f7d34adf6c06774a8",
+   "photos": [
+    "https://cdnihddipa.cloudimg.io/3/2/7/a/327aea47-b9de-4f02-8b30-c18ba92c767d.jpg?ci_seal=11b5c564f27a3cd4da5f559f7d34adf6c06774a8",
+    "https://cdnihddipa.cloudimg.io/4/d/d/f/4ddfaaff-251f-49a9-b1c4-cd116ebddac8.jpg?ci_seal=8581332ac935101d994dd5c8889f6cdc507bb172",
+    "https://cdnihddipa.cloudimg.io/3/a/e/b/3aeb625d-6fa8-43d1-be51-1746d5f8f5cb.jpg?ci_seal=a8a49723ba1868f8b3755d9406e4b545825b132e",
+    "https://cdnihddipa.cloudimg.io/f/1/9/e/f19e914a-321d-4e1e-8825-dfec34b6ee17.jpg?ci_seal=ce0eccc7db1d534711538843ebbff75055b104b9",
+    "https://cdnihddipa.cloudimg.io/7/6/0/9/7609e527-4bb4-4dac-8b6d-5b5adfe2d5e9.jpg?ci_seal=67ae9a8b08190da1c1f8394d61576cef42794466",
+    "https://cdnihddipa.cloudimg.io/a/8/4/b/a84b9c2c-1ffb-4894-9cae-d510ab581bd3.jpg?ci_seal=8d9eccb736c4049ff8d01296a9c8661ed2971b1f"
+   ],
+   "published": "2026-09-04T00:16:00Z",
+   "updated": "2026-11-18T02:01:20.578Z",
+   "agency": "PARIS ATTITUDE",
+   "privateOwner": false,
+   "exclusive": true,
+   "lng": 2.402256,
+   "lat": 48.835736,
+   "approxPosition": false,
+   "addressPublished": true,
+   "phone": "0162045633",
+   "firstSeen": "2026-11-18T06:30:03+00:00",
+   "inSector": true,
+   "pricePerM2": 40.3
   },
   {
    "id": "li-265XKV257WAY",
