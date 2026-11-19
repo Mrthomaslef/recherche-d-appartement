@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-19T18:00:03+00:00",
- "count": 42,
+ "updated": "2026-11-19T19:24:52+00:00",
+ "count": 41,
  "criteria": {
   "minRooms": 3,
   "minSurface": 55,
@@ -12,7 +12,9 @@
    "94220": "Charenton-le-Pont"
   }
  },
- "errors": [],
+ "errors": [
+  "PAP"
+ ],
  "listings": [
   {
    "id": "li-26KITINF9SHY",
@@ -44,11 +46,10 @@
    "agency": "LAFORÊT IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
-   "lng": 2.40816,
    "lat": 48.82035,
-   "approxPosition": true,
-   "addressPublished": false,
+   "lng": 2.40816,
    "phone": "0141791919",
+   "addressPublished": false,
    "firstSeen": "2026-11-19T18:00:03+00:00",
    "inSector": true,
    "pricePerM2": 25.2
@@ -83,11 +84,10 @@
    "agency": "BLR PARTNERS",
    "privateOwner": false,
    "exclusive": true,
-   "lng": 2.39465,
    "lat": 48.83625,
-   "approxPosition": true,
-   "addressPublished": false,
+   "lng": 2.39465,
    "phone": "0617031666",
+   "addressPublished": false,
    "firstSeen": "2026-11-19T18:00:03+00:00",
    "inSector": true,
    "pricePerM2": 35.5
@@ -122,11 +122,10 @@
    "agency": "ARMON IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
-   "lng": 2.41955,
    "lat": 48.83478,
-   "approxPosition": true,
-   "addressPublished": false,
+   "lng": 2.41955,
    "phone": "0614310724",
+   "addressPublished": false,
    "firstSeen": "2026-11-19T18:00:03+00:00",
    "inSector": true,
    "pricePerM2": 44.1
@@ -1082,41 +1081,6 @@
    "pricePerM2": 30.6
   },
   {
-   "id": "bi-immo-facile-61699687",
-   "source": "Bien'ici",
-   "url": "https://www.bienici.com/annonce/immo-facile-61699687",
-   "price": 2200,
-   "chargesIncluded": true,
-   "charges": 150,
-   "surface": 72,
-   "rooms": 3,
-   "bedrooms": 2,
-   "zip": "94220",
-   "city": "Charenton-le-Pont",
-   "district": "Valmy",
-   "floor": "5/7",
-   "elevator": true,
-   "furnished": false,
-   "energy": "E",
-   "title": "Charenton Le Pont  prox metro et bois 3 pièces de 72 m2",
-   "description": "Dans un immeuble moderne d un très bon standing, 3/4 Pieces avec balcon entièrement refait à neuf avec climatisation. Prestations haut de gamme à proximité du métro, des commerces et du bois de Vincennes A SAISIR. Possibilité de parking en sus",
-   "photo": "https://file.bienici.com/photo/immo-facile-61699687_media.immo-facile.com_office8_lacote_immo_catalog_images_pr_p_6_1_6_9_9_6_8_7_61699687a.jpg_DATEMAJ_02_11_2026-15_54_44",
-   "photos": [
-    "https://file.bienici.com/photo/immo-facile-61699687_media.immo-facile.com_office8_lacote_immo_catalog_images_pr_p_6_1_6_9_9_6_8_7_61699687a.jpg_DATEMAJ_02_11_2026-15_54_44"
-   ],
-   "published": "2026-11-02T15:31:26.359Z",
-   "updated": "2026-11-02T15:31:26.359Z",
-   "agency": null,
-   "privateOwner": false,
-   "agencyFee": 1080,
-   "lat": 48.824668628536436,
-   "lng": 2.4050262839562726,
-   "approxPosition": true,
-   "firstSeen": "2026-11-15T17:15:38+00:00",
-   "inSector": true,
-   "pricePerM2": 30.6
-  },
-  {
    "id": "li-263GNYCH2QN5",
    "source": "SeLoger / Logic-Immo",
    "url": "https://www.seloger.com/annonce/location/ile-de-france/paris-75/paris-75000/263GNYCH2QN5",
@@ -1256,7 +1220,7 @@
     "https://cdnihddipa.cloudimg.io/c/5/9/9/c59902fe-2385-4edc-be1e-cd925ea8f915.jpg?ci_seal=b8e7ec4f4012e43c159535be3abaf1b1e3383d11"
    ],
    "published": "2026-10-22T10:51:00Z",
-   "updated": "2026-11-19T02:16:13.876Z",
+   "updated": "2026-11-19T18:15:09.291Z",
    "agency": "Arik Property",
    "privateOwner": false,
    "exclusive": false,
