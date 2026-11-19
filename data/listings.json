@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-18T19:16:28+00:00",
- "count": 41,
+ "updated": "2026-11-19T06:30:03+00:00",
+ "count": 40,
  "criteria": {
   "minRooms": 3,
   "minSurface": 55,
@@ -12,9 +12,7 @@
    "94220": "Charenton-le-Pont"
   }
  },
- "errors": [
-  "PAP"
- ],
+ "errors": [],
  "listings": [
   {
    "id": "li-261G1MGIJMRZ",
@@ -42,7 +40,7 @@
     "https://cdnihddipa.cloudimg.io/2/a/8/2/2a829772-e7ae-44eb-a3e8-f56c25beea77.jpg?ci_seal=80660ef9e75835c0c89c9a364a91df99a00971f5"
    ],
    "published": "2026-11-18T13:22:00Z",
-   "updated": "2026-11-18T18:46:13.926Z",
+   "updated": "2026-11-19T02:06:26.47Z",
    "agency": "D&J PARIS IMMO",
    "privateOwner": false,
    "exclusive": false,
@@ -80,7 +78,7 @@
     "https://cdnihddipa.cloudimg.io/c/d/7/2/cd727986-ac95-4bd9-9ca1-5dbbd4548173.jpg?ci_seal=1de9930ec17120fd04fa6b461a1de97369b19551"
    ],
    "published": "2026-11-18T13:09:00Z",
-   "updated": "2026-11-18T13:16:13.117Z",
+   "updated": "2026-11-19T01:51:17.364Z",
    "agency": "SR IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
@@ -91,6 +89,51 @@
    "firstSeen": "2026-11-18T18:00:02+00:00",
    "inSector": false,
    "pricePerM2": 29.0
+  },
+  {
+   "id": "li-26XMJ27HYG3X",
+   "source": "SeLoger / Logic-Immo",
+   "url": "https://www.seloger.com/annonce/location/ile-de-france/paris-75/paris-75000/26XMJ27HYG3X",
+   "price": 2000,
+   "chargesIncluded": true,
+   "surface": 66,
+   "rooms": 3,
+   "bedrooms": 2,
+   "zip": "94220",
+   "city": "Charenton-le-Pont",
+   "district": "Archeveche",
+   "floor": "3/6",
+   "energy": "C",
+   "title": "Un cocon de sérénité aux portes du Bois de Vincennes",
+   "description": "Imaginez-vous dans un appartement T3 spacieux et lumineux, baigné de lumière naturelle grâce à son exposition sud-est. Cet appartement de 62,10 m², situé au 5ème étage d'un immeuble de 6 étages, est le refuge idéal pour une vie moderne et confortable. À l'intérieur, vous découvrirez un espace de vie chaleureux et bien agencé. La cuisine aménagée et équipée, de type coin cuisine, est parfaite pour les amateurs de cuisine. Les ouvertures en aluminium et les portes à double vitrage garantissent un...",
+   "photo": "https://cdnihddipa.cloudimg.io/c/8/2/9/c8297ee8-e318-4306-be0d-db5d7b31d2f3.jpg?ci_seal=13591b2f83ec2a36c1ca5f73932cf012074de2c8",
+   "photos": [
+    "https://cdnihddipa.cloudimg.io/c/8/2/9/c8297ee8-e318-4306-be0d-db5d7b31d2f3.jpg?ci_seal=13591b2f83ec2a36c1ca5f73932cf012074de2c8",
+    "https://cdnihddipa.cloudimg.io/c/7/3/b/c73b3dac-df43-49d7-891c-4d0dc98caeff.jpg?ci_seal=ed78818944c153934a68d8b28f771c99f0a08140",
+    "https://cdnihddipa.cloudimg.io/c/2/a/8/c2a81830-dfbe-4240-b662-2143d2881f1a.jpg?ci_seal=bbfa367e7bc16356faaa773b5f72bc2f8f2aff0a",
+    "https://cdnihddipa.cloudimg.io/b/b/6/1/bb61276e-fc0a-4bed-97d4-96f0af7f1433.jpg?ci_seal=ae20302e64bea8db118e5e98645807e604e67a66",
+    "https://cdnihddipa.cloudimg.io/3/c/d/5/3cd5f03d-9960-4c8e-b19b-273cd828ad97.jpg?ci_seal=225d9c5a2a79f589211bf9bc49995930004ca0a1",
+    "https://cdnihddipa.cloudimg.io/b/8/e/0/b8e0cf22-e70f-44c9-b95f-7aca4af0d101.jpg?ci_seal=a6f3a19e8ebc2b8579c111124be9bda9f939274b"
+   ],
+   "published": "2026-11-18T12:49:16.176Z",
+   "updated": "2026-11-19T04:26:10.466Z",
+   "agency": "INSTANTiMMO - Jacky Merai",
+   "privateOwner": false,
+   "exclusive": true,
+   "lng": 2.41311,
+   "lat": 48.82147,
+   "approxPosition": true,
+   "addressPublished": false,
+   "phone": "0603017403",
+   "alsoOn": [
+    {
+     "source": "Bien'ici",
+     "url": "https://www.bienici.com/annonce/netty-instantimmo-appt-10742"
+    }
+   ],
+   "firstSeen": "2026-11-19T06:30:03+00:00",
+   "inSector": true,
+   "pricePerM2": 30.3
   },
   {
    "id": "li-26C1FBR7XVXJ",
@@ -126,12 +169,6 @@
    "lng": 2.41311,
    "phone": "0603017403",
    "addressPublished": false,
-   "alsoOn": [
-    {
-     "source": "Bien'ici",
-     "url": "https://www.bienici.com/annonce/netty-instantimmo-appt-10742"
-    }
-   ],
    "firstSeen": "2026-11-18T18:00:02+00:00",
    "inSector": true,
    "pricePerM2": 30.3
@@ -170,6 +207,12 @@
    "lng": 2.40068,
    "phone": "0767822050",
    "addressPublished": false,
+   "alsoOn": [
+    {
+     "source": "Bien'ici",
+     "url": "https://www.bienici.com/annonce/ag753737-561032990"
+    }
+   ],
    "firstSeen": "2026-11-18T18:00:02+00:00",
    "inSector": true,
    "pricePerM2": 29.4
@@ -317,7 +360,7 @@
     "https://cdnihddipa.cloudimg.io/f/9/4/9/f9491c74-73b6-4245-8182-3918c410c4d0.jpg?ci_seal=94ef331ba8bc46ac03c4ab452058d1b645932174"
    ],
    "published": "2026-11-16T08:16:00Z",
-   "updated": "2026-11-18T02:31:20.804Z",
+   "updated": "2026-11-19T01:41:14.835Z",
    "agency": "LYNX D'OR IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
@@ -421,7 +464,7 @@
     "https://cdnihddipa.cloudimg.io/9/b/5/e/9b5e5d30-efa7-4df5-8e32-a6008f7be817.jpg?ci_seal=692f9037629c3ad2f795449ab6fdee44efe2800c"
    ],
    "published": "2026-11-15T06:48:14.060Z",
-   "updated": "2026-11-18T11:41:13.597Z",
+   "updated": "2026-11-19T06:26:14.204Z",
    "agency": "GUY HOQUET DAUMESNIL",
    "privateOwner": false,
    "exclusive": false,
@@ -508,46 +551,42 @@
    "pricePerM2": 30.6
   },
   {
-   "id": "li-265KF6Z68FRX",
-   "source": "SeLoger / Logic-Immo",
-   "url": "https://www.seloger.com/annonce/location/ile-de-france/paris-75/paris-75000/265KF6Z68FRX",
+   "id": "bi-hektor-sia-immo-2429",
+   "source": "Bien'ici",
+   "url": "https://www.bienici.com/annonce/hektor-sia-immo-2429",
    "price": 2150,
    "chargesIncluded": true,
+   "charges": 95,
    "surface": 55.4,
    "rooms": 3,
    "bedrooms": 2,
    "zip": "75012",
-   "city": "Paris 12ème arrondissement",
-   "district": "Aligre-Gare de Lyon",
-   "floor": "1/5",
+   "city": "Paris 12e",
+   "district": "Aligre - Gare de Lyon",
+   "floor": "1/6",
+   "elevator": null,
+   "furnished": false,
    "energy": "E",
-   "title": "3 PIÈCES 55,40 M²   RÉNOVÉ À NEUF   CAVE   BAIL CIVIL",
-   "description": "EXCLUSIVITÉ SIA IMMOBILIER - BAIL CIVIL À DEUX PAS DE LA GARE DE LYON SUPERBE 3 PIÈCES ENTIÈREMENT RÉNOVÉ AVEC DEUX CHEMINÉES Situé au 3 rue Émile-Gilbert, Paris 12e, à seulement 2 minutes à pied de la Gare de Lyon, découvrez ce bel appartement de 55,40 m², entièrement rénové, alliant le charme de l'ancien au confort d'un intérieur contemporain. Au 1er étage d'un immeuble parisien, sans ascenseur, cet appartement séduit par ses beaux volumes, sa luminosité et ses deux cheminées, qui lui confère...",
-   "photo": "https://cdnihddipa.cloudimg.io/4/a/8/d/4a8d45e6-ae70-43b2-874a-76eb9a86538c.jpg?ci_seal=50557c25eda9cc68733432f5ff856dffd4803da0",
+   "title": "3 PIÈCES 55,40 M2   RÉNOVÉ À NEUF   CAVE   BAIL CIVIL",
+   "description": "EXCLUSIVITÉ SIA IMMOBILIER - BAIL CIVIL <br>À DEUX PAS DE LA GARE DE LYON   SUPERBE 3 PIÈCES ENTIÈREMENT RÉNOVÉ AVEC DEUX CHEMINÉES<br> Situé au 3 rue Émile-Gilbert, Paris 12e, à seulement 2 minutes à pied de la Gare de Lyon, découvrez ce bel appartement de 55,40 m2, entièrement rénové, alliant le charme de l'ancien au confort d'un intérieur contemporain.<br> Au 1er étage d'un immeuble parisien, sans ascenseur, cet appartement séduit par ses beaux volumes, sa luminosité et ses deux cheminées, qui lui confèrent un véritable cachet.<br>  <br> Il se compose de :<br> Une entrée desservant les diff",
+   "photo": "https://file.bienici.com/photo/hektor-sia-immo-2429_sia-immo.staticlbi.com_original_images_biens_1_644a6777df9d87631900b7ec405d5c0f_photo_e987d9313f214d86b34644faf94fe9a8.png",
    "photos": [
-    "https://cdnihddipa.cloudimg.io/4/a/8/d/4a8d45e6-ae70-43b2-874a-76eb9a86538c.jpg?ci_seal=50557c25eda9cc68733432f5ff856dffd4803da0",
-    "https://cdnihddipa.cloudimg.io/d/6/e/1/d6e1dac4-96d3-4547-ba6e-1137744980a4.jpg?ci_seal=e94d6d7b02d48bf2eea89ca985549d1da0209e62",
-    "https://cdnihddipa.cloudimg.io/7/8/2/6/7826b966-5ccc-4c8d-908d-c894d077a566.jpg?ci_seal=f0d7c84e7b9a04d6b96dbe171b45ab8983984c76",
-    "https://cdnihddipa.cloudimg.io/7/c/c/a/7ccab38d-04c6-43b0-805e-a996386af6df.jpg?ci_seal=e9eddaad5e614717de4b7262592115a8fc96f5b2",
-    "https://cdnihddipa.cloudimg.io/2/2/4/4/22440c33-01eb-465d-9625-b4e2266e5f2c.jpg?ci_seal=e3d49f5186823d5d617bb77a5b61d68511f34a0d",
-    "https://cdnihddipa.cloudimg.io/8/4/5/5/8455e362-63a7-4252-80bb-04c00414bdb4.jpg?ci_seal=a589b2620ce6fe1946cfb51112d1fc02a584d83d"
+    "https://file.bienici.com/photo/hektor-sia-immo-2429_sia-immo.staticlbi.com_original_images_biens_1_644a6777df9d87631900b7ec405d5c0f_photo_e987d9313f214d86b34644faf94fe9a8.png",
+    "https://file.bienici.com/photo/hektor-sia-immo-2429_sia-immo.staticlbi.com_original_images_biens_1_644a6777df9d87631900b7ec405d5c0f_photo_aec2e817953c702f47bbb555cbeeb9b1.png",
+    "https://file.bienici.com/photo/hektor-sia-immo-2429_sia-immo.staticlbi.com_original_images_biens_1_644a6777df9d87631900b7ec405d5c0f_photo_dbe067d089e11c1e372cfca04f976a8c.png",
+    "https://file.bienici.com/photo/hektor-sia-immo-2429_sia-immo.staticlbi.com_original_images_biens_1_644a6777df9d87631900b7ec405d5c0f_photo_3a0d89b8bafdcc563fcd7dce81b02baf.png",
+    "https://file.bienici.com/photo/hektor-sia-immo-2429_sia-immo.staticlbi.com_original_images_biens_1_644a6777df9d87631900b7ec405d5c0f_photo_e86d1e317b757435eb1761457a087917.png",
+    "https://file.bienici.com/photo/hektor-sia-immo-2429_sia-immo.staticlbi.com_original_images_biens_1_644a6777df9d87631900b7ec405d5c0f_photo_7b0a8182ab6fc75a04fe7e056ab16551.png"
    ],
-   "published": "2026-11-13T16:11:00Z",
-   "updated": "2026-11-18T18:16:15.205Z",
-   "agency": "SIA IMMOBILIER",
+   "published": "2026-11-13T16:24:44.185Z",
+   "updated": "2026-11-18T21:19:54.913Z",
+   "agency": null,
    "privateOwner": false,
-   "exclusive": true,
-   "lat": 48.84614188532609,
-   "lng": 2.373191775469055,
-   "phone": "0668176077",
-   "addressPublished": true,
-   "alsoOn": [
-    {
-     "source": "Bien'ici",
-     "url": "https://www.bienici.com/annonce/hektor-sia-immo-2429"
-    }
-   ],
-   "firstSeen": "2026-11-15T17:16:21+00:00",
+   "agencyFee": 2580,
+   "lat": 48.84615998474999,
+   "lng": 2.37275399597217,
+   "approxPosition": true,
+   "firstSeen": "2026-11-19T06:30:03+00:00",
    "inSector": false,
    "pricePerM2": 38.8
   },
@@ -577,7 +616,7 @@
     "https://cdnihddipa.cloudimg.io/e/e/4/d/ee4d0862-38cd-4f15-afdd-37aff5d75bfe.jpg?ci_seal=09136858fe1bcf296ff2dda467ccf8e16f3b55c5"
    ],
    "published": "2026-11-13T15:51:00Z",
-   "updated": "2026-11-18T10:16:14.485Z",
+   "updated": "2026-11-19T01:56:24.628Z",
    "agency": "2S IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
@@ -737,50 +776,6 @@
    "firstSeen": "2026-11-15T17:16:21+00:00",
    "inSector": true,
    "pricePerM2": 35.5
-  },
-  {
-   "id": "li-269TBZULJW9G",
-   "source": "SeLoger / Logic-Immo",
-   "url": "https://www.seloger.com/annonce/location/ile-de-france/paris-75/paris-75000/269TBZULJW9G",
-   "price": 2108,
-   "chargesIncluded": true,
-   "surface": 78.74,
-   "rooms": 4,
-   "bedrooms": 2,
-   "zip": "75012",
-   "city": "Paris 12ème arrondissement",
-   "district": "Aligre - Gare de Lyon",
-   "floor": "étage",
-   "energy": "E",
-   "title": "LOCATION T4, rue Michel Chasles, PARIS XII",
-   "description": "Situé proche de la Gare de Lyon dans le 12ème arrondissment de PARIS, rue Michel Chasles, à seulement 50m du métro (Ligne 1- Ligne 14), dans un immeuble ancien, au 1er étage sans ascenceur, un appartement de 4 pièces comprenant : une entrée, un double séjour sur rue, deux chambres sur cour, une cuisine aménagée, une salle de bains, un WC séparé, un débarras. « CLASSE ENERGIE : E (286) CLASSE CLIMAT : E (51), DPE NOUVELLE VERSION» - Surface habitable : 78,74 m² LOYER MENSUEL CHARGES COMPRISES : ...",
-   "photo": "https://cdnihddipa.cloudimg.io/b/4/4/a/b44a1506-fd7b-47e7-9c2e-98dfb96d259d.jpg?ci_seal=60d00af3c160c9801a8cf08819912ff620b8a559",
-   "photos": [
-    "https://cdnihddipa.cloudimg.io/b/4/4/a/b44a1506-fd7b-47e7-9c2e-98dfb96d259d.jpg?ci_seal=60d00af3c160c9801a8cf08819912ff620b8a559",
-    "https://cdnihddipa.cloudimg.io/1/5/1/b/151bad33-09e9-4e58-a601-6799b4d453e7.jpg?ci_seal=4796b03becc9da53fd35244000d6793f348d111e",
-    "https://cdnihddipa.cloudimg.io/f/d/4/b/fd4b4e63-a92a-4ae4-a82b-b9f56b9f0de7.jpg?ci_seal=7459742fb877e851059ea25541a1091585e5781b",
-    "https://cdnihddipa.cloudimg.io/8/3/3/b/833b8c53-22c4-47fc-9664-8c6a6b382940.jpg?ci_seal=a2a81e72136dfee4086d25f2095ed06e6f8bbf15",
-    "https://cdnihddipa.cloudimg.io/2/2/7/8/22781559-5603-4b1c-82e2-a1a8ded0f5ad.jpg?ci_seal=c7953df850d0c4837685de5d5815ddc4d255f6a1",
-    "https://cdnihddipa.cloudimg.io/1/4/d/2/14d2f880-0302-4ec1-a930-b553fcbf5282.jpg?ci_seal=a93e5810540f382d6d8f6dc6c41c7b5520879ef4"
-   ],
-   "published": "2026-11-10T10:18:20.047Z",
-   "updated": "2026-11-18T02:31:21.179Z",
-   "agency": "DESRUE IMMOBILIER",
-   "privateOwner": false,
-   "exclusive": false,
-   "lat": 48.83918514841505,
-   "lng": 2.401064702104715,
-   "phone": "0143263120",
-   "addressPublished": false,
-   "alsoOn": [
-    {
-     "source": "Bien'ici",
-     "url": "https://www.bienici.com/annonce/hektor-desrueimmo-2227"
-    }
-   ],
-   "firstSeen": "2026-11-15T17:16:21+00:00",
-   "inSector": true,
-   "pricePerM2": 26.8
   },
   {
    "id": "pap-466100274",
@@ -1186,7 +1181,7 @@
     "https://cdnihddipa.cloudimg.io/c/5/9/9/c59902fe-2385-4edc-be1e-cd925ea8f915.jpg?ci_seal=b8e7ec4f4012e43c159535be3abaf1b1e3383d11"
    ],
    "published": "2026-10-22T10:51:00Z",
-   "updated": "2026-11-18T17:41:12.409Z",
+   "updated": "2026-11-19T02:16:13.876Z",
    "agency": "Arik Property",
    "privateOwner": false,
    "exclusive": false,
@@ -1232,6 +1227,12 @@
    "lng": 2.416020753270021,
    "phone": "0140052626",
    "addressPublished": true,
+   "alsoOn": [
+    {
+     "source": "PAP (particulier)",
+     "url": "https://www.pap.fr/annonces/appartement-saint-mande-94160-r465702781"
+    }
+   ],
    "firstSeen": "2026-11-15T17:16:21+00:00",
    "inSector": true,
    "pricePerM2": 30.0
@@ -1300,7 +1301,7 @@
     "https://cdnihddipa.cloudimg.io/c/0/b/6/c0b64e83-e8c1-4036-abff-87f71749c7c0.jpg?ci_seal=db14f3bdcc3cece3b5b42d50dd8877137fbab17b"
    ],
    "published": "2026-09-25T09:54:00Z",
-   "updated": "2026-11-18T02:21:18.163Z",
+   "updated": "2026-11-19T02:36:25.718Z",
    "agency": "LYNX D'OR IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
@@ -1393,44 +1394,6 @@
    "firstSeen": "2026-11-15T17:16:21+00:00",
    "inSector": true,
    "pricePerM2": 27.5
-  },
-  {
-   "id": "li-26N9QBLGJ7W6",
-   "source": "SeLoger / Logic-Immo",
-   "url": "https://www.seloger.com/annonce/location/ile-de-france/paris-75/paris-75000/26N9QBLGJ7W6",
-   "price": 2500,
-   "chargesIncluded": true,
-   "surface": 62,
-   "rooms": 3,
-   "bedrooms": 2,
-   "zip": "75012",
-   "city": "Paris 12ème arrondissement",
-   "district": "Vallée de Fécamp",
-   "floor": "1/6",
-   "energy": null,
-   "title": "Appartement meublé 2 chambres - Paris 12 - 62m2",
-   "description": "Location meublée Paris Attitude (Référence 14107). Retrouvez la visite virtuelle de cet appartement meublé et envoyez votre demande de location uniquement via notre site Paris Attitude. Cet appartement meublé prêt à vivre peut être réservé pour une durée comprise entre 6 mois et un an. Cet appartement de 62 m² , 3 pièces, est situé avenue du General Michel Bizot dans le 12ème arrondissement , au 1er étage d'un immeuble du 19ème siècle et il peut accueillir 4 personnes. Cet appartement est équip...",
-   "photo": "https://cdnihddipa.cloudimg.io/3/2/7/a/327aea47-b9de-4f02-8b30-c18ba92c767d.jpg?ci_seal=11b5c564f27a3cd4da5f559f7d34adf6c06774a8",
-   "photos": [
-    "https://cdnihddipa.cloudimg.io/3/2/7/a/327aea47-b9de-4f02-8b30-c18ba92c767d.jpg?ci_seal=11b5c564f27a3cd4da5f559f7d34adf6c06774a8",
-    "https://cdnihddipa.cloudimg.io/4/d/d/f/4ddfaaff-251f-49a9-b1c4-cd116ebddac8.jpg?ci_seal=8581332ac935101d994dd5c8889f6cdc507bb172",
-    "https://cdnihddipa.cloudimg.io/3/a/e/b/3aeb625d-6fa8-43d1-be51-1746d5f8f5cb.jpg?ci_seal=a8a49723ba1868f8b3755d9406e4b545825b132e",
-    "https://cdnihddipa.cloudimg.io/f/1/9/e/f19e914a-321d-4e1e-8825-dfec34b6ee17.jpg?ci_seal=ce0eccc7db1d534711538843ebbff75055b104b9",
-    "https://cdnihddipa.cloudimg.io/7/6/0/9/7609e527-4bb4-4dac-8b6d-5b5adfe2d5e9.jpg?ci_seal=67ae9a8b08190da1c1f8394d61576cef42794466",
-    "https://cdnihddipa.cloudimg.io/a/8/4/b/a84b9c2c-1ffb-4894-9cae-d510ab581bd3.jpg?ci_seal=8d9eccb736c4049ff8d01296a9c8661ed2971b1f"
-   ],
-   "published": "2026-09-04T00:16:00Z",
-   "updated": "2026-11-18T02:01:20.578Z",
-   "agency": "PARIS ATTITUDE",
-   "privateOwner": false,
-   "exclusive": true,
-   "lat": 48.835736,
-   "lng": 2.402256,
-   "phone": "0162045633",
-   "addressPublished": true,
-   "firstSeen": "2026-11-18T06:30:03+00:00",
-   "inSector": true,
-   "pricePerM2": 40.3
   },
   {
    "id": "li-265XKV257WAY",
