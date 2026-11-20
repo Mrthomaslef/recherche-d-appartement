@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T18:00:04+00:00",
+ "updated": "2026-11-20T19:00:02+00:00",
  "count": 39,
  "criteria": {
   "minRooms": 3,
@@ -12,7 +12,10 @@
    "94220": "Charenton-le-Pont"
   }
  },
- "errors": [],
+ "errors": [
+  "Logic-Immo",
+  "PAP"
+ ],
  "listings": [
   {
    "id": "li-26H2SAXBJNY8",
@@ -49,15 +52,15 @@
    "approxPosition": false,
    "addressPublished": true,
    "phone": "0143944242",
+   "firstSeen": "2026-11-20T18:00:04+00:00",
+   "inSector": false,
+   "pricePerM2": 30.1,
    "alsoOn": [
     {
      "source": "Bien'ici",
      "url": "https://www.bienici.com/annonce/ladresse-1-adresse-13915603"
     }
-   ],
-   "firstSeen": "2026-11-20T18:00:04+00:00",
-   "inSector": false,
-   "pricePerM2": 30.1
+   ]
   },
   {
    "id": "li-26KITINF9SHY",
@@ -169,12 +172,6 @@
    "lng": 2.41955,
    "phone": "0614310724",
    "addressPublished": false,
-   "alsoOn": [
-    {
-     "source": "PAP (particulier)",
-     "url": "https://www.pap.fr/annonces/appartement-paris-12e-75012-r465900493"
-    }
-   ],
    "firstSeen": "2026-11-19T18:00:03+00:00",
    "inSector": true,
    "pricePerM2": 44.1
@@ -284,15 +281,15 @@
    "lng": 2.41311,
    "phone": "0603017403",
    "addressPublished": false,
+   "firstSeen": "2026-11-19T06:30:03+00:00",
+   "inSector": true,
+   "pricePerM2": 30.3,
    "alsoOn": [
     {
      "source": "Bien'ici",
      "url": "https://www.bienici.com/annonce/netty-instantimmo-appt-10742"
     }
-   ],
-   "firstSeen": "2026-11-19T06:30:03+00:00",
-   "inSector": true,
-   "pricePerM2": 30.3
+   ]
   },
   {
    "id": "li-26C1FBR7XVXJ",
@@ -366,15 +363,15 @@
    "lng": 2.40068,
    "phone": "0767822050",
    "addressPublished": false,
+   "firstSeen": "2026-11-18T18:00:02+00:00",
+   "inSector": true,
+   "pricePerM2": 29.4,
    "alsoOn": [
     {
      "source": "Bien'ici",
      "url": "https://www.bienici.com/annonce/ag753737-561032990"
     }
-   ],
-   "firstSeen": "2026-11-18T18:00:02+00:00",
-   "inSector": true,
-   "pricePerM2": 29.4
+   ]
   },
   {
    "id": "li-265I3ENELJ2R",
@@ -410,15 +407,15 @@
    "lng": 2.41334,
    "phone": "0178902020",
    "addressPublished": false,
+   "firstSeen": "2026-11-18T18:00:02+00:00",
+   "inSector": true,
+   "pricePerM2": 30.4,
    "alsoOn": [
     {
      "source": "Bien'ici",
      "url": "https://www.bienici.com/annonce/guy-hoquet-immo-facile-7199601"
     }
-   ],
-   "firstSeen": "2026-11-18T18:00:02+00:00",
-   "inSector": true,
-   "pricePerM2": 30.4
+   ]
   },
   {
    "id": "bi-gedeon-29341207",
@@ -708,15 +705,15 @@
    "approxPosition": false,
    "addressPublished": true,
    "phone": "0668176077",
+   "firstSeen": "2026-11-20T18:00:04+00:00",
+   "inSector": false,
+   "pricePerM2": 38.8,
    "alsoOn": [
     {
      "source": "Bien'ici",
      "url": "https://www.bienici.com/annonce/hektor-sia-immo-2429"
     }
-   ],
-   "firstSeen": "2026-11-20T18:00:04+00:00",
-   "inSector": false,
-   "pricePerM2": 38.8
+   ]
   },
   {
    "id": "li-26BAI6VZ8CU5",
@@ -786,15 +783,15 @@
    "lng": 2.40153,
    "phone": "0534401798",
    "addressPublished": false,
+   "firstSeen": "2026-11-15T17:16:21+00:00",
+   "inSector": true,
+   "pricePerM2": 39.9,
    "alsoOn": [
     {
      "source": "Bien'ici",
      "url": "https://www.bienici.com/annonce/ag313862-559582208"
     }
-   ],
-   "firstSeen": "2026-11-15T17:16:21+00:00",
-   "inSector": true,
-   "pricePerM2": 39.9
+   ]
   },
   {
    "id": "li-26IGPHMW5JYD",
@@ -972,15 +969,15 @@
    "lng": 2.410151161203584,
    "phone": "0757921512",
    "addressPublished": true,
+   "firstSeen": "2026-11-15T17:16:21+00:00",
+   "inSector": true,
+   "pricePerM2": 31.7,
    "alsoOn": [
     {
      "source": "Bien'ici",
      "url": "https://www.bienici.com/annonce/immo-facile-49475238"
     }
-   ],
-   "firstSeen": "2026-11-15T17:16:21+00:00",
-   "inSector": true,
-   "pricePerM2": 31.7
+   ]
   },
   {
    "id": "li-265TYE2MZ7Q7",
@@ -1320,15 +1317,15 @@
    "lng": 2.393397581154755,
    "phone": "0143401767",
    "addressPublished": true,
+   "firstSeen": "2026-11-15T17:16:21+00:00",
+   "inSector": true,
+   "pricePerM2": 25.5,
    "alsoOn": [
     {
      "source": "Bien'ici",
      "url": "https://www.bienici.com/annonce/ag755708-550867652"
     }
-   ],
-   "firstSeen": "2026-11-15T17:16:21+00:00",
-   "inSector": true,
-   "pricePerM2": 25.5
+   ]
   },
   {
    "id": "li-262S7QQ8XH1V",
