@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T19:24:52+00:00",
+ "updated": "2026-11-20T06:30:01+00:00",
  "count": 41,
  "criteria": {
   "minRooms": 3,
@@ -12,9 +12,7 @@
    "94220": "Charenton-le-Pont"
   }
  },
- "errors": [
-  "PAP"
- ],
+ "errors": [],
  "listings": [
   {
    "id": "li-26KITINF9SHY",
@@ -42,7 +40,7 @@
     "https://cdnihddipa.cloudimg.io/1/7/6/1/176192da-7839-45bf-9ea0-a9321787c59a.jpg?ci_seal=dceda3c14fe2c5963a1658f2dec2201b2a319e32"
    ],
    "published": "2026-11-19T16:03:00Z",
-   "updated": "2026-11-19T16:21:12.633Z",
+   "updated": "2026-11-20T02:06:30.396Z",
    "agency": "LAFORÊT IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
@@ -80,7 +78,7 @@
     "https://cdnihddipa.cloudimg.io/d/2/2/4/d224e822-0787-45c8-836f-029c729536a2.jpg?ci_seal=811a2421564d7ff92ccaa614eecd28bf147d1cb9"
    ],
    "published": "2026-11-19T14:47:00Z",
-   "updated": "2026-11-19T14:51:10.725Z",
+   "updated": "2026-11-20T02:21:26.802Z",
    "agency": "BLR PARTNERS",
    "privateOwner": false,
    "exclusive": true,
@@ -118,7 +116,7 @@
     "https://cdnihddipa.cloudimg.io/d/8/4/b/d84bc290-3fd5-4a19-b8fe-027c78d761d1.jpg?ci_seal=0fee9e23b3910b673ff30cff25af11a475317555"
    ],
    "published": "2026-11-19T09:50:00Z",
-   "updated": "2026-11-19T15:56:14.944Z",
+   "updated": "2026-11-20T02:21:39.643Z",
    "agency": "ARMON IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
@@ -189,7 +187,7 @@
     "https://cdnihddipa.cloudimg.io/2/a/8/2/2a829772-e7ae-44eb-a3e8-f56c25beea77.jpg?ci_seal=80660ef9e75835c0c89c9a364a91df99a00971f5"
    ],
    "published": "2026-11-18T13:22:00Z",
-   "updated": "2026-11-19T02:06:26.47Z",
+   "updated": "2026-11-20T02:16:19.477Z",
    "agency": "D&J PARIS IMMO",
    "privateOwner": false,
    "exclusive": false,
@@ -227,7 +225,7 @@
     "https://cdnihddipa.cloudimg.io/c/d/7/2/cd727986-ac95-4bd9-9ca1-5dbbd4548173.jpg?ci_seal=1de9930ec17120fd04fa6b461a1de97369b19551"
    ],
    "published": "2026-11-18T13:09:00Z",
-   "updated": "2026-11-19T09:41:11.121Z",
+   "updated": "2026-11-20T01:41:18.034Z",
    "agency": "SR IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
@@ -347,7 +345,7 @@
     "https://cdnihddipa.cloudimg.io/2/a/9/1/2a91255c-1342-42ad-9952-f607190223a8.jpg?ci_seal=0ab469576f62b0fb1faabe4bb0ccc5702c0cd10f"
    ],
    "published": "2026-11-18T12:23:00Z",
-   "updated": "2026-11-19T14:26:14.056Z",
+   "updated": "2026-11-19T22:26:12.95Z",
    "agency": "GARANCE IMMOBILIER - PARIS 12",
    "privateOwner": false,
    "exclusive": true,
@@ -391,7 +389,7 @@
     "https://cdnihddipa.cloudimg.io/9/b/5/e/9b5e5d30-efa7-4df5-8e32-a6008f7be817.jpg?ci_seal=692f9037629c3ad2f795449ab6fdee44efe2800c"
    ],
    "published": "2026-11-18T11:39:00Z",
-   "updated": "2026-11-19T06:26:14.204Z",
+   "updated": "2026-11-20T02:11:28.283Z",
    "agency": "GUY HOQUET DAUMESNIL",
    "privateOwner": false,
    "exclusive": false,
@@ -552,7 +550,7 @@
     "https://cdnihddipa.cloudimg.io/f/9/4/9/f9491c74-73b6-4245-8182-3918c410c4d0.jpg?ci_seal=94ef331ba8bc46ac03c4ab452058d1b645932174"
    ],
    "published": "2026-11-16T08:16:00Z",
-   "updated": "2026-11-19T01:41:14.835Z",
+   "updated": "2026-11-20T02:01:17.212Z",
    "agency": "LYNX D'OR IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
@@ -728,7 +726,7 @@
     "https://cdnihddipa.cloudimg.io/e/e/4/d/ee4d0862-38cd-4f15-afdd-37aff5d75bfe.jpg?ci_seal=09136858fe1bcf296ff2dda467ccf8e16f3b55c5"
    ],
    "published": "2026-11-13T15:51:00Z",
-   "updated": "2026-11-19T01:56:24.628Z",
+   "updated": "2026-11-20T01:46:25.944Z",
    "agency": "2S IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
@@ -1220,7 +1218,7 @@
     "https://cdnihddipa.cloudimg.io/c/5/9/9/c59902fe-2385-4edc-be1e-cd925ea8f915.jpg?ci_seal=b8e7ec4f4012e43c159535be3abaf1b1e3383d11"
    ],
    "published": "2026-10-22T10:51:00Z",
-   "updated": "2026-11-19T18:15:09.291Z",
+   "updated": "2026-11-20T02:21:37.167Z",
    "agency": "Arik Property",
    "privateOwner": false,
    "exclusive": false,
@@ -1334,7 +1332,7 @@
     "https://cdnihddipa.cloudimg.io/c/0/b/6/c0b64e83-e8c1-4036-abff-87f71749c7c0.jpg?ci_seal=db14f3bdcc3cece3b5b42d50dd8877137fbab17b"
    ],
    "published": "2026-09-25T09:54:00Z",
-   "updated": "2026-11-19T02:36:25.718Z",
+   "updated": "2026-11-20T02:06:26.472Z",
    "agency": "LYNX D'OR IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
