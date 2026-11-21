@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T17:54:35+00:00",
+ "updated": "2026-11-21T18:00:01+00:00",
  "count": 40,
  "criteria": {
   "minRooms": 3,
@@ -12,9 +12,7 @@
    "94220": "Charenton-le-Pont"
   }
  },
- "errors": [
-  "PAP"
- ],
+ "errors": [],
  "listings": [
   {
    "id": "li-264594T7Q7P3",
@@ -46,11 +44,10 @@
    "agency": "SARL Imax",
    "privateOwner": false,
    "exclusive": false,
-   "lng": 2.41634,
    "lat": 48.84923,
-   "approxPosition": true,
-   "addressPublished": false,
+   "lng": 2.41634,
    "phone": "0644634776",
+   "addressPublished": false,
    "firstSeen": "2026-11-21T17:54:35+00:00",
    "inSector": true,
    "pricePerM2": 35.8
@@ -200,7 +197,7 @@
     "https://cdnihddipa.cloudimg.io/a/3/4/1/a34195cf-28d7-4759-b48a-20def53c0f82.jpg?ci_seal=637250ded11a88683fdab0ab2ac30340364f300e",
     "https://cdnihddipa.cloudimg.io/d/8/4/b/d84bc290-3fd5-4a19-b8fe-027c78d761d1.jpg?ci_seal=0fee9e23b3910b673ff30cff25af11a475317555"
    ],
-   "published": "2026-11-19T09:50:00Z",
+   "published": "2026-11-19T08:00:00Z",
    "updated": "2026-11-20T02:21:39.643Z",
    "agency": "ARMON IMMOBILIER",
    "privateOwner": false,
@@ -209,6 +206,12 @@
    "lng": 2.41955,
    "phone": "0614310724",
    "addressPublished": false,
+   "alsoOn": [
+    {
+     "source": "PAP (particulier)",
+     "url": "https://www.pap.fr/annonces/appartement-paris-12e-75012-r465900493"
+    }
+   ],
    "firstSeen": "2026-11-19T18:00:03+00:00",
    "inSector": true,
    "pricePerM2": 44.1
