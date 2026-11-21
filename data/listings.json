@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-21T06:30:04+00:00",
- "count": 39,
+ "updated": "2026-11-21T17:54:35+00:00",
+ "count": 40,
  "criteria": {
   "minRooms": 3,
   "minSurface": 55,
@@ -13,9 +13,48 @@
   }
  },
  "errors": [
-  "Logic-Immo"
+  "PAP"
  ],
  "listings": [
+  {
+   "id": "li-264594T7Q7P3",
+   "source": "SeLoger / Logic-Immo",
+   "url": "https://www.seloger.com/annonce/location/ile-de-france/paris-75/paris-75000/264594T7Q7P3",
+   "price": 1970.44,
+   "chargesIncluded": true,
+   "surface": 55,
+   "rooms": 3,
+   "bedrooms": 2,
+   "zip": "94160",
+   "city": "Saint-Mandé",
+   "district": "Saint Louis",
+   "floor": "étage",
+   "energy": null,
+   "title": "Appartement Saint Mande 3 pièce(s) 55 m2",
+   "description": "LA PRISE DE RENDEZ-VOUS S'EFFECTUE EN LIGNE. MERCI DE BIEN VOULOIR REMPLIR LE FORMULAIRE DE CONTACT SUR JINKA OU SUR SELOGER AFIN DE RECEVOIR UN MAIL DE QEEPS VOUS INDIQUANT LA MARCHE A SUIVRE. SI LES CRENEAUX DE VISITE SONT COMPLETS OU PAS ENCORE CREES, VOUS SEREZ INSCRIT SUR LISTE D'ATTENTE. LE DEPOT DE DOSSIER N'EST PAS NECESSAIRE POUR LA PRISE DE RENDEZ-VOUS. MERCI DE VOTRE COMPREHENSION. SAINT-MANDE - METRO LIGNE 1 Exclusivité Imax. Immeuble bourgeois des années 30, rue calme à sens unique...",
+   "photo": "https://cdnihddipa.cloudimg.io/7/e/2/a/7e2a5cd4-46de-4234-9a0a-9272764dec5a.jpg?ci_seal=189cd11face270ad2b05f21d1c6b85bbf16bee5e",
+   "photos": [
+    "https://cdnihddipa.cloudimg.io/7/e/2/a/7e2a5cd4-46de-4234-9a0a-9272764dec5a.jpg?ci_seal=189cd11face270ad2b05f21d1c6b85bbf16bee5e",
+    "https://cdnihddipa.cloudimg.io/4/6/2/7/46275c4a-3423-4b49-94d9-c8c754a310c3.jpg?ci_seal=0cc66284041aa95274fd05e849e0a651e2d91bc3",
+    "https://cdnihddipa.cloudimg.io/b/9/8/8/b988c737-3535-48b9-8cf9-6529bc1f5591.jpg?ci_seal=b37ac3798250bfc33f3b6cf66e3c707f86010672",
+    "https://cdnihddipa.cloudimg.io/9/e/0/c/9e0c6381-13c5-4092-9630-58e307a0b9be.jpg?ci_seal=1ce05abd7f217214f52e37a346ec85ee3a17be7d",
+    "https://cdnihddipa.cloudimg.io/3/1/7/6/3176aab8-9b93-4d63-83e9-42462b2c4b41.jpg?ci_seal=11c323533fa2200aa7034e944293de660d7377b0",
+    "https://cdnihddipa.cloudimg.io/3/9/1/3/3913df12-301a-4838-bd8f-1ba9b1f6d761.jpg?ci_seal=2f75576001c21add0b36d281289787847ac811c6"
+   ],
+   "published": "2026-11-20T18:16:00Z",
+   "updated": "2026-11-21T10:11:10.021Z",
+   "agency": "SARL Imax",
+   "privateOwner": false,
+   "exclusive": false,
+   "lng": 2.41634,
+   "lat": 48.84923,
+   "approxPosition": true,
+   "addressPublished": false,
+   "phone": "0644634776",
+   "firstSeen": "2026-11-21T17:54:35+00:00",
+   "inSector": true,
+   "pricePerM2": 35.8
+  },
   {
    "id": "li-26H2SAXBJNY8",
    "source": "SeLoger / Logic-Immo",
@@ -42,24 +81,23 @@
     "https://cdnihddipa.cloudimg.io/e/3/a/2/e3a2f3cb-52ed-4dac-865b-34ebe76fe93a.jpg?ci_seal=e1cf09b93683d951864373b09b205ee4da016d40"
    ],
    "published": "2026-11-20T11:39:00Z",
-   "updated": "2026-11-20T11:46:13.244Z",
+   "updated": "2026-11-21T06:31:09.232Z",
    "agency": "ADN GESTION TRANSACTION",
    "privateOwner": false,
    "exclusive": true,
-   "lng": 2.454880075830463,
    "lat": 48.84978924851098,
-   "approxPosition": false,
-   "addressPublished": true,
+   "lng": 2.454880075830463,
    "phone": "0143944242",
-   "firstSeen": "2026-11-20T18:00:04+00:00",
-   "inSector": false,
-   "pricePerM2": 30.1,
+   "addressPublished": true,
    "alsoOn": [
     {
      "source": "Bien'ici",
      "url": "https://www.bienici.com/annonce/ladresse-1-adresse-13915603"
     }
-   ]
+   ],
+   "firstSeen": "2026-11-20T18:00:04+00:00",
+   "inSector": false,
+   "pricePerM2": 30.1
   },
   {
    "id": "li-26KITINF9SHY",
@@ -87,7 +125,7 @@
     "https://cdnihddipa.cloudimg.io/1/7/6/1/176192da-7839-45bf-9ea0-a9321787c59a.jpg?ci_seal=dceda3c14fe2c5963a1658f2dec2201b2a319e32"
    ],
    "published": "2026-11-19T16:03:00Z",
-   "updated": "2026-11-20T11:46:14.769Z",
+   "updated": "2026-11-21T02:01:23.707Z",
    "agency": "LAFORÊT IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
@@ -162,7 +200,7 @@
     "https://cdnihddipa.cloudimg.io/a/3/4/1/a34195cf-28d7-4759-b48a-20def53c0f82.jpg?ci_seal=637250ded11a88683fdab0ab2ac30340364f300e",
     "https://cdnihddipa.cloudimg.io/d/8/4/b/d84bc290-3fd5-4a19-b8fe-027c78d761d1.jpg?ci_seal=0fee9e23b3910b673ff30cff25af11a475317555"
    ],
-   "published": "2026-11-19T08:00:00Z",
+   "published": "2026-11-19T09:50:00Z",
    "updated": "2026-11-20T02:21:39.643Z",
    "agency": "ARMON IMMOBILIER",
    "privateOwner": false,
@@ -173,13 +211,7 @@
    "addressPublished": false,
    "firstSeen": "2026-11-19T18:00:03+00:00",
    "inSector": true,
-   "pricePerM2": 44.1,
-   "alsoOn": [
-    {
-     "source": "PAP (particulier)",
-     "url": "https://www.pap.fr/annonces/appartement-paris-12e-75012-r465900493"
-    }
-   ]
+   "pricePerM2": 44.1
   },
   {
    "id": "pap-447800034",
@@ -286,15 +318,15 @@
    "lng": 2.41311,
    "phone": "0603017403",
    "addressPublished": false,
-   "firstSeen": "2026-11-19T06:30:03+00:00",
-   "inSector": true,
-   "pricePerM2": 30.3,
    "alsoOn": [
     {
      "source": "Bien'ici",
      "url": "https://www.bienici.com/annonce/netty-instantimmo-appt-10742"
     }
-   ]
+   ],
+   "firstSeen": "2026-11-19T06:30:03+00:00",
+   "inSector": true,
+   "pricePerM2": 30.3
   },
   {
    "id": "li-26C1FBR7XVXJ",
@@ -360,7 +392,7 @@
     "https://cdnihddipa.cloudimg.io/2/a/9/1/2a91255c-1342-42ad-9952-f607190223a8.jpg?ci_seal=0ab469576f62b0fb1faabe4bb0ccc5702c0cd10f"
    ],
    "published": "2026-11-18T12:23:00Z",
-   "updated": "2026-11-20T17:16:12.957Z",
+   "updated": "2026-11-21T17:26:05.961Z",
    "agency": "GARANCE IMMOBILIER - PARIS 12",
    "privateOwner": false,
    "exclusive": true,
@@ -368,15 +400,15 @@
    "lng": 2.40068,
    "phone": "0767822050",
    "addressPublished": false,
-   "firstSeen": "2026-11-18T18:00:02+00:00",
-   "inSector": true,
-   "pricePerM2": 29.4,
    "alsoOn": [
     {
      "source": "Bien'ici",
      "url": "https://www.bienici.com/annonce/ag753737-561032990"
     }
-   ]
+   ],
+   "firstSeen": "2026-11-18T18:00:02+00:00",
+   "inSector": true,
+   "pricePerM2": 29.4
   },
   {
    "id": "li-265I3ENELJ2R",
@@ -412,15 +444,15 @@
    "lng": 2.41334,
    "phone": "0178902020",
    "addressPublished": false,
-   "firstSeen": "2026-11-18T18:00:02+00:00",
-   "inSector": true,
-   "pricePerM2": 30.4,
    "alsoOn": [
     {
      "source": "Bien'ici",
      "url": "https://www.bienici.com/annonce/guy-hoquet-immo-facile-7199601"
     }
-   ]
+   ],
+   "firstSeen": "2026-11-18T18:00:02+00:00",
+   "inSector": true,
+   "pricePerM2": 30.4
   },
   {
    "id": "bi-gedeon-29341207",
@@ -565,7 +597,7 @@
     "https://cdnihddipa.cloudimg.io/f/9/4/9/f9491c74-73b6-4245-8182-3918c410c4d0.jpg?ci_seal=94ef331ba8bc46ac03c4ab452058d1b645932174"
    ],
    "published": "2026-11-16T08:16:00Z",
-   "updated": "2026-11-20T02:01:17.212Z",
+   "updated": "2026-11-21T01:41:23.163Z",
    "agency": "LYNX D'OR IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
@@ -701,24 +733,23 @@
     "https://cdnihddipa.cloudimg.io/8/4/5/5/8455e362-63a7-4252-80bb-04c00414bdb4.jpg?ci_seal=a589b2620ce6fe1946cfb51112d1fc02a584d83d"
    ],
    "published": "2026-11-13T16:11:00Z",
-   "updated": "2026-11-20T10:25:08.312Z",
+   "updated": "2026-11-21T01:45:21.799Z",
    "agency": "SIA IMMOBILIER",
    "privateOwner": false,
    "exclusive": true,
-   "lng": 2.373191775469055,
    "lat": 48.84614188532609,
-   "approxPosition": false,
-   "addressPublished": true,
+   "lng": 2.373191775469055,
    "phone": "0668176077",
-   "firstSeen": "2026-11-20T18:00:04+00:00",
-   "inSector": false,
-   "pricePerM2": 38.8,
+   "addressPublished": true,
    "alsoOn": [
     {
      "source": "Bien'ici",
      "url": "https://www.bienici.com/annonce/hektor-sia-immo-2429"
     }
-   ]
+   ],
+   "firstSeen": "2026-11-20T18:00:04+00:00",
+   "inSector": false,
+   "pricePerM2": 38.8
   },
   {
    "id": "li-26BAI6VZ8CU5",
@@ -746,7 +777,7 @@
     "https://cdnihddipa.cloudimg.io/e/e/4/d/ee4d0862-38cd-4f15-afdd-37aff5d75bfe.jpg?ci_seal=09136858fe1bcf296ff2dda467ccf8e16f3b55c5"
    ],
    "published": "2026-11-13T15:51:00Z",
-   "updated": "2026-11-20T01:46:25.944Z",
+   "updated": "2026-11-21T02:01:20.599Z",
    "agency": "2S IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
@@ -788,15 +819,15 @@
    "lng": 2.40153,
    "phone": "0534401798",
    "addressPublished": false,
-   "firstSeen": "2026-11-15T17:16:21+00:00",
-   "inSector": true,
-   "pricePerM2": 39.9,
    "alsoOn": [
     {
      "source": "Bien'ici",
      "url": "https://www.bienici.com/annonce/ag313862-559582208"
     }
-   ]
+   ],
+   "firstSeen": "2026-11-15T17:16:21+00:00",
+   "inSector": true,
+   "pricePerM2": 39.9
   },
   {
    "id": "li-26IGPHMW5JYD",
@@ -974,15 +1005,15 @@
    "lng": 2.410151161203584,
    "phone": "0757921512",
    "addressPublished": true,
-   "firstSeen": "2026-11-15T17:16:21+00:00",
-   "inSector": true,
-   "pricePerM2": 31.7,
    "alsoOn": [
     {
      "source": "Bien'ici",
      "url": "https://www.bienici.com/annonce/immo-facile-49475238"
     }
-   ]
+   ],
+   "firstSeen": "2026-11-15T17:16:21+00:00",
+   "inSector": true,
+   "pricePerM2": 31.7
   },
   {
    "id": "li-265TYE2MZ7Q7",
@@ -1200,7 +1231,7 @@
     "https://cdnihddipa.cloudimg.io/c/5/9/9/c59902fe-2385-4edc-be1e-cd925ea8f915.jpg?ci_seal=b8e7ec4f4012e43c159535be3abaf1b1e3383d11"
    ],
    "published": "2026-10-22T10:51:00Z",
-   "updated": "2026-11-20T02:21:37.167Z",
+   "updated": "2026-11-21T01:45:19.24Z",
    "agency": "Arik Property",
    "privateOwner": false,
    "exclusive": false,
@@ -1276,7 +1307,7 @@
     "https://cdnihddipa.cloudimg.io/c/0/b/6/c0b64e83-e8c1-4036-abff-87f71749c7c0.jpg?ci_seal=db14f3bdcc3cece3b5b42d50dd8877137fbab17b"
    ],
    "published": "2026-09-25T09:54:00Z",
-   "updated": "2026-11-20T02:06:26.472Z",
+   "updated": "2026-11-21T02:06:20.908Z",
    "agency": "LYNX D'OR IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
@@ -1322,15 +1353,15 @@
    "lng": 2.393397581154755,
    "phone": "0143401767",
    "addressPublished": true,
-   "firstSeen": "2026-11-15T17:16:21+00:00",
-   "inSector": true,
-   "pricePerM2": 25.5,
    "alsoOn": [
     {
      "source": "Bien'ici",
      "url": "https://www.bienici.com/annonce/ag755708-550867652"
     }
-   ]
+   ],
+   "firstSeen": "2026-11-15T17:16:21+00:00",
+   "inSector": true,
+   "pricePerM2": 25.5
   },
   {
    "id": "li-262S7QQ8XH1V",
