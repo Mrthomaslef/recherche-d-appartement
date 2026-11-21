@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T19:00:02+00:00",
+ "updated": "2026-11-21T06:30:04+00:00",
  "count": 39,
  "criteria": {
   "minRooms": 3,
@@ -13,8 +13,7 @@
   }
  },
  "errors": [
-  "Logic-Immo",
-  "PAP"
+  "Logic-Immo"
  ],
  "listings": [
   {
@@ -174,7 +173,13 @@
    "addressPublished": false,
    "firstSeen": "2026-11-19T18:00:03+00:00",
    "inSector": true,
-   "pricePerM2": 44.1
+   "pricePerM2": 44.1,
+   "alsoOn": [
+    {
+     "source": "PAP (particulier)",
+     "url": "https://www.pap.fr/annonces/appartement-paris-12e-75012-r465900493"
+    }
+   ]
   },
   {
    "id": "pap-447800034",
