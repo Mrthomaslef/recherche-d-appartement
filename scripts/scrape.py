@@ -136,7 +136,7 @@ def scrape_logicimmo(prev):
                 "title": (c.get("mainDescription") or {}).get("headline") or c.get("hardFacts", {}).get("title"),
                 "description": (c.get("mainDescription") or {}).get("description"),
                 "photo": imgs[0] if imgs else None,
-                "photos": imgs[:6],
+                "photos": imgs[:40],
                 "published": (c.get("metadata") or {}).get("creationDate"),
                 "updated": (c.get("metadata") or {}).get("updateDate"),
                 "agency": (prov.get("intermediaryCard") or {}).get("title"),
@@ -217,7 +217,7 @@ def scrape_bienici(prev):
             "title": a.get("title"),
             "description": (a.get("description") or "")[:600],
             "photo": photos[0] if photos else None,
-            "photos": photos[:6],
+            "photos": photos[:40],
             "published": pub,
             "updated": a.get("modificationDate"),
             "agency": None,
@@ -262,12 +262,14 @@ def scrape_pap(prev):
     for path in sorted(urls):
         pid = "pap-" + path.rsplit("-r", 1)[1]
         old = prev.get(pid)
-        if old:
+        if old and old.get("photosAll"):
             out.append(old)
             continue
         r = get("https://www.pap.fr" + path)
         time.sleep(1.0)
         if not r:
+            if old:
+                out.append(old)
             continue
         t = r.text
         head = strip(t[t.find('class="item-title-container"'):][:1500])
@@ -304,7 +306,8 @@ def scrape_pap(prev):
             "title": head.split("€")[0][:120] if head else None,
             "description": desc,
             "photo": photos[0] if photos else None,
-            "photos": list(dict.fromkeys(photos))[:6],
+            "photos": list(dict.fromkeys(photos))[:40],
+            "photosAll": True,
             "published": parse_pap_date(head),
             "agency": "Particulier",
             "privateOwner": True,
@@ -347,6 +350,9 @@ def dedupe(items):
             for f in ("lat", "lng", "phone", "photo", "district", "agency", "description"):
                 if not dup.get(f) and it.get(f):
                     dup[f] = it[f]
+            if len(it.get("photos") or []) > len(dup.get("photos") or []):
+                dup["photos"] = it["photos"]
+                dup["photo"] = dup.get("photo") or it["photos"][0]
             if dup.get("approxPosition") and it.get("lat") and not it.get("approxPosition"):
                 dup["lat"], dup["lng"], dup["approxPosition"] = it["lat"], it["lng"], False
             pubs = [p for p in (dup.get("published"), it.get("published")) if p]
