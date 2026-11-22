@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T18:00:04+00:00",
+ "updated": "2026-11-22T18:19:54+00:00",
  "count": 40,
  "criteria": {
   "minRooms": 3,
@@ -12,7 +12,9 @@
    "94220": "Charenton-le-Pont"
   }
  },
- "errors": [],
+ "errors": [
+  "PAP"
+ ],
  "listings": [
   {
    "id": "li-264594T7Q7P3",
@@ -197,7 +199,7 @@
     "https://cdnihddipa.cloudimg.io/a/3/4/1/a34195cf-28d7-4759-b48a-20def53c0f82.jpg?ci_seal=637250ded11a88683fdab0ab2ac30340364f300e",
     "https://cdnihddipa.cloudimg.io/d/8/4/b/d84bc290-3fd5-4a19-b8fe-027c78d761d1.jpg?ci_seal=0fee9e23b3910b673ff30cff25af11a475317555"
    ],
-   "published": "2026-11-19T08:00:00Z",
+   "published": "2026-11-19T09:50:00Z",
    "updated": "2026-11-20T02:21:39.643Z",
    "agency": "ARMON IMMOBILIER",
    "privateOwner": false,
@@ -206,12 +208,6 @@
    "lng": 2.41955,
    "phone": "0614310724",
    "addressPublished": false,
-   "alsoOn": [
-    {
-     "source": "PAP (particulier)",
-     "url": "https://www.pap.fr/annonces/appartement-paris-12e-75012-r465900493"
-    }
-   ],
    "firstSeen": "2026-11-19T18:00:03+00:00",
    "inSector": true,
    "pricePerM2": 44.1
@@ -758,7 +754,7 @@
    "id": "li-26BAI6VZ8CU5",
    "source": "SeLoger / Logic-Immo",
    "url": "https://www.seloger.com/annonce/location/ile-de-france/paris-75/paris-75000/26BAI6VZ8CU5",
-   "price": 2600,
+   "price": 2500,
    "chargesIncluded": true,
    "surface": 85,
    "rooms": 4,
@@ -769,7 +765,7 @@
    "floor": "3/6",
    "energy": "D",
    "title": "CHARENTON-ÉCOLES   AU PIED DU MÉTRO   SUPERBE 4 PIÈCES MEUBLÉ",
-   "description": "Idéalement situé au cœur du quartier recherché de Charenton-Écoles, au pied du métro et à proximité immédiate des commerces et commodités, 2S Immobilier vous propose à la location ce bel appartement familial de 4 pièces, entièrement meublé. Situé au 3e étage d'un immeuble semi-récent, cet appartement offre un cadre de vie agréable et un agencement fonctionnel. Il se compose d'une entrée, d'un séjour avec cuisine américaine aménagée et équipée, de trois chambres, ainsi que d'une salle d'eau. Le ...",
+   "description": "Idéalement situé au cœur du quartier recherché de Charenton-Écoles, au pied du métro et à proximité immédiate des commerces et commodités,2S Immobiliervous propose à la location ce bel appartement familial de 4 pièces, entièrement meublé. Situé au3e étage d'un immeuble semi-récent, cet appartement offre un cadre de vie agréable et un agencement fonctionnel. Il se compose d'une entrée, d'un séjour avec cuisine américaine aménagée et équipée, detrois chambres, ainsi que d'une salle d'eau. Le chau...",
    "photo": "https://cdnihddipa.cloudimg.io/f/7/d/b/f7db0795-de41-4004-818e-b5099e9b7281.jpg?ci_seal=3dfb767b0341eab84f637f7a1dc3a397209ad6fc",
    "photos": [
     "https://cdnihddipa.cloudimg.io/f/7/d/b/f7db0795-de41-4004-818e-b5099e9b7281.jpg?ci_seal=3dfb767b0341eab84f637f7a1dc3a397209ad6fc",
@@ -780,7 +776,7 @@
     "https://cdnihddipa.cloudimg.io/e/e/4/d/ee4d0862-38cd-4f15-afdd-37aff5d75bfe.jpg?ci_seal=09136858fe1bcf296ff2dda467ccf8e16f3b55c5"
    ],
    "published": "2026-11-13T15:51:00Z",
-   "updated": "2026-11-22T02:12:26.61Z",
+   "updated": "2026-11-22T18:15:14.493Z",
    "agency": "2S IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
@@ -791,7 +787,7 @@
    "firstSeen": "2026-11-15T17:16:21+00:00",
    "priceDrop": 100,
    "inSector": true,
-   "pricePerM2": 30.6
+   "pricePerM2": 29.4
   },
   {
    "id": "li-26U7AN9CP3IX",
