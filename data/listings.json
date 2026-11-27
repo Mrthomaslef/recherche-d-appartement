@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-26T20:01:48+00:00",
- "count": 37,
+ "updated": "2026-11-27T06:30:05+00:00",
+ "count": 35,
  "criteria": {
   "minRooms": 3,
   "minSurface": 55,
@@ -12,9 +12,7 @@
    "94220": "Charenton-le-Pont"
   }
  },
- "errors": [
-  "PAP"
- ],
+ "errors": [],
  "listings": [
   {
    "id": "bi-gedeon-29341207",
@@ -102,7 +100,7 @@
     "https://cdnihddipa.cloudimg.io/a/8/3/5/a83565ee-5489-4c65-bc8a-53c49b009a20.jpg?ci_seal=1b00489e0aece02ec6d08df67bbd722a0d083d97"
    ],
    "published": "2026-11-26T16:38:00Z",
-   "updated": "2026-11-26T16:41:04.685Z",
+   "updated": "2026-11-27T01:41:21.875Z",
    "agency": "SAMCOGER",
    "privateOwner": false,
    "exclusive": true,
@@ -171,15 +169,18 @@
    "description": "Paris 12 - Aligre-Gare de Lyon Situé avenue Daumesnil, dans le 12e arrondissement de Paris, à proximité immédiate de la place Daumesnil et à quelques minutes du bois de Vincennes, découvrez ce magnifique appartement haussmannien entièrement meublé et équipé, au 4e étage avec ascenseur. Alliant le charme de l’ancien et le confort contemporain, cet appartement offre de belles prestations, notamment un parquet en point de Hongrie, une cheminée et d’élégantes moulures. Il se compose d’un beau séjou...",
    "photo": "https://cdnihddipa.cloudimg.io/6/d/d/4/6dd43a31-9ce5-41dd-98ff-c910c03db1a8.jpg?ci_seal=bded4f32290dc22f38038728940994883c4b8a67",
    "photos": [
-    "https://cdnihddipa.cloudimg.io/6/d/d/4/6dd43a31-9ce5-41dd-98ff-c910c03db1a8.jpg?ci_seal=bded4f32290dc22f38038728940994883c4b8a67",
-    "https://cdnihddipa.cloudimg.io/f/5/8/4/f58462d0-bdf0-4b43-8c94-fd3288d649bf.jpg?ci_seal=0bad44c61665ee34983de5977399d7ac088da384",
-    "https://cdnihddipa.cloudimg.io/9/2/4/2/92429d8f-c855-491e-bb39-5d472ac8b9a6.jpg?ci_seal=7b820a554ed3f567b8e5a9fe0bbb3b98ecb8543b",
-    "https://cdnihddipa.cloudimg.io/f/9/6/c/f96c68c3-e5ed-4e49-a739-48b6bb984c69.jpg?ci_seal=ef9a8afa16d89e248a89c80f9d1ee56a67e1ab07",
-    "https://cdnihddipa.cloudimg.io/6/8/4/c/684cbcb1-f1f0-48e3-afc5-ada41663cf6e.jpg?ci_seal=b55ae0f9219994d46dffe412013ad8890ec53b21",
-    "https://cdnihddipa.cloudimg.io/5/c/a/d/5cad4c20-9db7-4fb6-8f7f-fe6c47beef98.jpg?ci_seal=f88963349728b2f791de355c9a11cbdca2c63723",
-    "https://cdnihddipa.cloudimg.io/9/6/5/8/9658d1c3-80a4-45b9-b684-0d15a0bc105a.jpg?ci_seal=746248f9c1dd55568b4c2b5f5460b5842790201d",
-    "https://cdnihddipa.cloudimg.io/7/3/e/5/73e58cdf-098d-4c7f-998f-dcda599c590f.jpg?ci_seal=61724e2bad4647406a2e02844aa438801571f19a",
-    "https://cdnihddipa.cloudimg.io/9/c/b/2/9cb28bc1-e324-43c5-a4b4-af85cd1dd44f.jpg?ci_seal=eb963bc51d151929283560ba4c571ef534bf84a0"
+    "https://cdn.pap.fr/photos/pap/7f/6f/7f6fdc373ea83c6cd6e5bc40d51fe743/7-p1.jpg",
+    "https://cdn.pap.fr/photos/pap/4e/04/4e049f4f30462336e84399f4b519543f/4-p1.jpg",
+    "https://cdn.pap.fr/photos/pap/0d/6a/0d6aa41e78d2a9331dfba29aaa010c6e/0-p1.jpg",
+    "https://cdn.pap.fr/photos/pap/a3/16/a3164813a82f9304a11966b54507037b/a-p1.jpg",
+    "https://cdn.pap.fr/photos/pap/f7/72/f772cc93cb58ca876deabbf01cf56d1e/f-p1.jpg",
+    "https://cdn.pap.fr/photos/pap/ea/1c/ea1cd29ac4bcc1076e6617ddc231fb31/e-p1.jpg",
+    "https://cdn.pap.fr/photos/pap/a5/1b/a51b7bdeb33c3747b5e8b2df0498e846/a-p1.jpg",
+    "https://cdn.pap.fr/photos/pap/5e/c3/5ec3172e410b254b47833f0fb49451a7/5-p1.jpg",
+    "https://cdn.pap.fr/photos/pap/78/7e/787e808528cb7d3f73ecfa592b1f030d/7-p1.jpg",
+    "https://cdn.pap.fr/photos/pap/54/59/5459aed76ce84ca82211e36b1d00884a/5-p1.jpg",
+    "https://cdn.pap.fr/photos/pap/72/c4/72c4cde2461ff85d200bea47aeed4f07/7-p1.jpg",
+    "https://cdn.pap.fr/photos/pap/d1/95/d1950554314fca45aedf24c5b66179cc/d-p1.jpg"
    ],
    "published": "2026-11-25T13:15:00Z",
    "updated": "2026-11-26T02:11:25.736Z",
@@ -190,6 +191,12 @@
    "lng": 2.399473,
    "phone": null,
    "addressPublished": null,
+   "alsoOn": [
+    {
+     "source": "PAP (particulier)",
+     "url": "https://www.pap.fr/annonces/appartement-paris-12e-75012-r465900493"
+    }
+   ],
    "firstSeen": "2026-11-25T18:00:05+00:00",
    "inSector": true,
    "pricePerM2": 44.1
@@ -261,7 +268,7 @@
     "https://cdnihddipa.cloudimg.io/7/5/0/e/750e4ea8-c051-4e20-852d-746242e44160.jpg?ci_seal=8eb82d8f33494e7e27dd31291e37f197e968ff91"
    ],
    "published": "2026-11-25T10:50:00Z",
-   "updated": "2026-11-26T13:55:06.23Z",
+   "updated": "2026-11-27T02:06:26.495Z",
    "agency": "CABINET FABRE D EGLANTINE",
    "privateOwner": false,
    "exclusive": false,
@@ -639,42 +646,6 @@
    "pricePerM2": 25.2
   },
   {
-   "id": "pap-465801207",
-   "source": "PAP (particulier)",
-   "url": "https://www.pap.fr/annonces/appartement-saint-mande-94160-r465801207",
-   "price": 2700.0,
-   "chargesIncluded": true,
-   "surface": 78.0,
-   "rooms": 3,
-   "bedrooms": 2,
-   "zip": "94160",
-   "city": "Saint-Mandé",
-   "district": null,
-   "title": "class=\"item-title-container\"> Location meublée appartement 3 pièces 78 m² Saint-Mandé (94160) 2.700 ",
-   "description": null,
-   "photo": "https://cdn.pap.fr/photos/pap/0d/7c/0d7cbcd05574a3683043c46a3b91299c/0-p1.jpg",
-   "photos": [
-    "https://cdn.pap.fr/photos/pap/0d/7c/0d7cbcd05574a3683043c46a3b91299c/0-p1.jpg",
-    "https://cdn.pap.fr/photos/pap/e1/02/e102bc97d2ee0f421d4d90c100792212/e-p1.jpg",
-    "https://cdn.pap.fr/photos/pap/4f/7d/4f7dcbfb72fb65e6b9558f307269b289/4-p1.jpg",
-    "https://cdn.pap.fr/photos/pap/9c/a6/9ca6af55e8eee5c69c2a6f5867844725/9-p1.jpg",
-    "https://cdn.pap.fr/photos/pap/3a/68/3a6800637f758ee4928fd6e72961b169/3-p1.jpg",
-    "https://cdn.pap.fr/photos/pap/85/45/8545a1c3ebb14172b5f59487ba06ca2e/8-p1.jpg",
-    "https://cdn.pap.fr/photos/pap/34/00/3400dc8d808794f707da39e234cbbec9/3-p1.jpg",
-    "https://cdn.pap.fr/photos/pap/95/4e/954e6c6ae30e7d60b4956f0b8a28bdf4/9-p1.jpg"
-   ],
-   "photosAll": true,
-   "published": "2026-11-19T08:00:00Z",
-   "agency": "Particulier",
-   "privateOwner": true,
-   "phone": null,
-   "lat": 48.840789,
-   "lng": 2.417858,
-   "firstSeen": "2026-11-15T17:24:14+00:00",
-   "inSector": true,
-   "pricePerM2": 34.6
-  },
-  {
    "id": "li-26N6E9TI1V9I",
    "source": "SeLoger / Logic-Immo",
    "url": "https://www.seloger.com/annonce/location/ile-de-france/paris-75/paris-75000/26N6E9TI1V9I",
@@ -981,7 +952,7 @@
     "https://cdnihddipa.cloudimg.io/c/4/3/b/c43be73a-17ad-4dc5-8f86-24d50b6fe30a.jpg?ci_seal=ba2ab4a360e6a701bd70187a99622764bab5fe96"
    ],
    "published": "2026-11-16T08:16:00Z",
-   "updated": "2026-11-26T01:21:16.205Z",
+   "updated": "2026-11-27T02:16:45.339Z",
    "agency": "LYNX D'OR IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
@@ -1061,7 +1032,7 @@
     "https://cdnihddipa.cloudimg.io/8/8/2/5/8825c228-a489-4ba2-869a-acdf3b7fd5a4.jpg?ci_seal=2d79e9f98a1c3a649b9c63ea4567a3c588e7d48f"
    ],
    "published": "2026-11-09T16:10:00Z",
-   "updated": "2026-11-26T07:25:09.52Z",
+   "updated": "2026-11-27T02:06:17.561Z",
    "agency": "ERA 12EME AVENUE",
    "privateOwner": false,
    "exclusive": false,
@@ -1072,46 +1043,6 @@
    "firstSeen": "2026-11-25T20:24:19+00:00",
    "inSector": true,
    "pricePerM2": 29.9
-  },
-  {
-   "id": "li-261R4354SENX",
-   "source": "SeLoger / Logic-Immo",
-   "url": "https://www.seloger.com/annonce/location/ile-de-france/paris-75/paris-75000/261R4354SENX",
-   "price": 2370,
-   "chargesIncluded": true,
-   "surface": 74.65,
-   "rooms": 3,
-   "bedrooms": 2,
-   "zip": "94220",
-   "city": "Charenton-le-Pont",
-   "district": "Conflans",
-   "floor": "2/9",
-   "energy": "D",
-   "title": "* Appartement de 3 pièces, 74.65 m², Charenton Centre",
-   "description": "Charenton le Pont Dans une résidence sécurisée avec gardien et espace vert, appartement 3 pièces en parfait état comprenant : une entrée, un double living , deux chambres donnant sur un grand jardin au calme, une cuisine aménagée et une salle de bains avec vasque, baignoire et WC. Un placard et nombreux rangements. Eau chaude et chauffage collectif. Une cave complète ce bien. Métro: Charenton Ecole Ligne 8 à 2 minutes à pied. Bois de Vincennes: 2 minutes à pied. Au pieds des commerces et à prox...",
-   "photo": "https://cdnihddipa.cloudimg.io/4/9/b/7/49b7a1aa-9762-45ec-86c6-abdf8a9ebbb8.jpg?ci_seal=dd5a9572e826f00d4c234782cb34249708f72839",
-   "photos": [
-    "https://cdnihddipa.cloudimg.io/4/9/b/7/49b7a1aa-9762-45ec-86c6-abdf8a9ebbb8.jpg?ci_seal=dd5a9572e826f00d4c234782cb34249708f72839",
-    "https://cdnihddipa.cloudimg.io/2/3/4/8/23484758-f61e-4b82-abd8-67818bc169a1.jpg?ci_seal=f03ab2b355a841a309b7458b9b0c2cd982846805",
-    "https://cdnihddipa.cloudimg.io/3/e/8/6/3e866cd0-5c77-42c3-a89f-6034a9f9601a.jpg?ci_seal=a59f670dff715b0bc6d27e58e1ce4b76391eca82",
-    "https://cdnihddipa.cloudimg.io/f/4/0/e/f40e1826-d327-4343-9836-0ba0a7b8a609.jpg?ci_seal=657868022964aef1fde9f9bfa93c7e7b61f84b38",
-    "https://cdnihddipa.cloudimg.io/5/1/1/1/5111198c-5420-498c-8efd-4a58d4557ddc.jpg?ci_seal=58551c31bfcb32be645991dc96ec3681903e40c1",
-    "https://cdnihddipa.cloudimg.io/5/f/2/b/5f2bb851-b34f-4319-801c-4993f0ea7ba7.jpg?ci_seal=89700bf16b8b0dffe41f168a54e0fee403a11c8b",
-    "https://cdnihddipa.cloudimg.io/f/2/b/8/f2b8b57f-202a-4ce5-ae87-e0476a9c3493.jpg?ci_seal=d7f48ae3e15158c086737a253786948e664a53fe",
-    "https://cdnihddipa.cloudimg.io/c/2/7/d/c27de1ee-035a-4e96-bda2-dc4d1639ba33.jpg?ci_seal=95530183da68ade78a2dccbfa665c715ad79d007"
-   ],
-   "published": "2026-11-04T14:02:00Z",
-   "updated": "2026-11-13T01:51:25.513Z",
-   "agency": "SAMCOGER",
-   "privateOwner": false,
-   "exclusive": true,
-   "lat": 48.82362225567717,
-   "lng": 2.410151161203584,
-   "phone": "0757921512",
-   "addressPublished": true,
-   "firstSeen": "2026-11-15T17:16:21+00:00",
-   "inSector": true,
-   "pricePerM2": 31.7
   },
   {
    "id": "li-265TYE2MZ7Q7",
@@ -1220,7 +1151,7 @@
     "https://cdnihddipa.cloudimg.io/0/6/a/1/06a1998c-b26e-4431-bb40-afe7f0a99582.jpg?ci_seal=e46eebb6fd3f12656167a90cd318b7e29bd2c4f0"
    ],
    "published": "2026-10-22T10:51:00Z",
-   "updated": "2026-11-26T16:15:14.9Z",
+   "updated": "2026-11-27T02:01:22.266Z",
    "agency": "Arik Property",
    "privateOwner": false,
    "exclusive": false,
@@ -1314,7 +1245,7 @@
     "https://cdnihddipa.cloudimg.io/f/5/f/b/f5fb3193-5d6d-424f-9cd1-34d536ff5b69.jpg?ci_seal=1962568413e5a34110e9147052736d2440e7613e"
    ],
    "published": "2026-09-25T09:54:00Z",
-   "updated": "2026-11-26T02:06:25.28Z",
+   "updated": "2026-11-27T01:46:35.992Z",
    "agency": "LYNX D'OR IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
@@ -1359,7 +1290,7 @@
     "https://cdnihddipa.cloudimg.io/3/a/4/2/3a4234f8-15c9-4bb3-898c-c4cc1648964e.jpg?ci_seal=69e65c2fb4deb4f479fe16bbc0d08d2f424a7b51"
    ],
    "published": "2026-09-18T13:23:00Z",
-   "updated": "2026-11-26T09:21:11.622Z",
+   "updated": "2026-11-27T02:01:20.011Z",
    "agency": "QUOD & ASSOCIES",
    "privateOwner": false,
    "exclusive": false,
