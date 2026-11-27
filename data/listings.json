@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T18:00:06+00:00",
+ "updated": "2026-11-27T19:50:17+00:00",
  "count": 33,
  "criteria": {
   "minRooms": 3,
@@ -12,7 +12,9 @@
    "94220": "Charenton-le-Pont"
   }
  },
- "errors": [],
+ "errors": [
+  "PAP"
+ ],
  "listings": [
   {
    "id": "bi-gedeon-29341207",
@@ -169,18 +171,15 @@
    "description": "Paris 12 - Aligre-Gare de Lyon Situé avenue Daumesnil, dans le 12e arrondissement de Paris, à proximité immédiate de la place Daumesnil et à quelques minutes du bois de Vincennes, découvrez ce magnifique appartement haussmannien entièrement meublé et équipé, au 4e étage avec ascenseur. Alliant le charme de l’ancien et le confort contemporain, cet appartement offre de belles prestations, notamment un parquet en point de Hongrie, une cheminée et d’élégantes moulures. Il se compose d’un beau séjou...",
    "photo": "https://cdnihddipa.cloudimg.io/6/d/d/4/6dd43a31-9ce5-41dd-98ff-c910c03db1a8.jpg?ci_seal=bded4f32290dc22f38038728940994883c4b8a67",
    "photos": [
-    "https://cdn.pap.fr/photos/pap/7f/6f/7f6fdc373ea83c6cd6e5bc40d51fe743/7-p1.jpg",
-    "https://cdn.pap.fr/photos/pap/4e/04/4e049f4f30462336e84399f4b519543f/4-p1.jpg",
-    "https://cdn.pap.fr/photos/pap/0d/6a/0d6aa41e78d2a9331dfba29aaa010c6e/0-p1.jpg",
-    "https://cdn.pap.fr/photos/pap/a3/16/a3164813a82f9304a11966b54507037b/a-p1.jpg",
-    "https://cdn.pap.fr/photos/pap/f7/72/f772cc93cb58ca876deabbf01cf56d1e/f-p1.jpg",
-    "https://cdn.pap.fr/photos/pap/ea/1c/ea1cd29ac4bcc1076e6617ddc231fb31/e-p1.jpg",
-    "https://cdn.pap.fr/photos/pap/a5/1b/a51b7bdeb33c3747b5e8b2df0498e846/a-p1.jpg",
-    "https://cdn.pap.fr/photos/pap/5e/c3/5ec3172e410b254b47833f0fb49451a7/5-p1.jpg",
-    "https://cdn.pap.fr/photos/pap/78/7e/787e808528cb7d3f73ecfa592b1f030d/7-p1.jpg",
-    "https://cdn.pap.fr/photos/pap/54/59/5459aed76ce84ca82211e36b1d00884a/5-p1.jpg",
-    "https://cdn.pap.fr/photos/pap/72/c4/72c4cde2461ff85d200bea47aeed4f07/7-p1.jpg",
-    "https://cdn.pap.fr/photos/pap/d1/95/d1950554314fca45aedf24c5b66179cc/d-p1.jpg"
+    "https://cdnihddipa.cloudimg.io/6/d/d/4/6dd43a31-9ce5-41dd-98ff-c910c03db1a8.jpg?ci_seal=bded4f32290dc22f38038728940994883c4b8a67",
+    "https://cdnihddipa.cloudimg.io/f/5/8/4/f58462d0-bdf0-4b43-8c94-fd3288d649bf.jpg?ci_seal=0bad44c61665ee34983de5977399d7ac088da384",
+    "https://cdnihddipa.cloudimg.io/9/2/4/2/92429d8f-c855-491e-bb39-5d472ac8b9a6.jpg?ci_seal=7b820a554ed3f567b8e5a9fe0bbb3b98ecb8543b",
+    "https://cdnihddipa.cloudimg.io/f/9/6/c/f96c68c3-e5ed-4e49-a739-48b6bb984c69.jpg?ci_seal=ef9a8afa16d89e248a89c80f9d1ee56a67e1ab07",
+    "https://cdnihddipa.cloudimg.io/6/8/4/c/684cbcb1-f1f0-48e3-afc5-ada41663cf6e.jpg?ci_seal=b55ae0f9219994d46dffe412013ad8890ec53b21",
+    "https://cdnihddipa.cloudimg.io/5/c/a/d/5cad4c20-9db7-4fb6-8f7f-fe6c47beef98.jpg?ci_seal=f88963349728b2f791de355c9a11cbdca2c63723",
+    "https://cdnihddipa.cloudimg.io/9/6/5/8/9658d1c3-80a4-45b9-b684-0d15a0bc105a.jpg?ci_seal=746248f9c1dd55568b4c2b5f5460b5842790201d",
+    "https://cdnihddipa.cloudimg.io/7/3/e/5/73e58cdf-098d-4c7f-998f-dcda599c590f.jpg?ci_seal=61724e2bad4647406a2e02844aa438801571f19a",
+    "https://cdnihddipa.cloudimg.io/9/c/b/2/9cb28bc1-e324-43c5-a4b4-af85cd1dd44f.jpg?ci_seal=eb963bc51d151929283560ba4c571ef534bf84a0"
    ],
    "published": "2026-11-25T13:15:00Z",
    "updated": "2026-11-26T02:11:25.736Z",
@@ -191,12 +190,6 @@
    "lng": 2.399473,
    "phone": null,
    "addressPublished": null,
-   "alsoOn": [
-    {
-     "source": "PAP (particulier)",
-     "url": "https://www.pap.fr/annonces/appartement-paris-12e-75012-r465900493"
-    }
-   ],
    "firstSeen": "2026-11-25T18:00:05+00:00",
    "inSector": true,
    "pricePerM2": 44.1
@@ -1423,11 +1416,10 @@
    "agency": "L.HARLE REAL ESTATE",
    "privateOwner": false,
    "exclusive": true,
-   "lng": 2.39465,
    "lat": 48.83625,
-   "approxPosition": true,
-   "addressPublished": false,
+   "lng": 2.39465,
    "phone": "0684880288",
+   "addressPublished": false,
    "firstSeen": "2026-11-27T18:00:06+00:00",
    "inSector": true,
    "pricePerM2": 31.1
