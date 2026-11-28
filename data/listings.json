@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-27T19:50:17+00:00",
- "count": 33,
+ "updated": "2026-11-28T06:30:04+00:00",
+ "count": 36,
  "criteria": {
   "minRooms": 3,
   "minSurface": 55,
@@ -12,10 +12,91 @@
    "94220": "Charenton-le-Pont"
   }
  },
- "errors": [
-  "PAP"
- ],
+ "errors": [],
  "listings": [
+  {
+   "id": "li-26CIW6TZ2AYC",
+   "source": "SeLoger / Logic-Immo",
+   "url": "https://www.seloger.com/annonce/location/ile-de-france/paris-75/paris-75000/26CIW6TZ2AYC",
+   "price": 2750,
+   "chargesIncluded": true,
+   "surface": 91,
+   "rooms": 3,
+   "bedrooms": 2,
+   "zip": "75012",
+   "city": "Paris 12ème arrondissement",
+   "district": "Vallée de Fécamp",
+   "floor": "10/13",
+   "energy": "D",
+   "title": "Bel appartement familial, vue panoramique",
+   "description": "PARIS 12 € – MÉTRO DUGOMMIER / PORTE DE CHARENTON – SUPERBE 3/4 PIÈCES AVEC VUE PANORAMIQUE SUR PARIS Idéalement situé dans un quartier recherché du 12 € arrondissement, à proximité immédiate des commerces, des écoles et des transports (métros lignes 6 et 8, tramway T3a), et à quelques minutes du bois de Vincennes, nous vous proposons ce bel appartement situé au 10 € étage avec ascenseur d'une résidence de grand standing de 1974, sécurisée et avec gardien. Bénéficiant d'une belle luminosité et ...",
+   "photo": "https://cdnihddipa.cloudimg.io/1/8/7/7/1877ba19-a7a7-4cf6-8bd8-513450d29eb3.jpg?ci_seal=dec9a7e3c71453e08bacb15f43790a9237a53a21",
+   "photos": [
+    "https://cdnihddipa.cloudimg.io/1/8/7/7/1877ba19-a7a7-4cf6-8bd8-513450d29eb3.jpg?ci_seal=dec9a7e3c71453e08bacb15f43790a9237a53a21",
+    "https://cdnihddipa.cloudimg.io/1/d/7/6/1d768d50-9828-44bf-9c36-4ae86d4ff3db.jpg?ci_seal=42c13fd8ae7867e0c5bbd69e9a4ec476ef1e4570",
+    "https://cdnihddipa.cloudimg.io/0/6/f/d/06fd5f2a-c2e8-4c41-b3bc-7ef744c96a13.jpg?ci_seal=df306af59b697451c343b134822e0c225357611b",
+    "https://cdnihddipa.cloudimg.io/2/c/2/5/2c258cd2-798d-4d86-a9e8-1990a1480456.jpg?ci_seal=c627209596531207130725a60be49da1dedefdbd",
+    "https://cdnihddipa.cloudimg.io/9/2/5/f/925f354a-0789-4bd8-b313-492bf911d601.jpg?ci_seal=3ed6656c0f0c37b533f1dbb20c984edda84e5027",
+    "https://cdnihddipa.cloudimg.io/4/6/8/5/46851b51-46fa-44cd-a9e9-3519b1fa6385.jpg?ci_seal=fb5d95356f365da979da3af1d3586f0afee6eb77",
+    "https://cdnihddipa.cloudimg.io/7/0/3/f/703f8b09-29c1-4878-aa71-24e083888275.jpg?ci_seal=fbacb5c985ee4543b1529e5aa9bf955522b599c0",
+    "https://cdnihddipa.cloudimg.io/a/0/9/b/a09b8e19-ddeb-418f-aad4-63f0ddc53878.jpg?ci_seal=c54bd32b221d0de2eb143f976b334625044cdb8a",
+    "https://cdnihddipa.cloudimg.io/a/b/e/0/abe084a3-06e7-4a6f-84d5-dd14a5c8e11e.jpg?ci_seal=972b43b05cf056e737e8ceb6172392ff6a752c61"
+   ],
+   "published": "2026-11-28T00:19:00Z",
+   "updated": "2026-11-28T00:21:12.969Z",
+   "agency": "AHT IMMOBILIER",
+   "privateOwner": false,
+   "exclusive": true,
+   "lng": 2.3968,
+   "lat": 48.83462,
+   "approxPosition": true,
+   "addressPublished": false,
+   "phone": "0155782727",
+   "firstSeen": "2026-11-28T06:30:04+00:00",
+   "inSector": true,
+   "pricePerM2": 30.2
+  },
+  {
+   "id": "li-26DT9WETHMDF",
+   "source": "SeLoger / Logic-Immo",
+   "url": "https://www.seloger.com/annonce/location/ile-de-france/paris-75/paris-75000/26DT9WETHMDF",
+   "price": 1914,
+   "chargesIncluded": true,
+   "surface": 65,
+   "rooms": 3,
+   "bedrooms": 2,
+   "zip": "94160",
+   "city": "Saint-Mandé",
+   "district": "Saint Michel",
+   "floor": "",
+   "energy": "C",
+   "title": "T3",
+   "description": "Crédit Agricole immobilier vous propose à la location, dans un bel immeuble avec gardien, un bel appartement de 65.95m² au rez-de-chaussée avec terrasse. Il comprend une entrée avec rangement, un séjour confortable, une cuisine indépendante, deux chambres dont une avec placard intégré et une salle de bains aménagée avec des WC séparés pour plus de confort. Vous bénéficierez également d'une cave et d'un parking en sous-sol. Honoraires de location (TTC) à la charge du locataire pour la réalisatio...",
+   "photo": "https://cdnihddipa.cloudimg.io/f/d/7/9/fd7987e2-f809-4114-b0b7-da88b948fc30.jpg?ci_seal=0c987dee0e0f3e20f3302f901dece3094bea1383",
+   "photos": [
+    "https://file.bienici.com/photo/ag313862-563278049_photos.ubiflow.net_313862_563278049_photos_1.jpg_INSOON_EB_5512801818_20261127230257",
+    "https://file.bienici.com/photo/ag313862-563278049_photos.ubiflow.net_313862_563278049_photos_2.jpg_INSOON_EB_5512801818_20261127230257"
+   ],
+   "published": "2026-11-27T22:49:00Z",
+   "updated": "2026-11-28T02:11:44.265Z",
+   "agency": "Crédit Agricole Immobilier",
+   "privateOwner": false,
+   "exclusive": false,
+   "lng": 2.41762,
+   "lat": 48.84132,
+   "approxPosition": true,
+   "addressPublished": false,
+   "phone": "0534401798",
+   "alsoOn": [
+    {
+     "source": "Bien'ici",
+     "url": "https://www.bienici.com/annonce/ag313862-563278049"
+    }
+   ],
+   "firstSeen": "2026-11-28T06:30:04+00:00",
+   "inSector": true,
+   "pricePerM2": 29.4
+  },
   {
    "id": "bi-gedeon-29341207",
    "source": "Bien'ici",
@@ -102,7 +183,7 @@
     "https://cdnihddipa.cloudimg.io/a/8/3/5/a83565ee-5489-4c65-bc8a-53c49b009a20.jpg?ci_seal=1b00489e0aece02ec6d08df67bbd722a0d083d97"
    ],
    "published": "2026-11-26T16:38:00Z",
-   "updated": "2026-11-27T08:21:11.086Z",
+   "updated": "2026-11-28T01:36:20.864Z",
    "agency": "SAMCOGER",
    "privateOwner": false,
    "exclusive": true,
@@ -171,15 +252,18 @@
    "description": "Paris 12 - Aligre-Gare de Lyon Situé avenue Daumesnil, dans le 12e arrondissement de Paris, à proximité immédiate de la place Daumesnil et à quelques minutes du bois de Vincennes, découvrez ce magnifique appartement haussmannien entièrement meublé et équipé, au 4e étage avec ascenseur. Alliant le charme de l’ancien et le confort contemporain, cet appartement offre de belles prestations, notamment un parquet en point de Hongrie, une cheminée et d’élégantes moulures. Il se compose d’un beau séjou...",
    "photo": "https://cdnihddipa.cloudimg.io/6/d/d/4/6dd43a31-9ce5-41dd-98ff-c910c03db1a8.jpg?ci_seal=bded4f32290dc22f38038728940994883c4b8a67",
    "photos": [
-    "https://cdnihddipa.cloudimg.io/6/d/d/4/6dd43a31-9ce5-41dd-98ff-c910c03db1a8.jpg?ci_seal=bded4f32290dc22f38038728940994883c4b8a67",
-    "https://cdnihddipa.cloudimg.io/f/5/8/4/f58462d0-bdf0-4b43-8c94-fd3288d649bf.jpg?ci_seal=0bad44c61665ee34983de5977399d7ac088da384",
-    "https://cdnihddipa.cloudimg.io/9/2/4/2/92429d8f-c855-491e-bb39-5d472ac8b9a6.jpg?ci_seal=7b820a554ed3f567b8e5a9fe0bbb3b98ecb8543b",
-    "https://cdnihddipa.cloudimg.io/f/9/6/c/f96c68c3-e5ed-4e49-a739-48b6bb984c69.jpg?ci_seal=ef9a8afa16d89e248a89c80f9d1ee56a67e1ab07",
-    "https://cdnihddipa.cloudimg.io/6/8/4/c/684cbcb1-f1f0-48e3-afc5-ada41663cf6e.jpg?ci_seal=b55ae0f9219994d46dffe412013ad8890ec53b21",
-    "https://cdnihddipa.cloudimg.io/5/c/a/d/5cad4c20-9db7-4fb6-8f7f-fe6c47beef98.jpg?ci_seal=f88963349728b2f791de355c9a11cbdca2c63723",
-    "https://cdnihddipa.cloudimg.io/9/6/5/8/9658d1c3-80a4-45b9-b684-0d15a0bc105a.jpg?ci_seal=746248f9c1dd55568b4c2b5f5460b5842790201d",
-    "https://cdnihddipa.cloudimg.io/7/3/e/5/73e58cdf-098d-4c7f-998f-dcda599c590f.jpg?ci_seal=61724e2bad4647406a2e02844aa438801571f19a",
-    "https://cdnihddipa.cloudimg.io/9/c/b/2/9cb28bc1-e324-43c5-a4b4-af85cd1dd44f.jpg?ci_seal=eb963bc51d151929283560ba4c571ef534bf84a0"
+    "https://cdn.pap.fr/photos/pap/7f/6f/7f6fdc373ea83c6cd6e5bc40d51fe743/7-p1.jpg",
+    "https://cdn.pap.fr/photos/pap/4e/04/4e049f4f30462336e84399f4b519543f/4-p1.jpg",
+    "https://cdn.pap.fr/photos/pap/0d/6a/0d6aa41e78d2a9331dfba29aaa010c6e/0-p1.jpg",
+    "https://cdn.pap.fr/photos/pap/a3/16/a3164813a82f9304a11966b54507037b/a-p1.jpg",
+    "https://cdn.pap.fr/photos/pap/f7/72/f772cc93cb58ca876deabbf01cf56d1e/f-p1.jpg",
+    "https://cdn.pap.fr/photos/pap/ea/1c/ea1cd29ac4bcc1076e6617ddc231fb31/e-p1.jpg",
+    "https://cdn.pap.fr/photos/pap/a5/1b/a51b7bdeb33c3747b5e8b2df0498e846/a-p1.jpg",
+    "https://cdn.pap.fr/photos/pap/5e/c3/5ec3172e410b254b47833f0fb49451a7/5-p1.jpg",
+    "https://cdn.pap.fr/photos/pap/78/7e/787e808528cb7d3f73ecfa592b1f030d/7-p1.jpg",
+    "https://cdn.pap.fr/photos/pap/54/59/5459aed76ce84ca82211e36b1d00884a/5-p1.jpg",
+    "https://cdn.pap.fr/photos/pap/72/c4/72c4cde2461ff85d200bea47aeed4f07/7-p1.jpg",
+    "https://cdn.pap.fr/photos/pap/d1/95/d1950554314fca45aedf24c5b66179cc/d-p1.jpg"
    ],
    "published": "2026-11-25T13:15:00Z",
    "updated": "2026-11-26T02:11:25.736Z",
@@ -190,6 +274,12 @@
    "lng": 2.399473,
    "phone": null,
    "addressPublished": null,
+   "alsoOn": [
+    {
+     "source": "PAP (particulier)",
+     "url": "https://www.pap.fr/annonces/appartement-paris-12e-75012-r465900493"
+    }
+   ],
    "firstSeen": "2026-11-25T18:00:05+00:00",
    "inSector": true,
    "pricePerM2": 44.1
@@ -853,7 +943,7 @@
     "https://cdnihddipa.cloudimg.io/c/4/3/b/c43be73a-17ad-4dc5-8f86-24d50b6fe30a.jpg?ci_seal=ba2ab4a360e6a701bd70187a99622764bab5fe96"
    ],
    "published": "2026-11-16T08:16:00Z",
-   "updated": "2026-11-27T02:16:45.339Z",
+   "updated": "2026-11-28T01:56:26.61Z",
    "agency": "LYNX D'OR IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
@@ -1052,7 +1142,7 @@
     "https://cdnihddipa.cloudimg.io/0/6/a/1/06a1998c-b26e-4431-bb40-afe7f0a99582.jpg?ci_seal=e46eebb6fd3f12656167a90cd318b7e29bd2c4f0"
    ],
    "published": "2026-10-22T10:51:00Z",
-   "updated": "2026-11-27T14:26:04.935Z",
+   "updated": "2026-11-28T01:56:17.071Z",
    "agency": "Arik Property",
    "privateOwner": false,
    "exclusive": false,
@@ -1146,7 +1236,7 @@
     "https://cdnihddipa.cloudimg.io/f/5/f/b/f5fb3193-5d6d-424f-9cd1-34d536ff5b69.jpg?ci_seal=1962568413e5a34110e9147052736d2440e7613e"
    ],
    "published": "2026-09-25T09:54:00Z",
-   "updated": "2026-11-27T01:46:35.992Z",
+   "updated": "2026-11-28T01:56:27.697Z",
    "agency": "LYNX D'OR IMMOBILIER",
    "privateOwner": false,
    "exclusive": false,
@@ -1196,6 +1286,55 @@
    "firstSeen": "2026-11-15T17:16:21+00:00",
    "inSector": true,
    "pricePerM2": 27.5
+  },
+  {
+   "id": "li-26N9QBLGJ7W6",
+   "source": "SeLoger / Logic-Immo",
+   "url": "https://www.seloger.com/annonce/location/ile-de-france/paris-75/paris-75000/26N9QBLGJ7W6",
+   "price": 2500,
+   "chargesIncluded": true,
+   "surface": 62,
+   "rooms": 3,
+   "bedrooms": 2,
+   "zip": "75012",
+   "city": "Paris 12ème arrondissement",
+   "district": "Bel-Air",
+   "floor": "1/6",
+   "energy": null,
+   "title": "Appartement meublé 2 chambres - Paris 12 - 62m2",
+   "description": "Location meublée Paris Attitude (Référence 14107). Retrouvez la visite virtuelle de cet appartement meublé et envoyez votre demande de location uniquement via notre site Paris Attitude. Cet appartement meublé prêt à vivre peut être réservé pour une durée comprise entre 6 mois et un an. Cet appartement de 62 m² , 3 pièces, est situé avenue du General Michel Bizot dans le 12ème arrondissement , au 1er étage d'un immeuble du 19ème siècle et il peut accueillir 4 personnes. Cet appartement est équip...",
+   "photo": "https://cdnihddipa.cloudimg.io/3/2/7/a/327aea47-b9de-4f02-8b30-c18ba92c767d.jpg?ci_seal=11b5c564f27a3cd4da5f559f7d34adf6c06774a8",
+   "photos": [
+    "https://cdnihddipa.cloudimg.io/3/2/7/a/327aea47-b9de-4f02-8b30-c18ba92c767d.jpg?ci_seal=11b5c564f27a3cd4da5f559f7d34adf6c06774a8",
+    "https://cdnihddipa.cloudimg.io/4/d/d/f/4ddfaaff-251f-49a9-b1c4-cd116ebddac8.jpg?ci_seal=8581332ac935101d994dd5c8889f6cdc507bb172",
+    "https://cdnihddipa.cloudimg.io/3/a/e/b/3aeb625d-6fa8-43d1-be51-1746d5f8f5cb.jpg?ci_seal=a8a49723ba1868f8b3755d9406e4b545825b132e",
+    "https://cdnihddipa.cloudimg.io/f/1/9/e/f19e914a-321d-4e1e-8825-dfec34b6ee17.jpg?ci_seal=ce0eccc7db1d534711538843ebbff75055b104b9",
+    "https://cdnihddipa.cloudimg.io/7/6/0/9/7609e527-4bb4-4dac-8b6d-5b5adfe2d5e9.jpg?ci_seal=67ae9a8b08190da1c1f8394d61576cef42794466",
+    "https://cdnihddipa.cloudimg.io/a/8/4/b/a84b9c2c-1ffb-4894-9cae-d510ab581bd3.jpg?ci_seal=8d9eccb736c4049ff8d01296a9c8661ed2971b1f",
+    "https://cdnihddipa.cloudimg.io/6/6/b/3/66b3790f-8ee1-48d7-8195-f26f49c79794.jpg?ci_seal=7f402b7c5f9f55ce10b38bc6cd5bd3424f8fc455",
+    "https://cdnihddipa.cloudimg.io/6/9/e/c/69eca815-ebbe-4925-8f0f-f46bf75e0460.jpg?ci_seal=baae623941c2bda4d61b3863a8e4555f5c5aa657",
+    "https://cdnihddipa.cloudimg.io/1/c/4/8/1c489ded-3b0f-4973-aac5-47e90e891bde.jpg?ci_seal=9489dfab69d7b2dbd0d7479a098461788faea8e7",
+    "https://cdnihddipa.cloudimg.io/e/5/e/0/e5e0e911-86a1-4036-b236-849abf3e0525.jpg?ci_seal=8a1f91c08298be92a2d75c9c6703c732b9ff810c",
+    "https://cdnihddipa.cloudimg.io/6/0/3/9/6039122d-1748-4c8d-bf7d-1b450ebf996e.jpg?ci_seal=0aa8a428dbb41894d971b413fe97bad29c04d05d",
+    "https://cdnihddipa.cloudimg.io/5/e/0/5/5e05a87d-91c8-4ad8-94ba-b9343d652ea8.jpg?ci_seal=c309fd8cfb97d18a157e15b858f498fbd216faa4",
+    "https://cdnihddipa.cloudimg.io/3/7/5/b/375b979b-6e0f-4590-a44a-50a32c39c6cd.jpg?ci_seal=ffcca5a3d6719d7530402106d2cd0badb835fa7a",
+    "https://cdnihddipa.cloudimg.io/5/6/3/9/56398850-74a8-484d-99fc-04c278393d02.jpg?ci_seal=fba89a457bd15d8bf3614fbd9f596aef868ff200",
+    "https://cdnihddipa.cloudimg.io/a/2/c/d/a2cd2be5-428e-4041-8618-c00accba1054.jpg?ci_seal=505db04aee7f6008e4759360a1f308504fd92f2b",
+    "https://cdnihddipa.cloudimg.io/c/e/1/8/ce188614-dcb8-4b9a-9569-feb49a3d0a9e.jpg?ci_seal=6b09fdff2172f38dc6324d908940415d202b7292"
+   ],
+   "published": "2026-09-04T00:16:00Z",
+   "updated": "2026-11-28T01:31:19.723Z",
+   "agency": "PARIS ATTITUDE",
+   "privateOwner": false,
+   "exclusive": true,
+   "lng": 2.40845,
+   "lat": 48.8389,
+   "approxPosition": true,
+   "addressPublished": false,
+   "phone": "0162045633",
+   "firstSeen": "2026-11-28T06:30:04+00:00",
+   "inSector": true,
+   "pricePerM2": 40.3
   },
   {
    "id": "li-265XKV257WAY",
